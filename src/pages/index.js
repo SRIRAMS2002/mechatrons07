@@ -1,11 +1,11 @@
-"use-client"
-
 import React from 'react'
-
+import Navbar from '@/Components/Navbar'
 const index = () => {
   return (
     <div>
-      sriram
+      
+      <Navbar/>
+      
     </div>
   )
 }
