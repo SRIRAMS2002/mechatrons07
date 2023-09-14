@@ -162,7 +162,7 @@ const Navbar = () => {
       </Popover.Group>
 
       <div className="flex mx-auto justify-center lg:flex-1">
-        <a href="#" className="-m-1.5 p-1.5">
+        <a href="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Company</span>
           <img className="h-18  w-20 " src={logo} alt="" />
           <Image src={logo} className='h-20 w-20 mx-0 lg:ml-52 ' alt='hello'/>
