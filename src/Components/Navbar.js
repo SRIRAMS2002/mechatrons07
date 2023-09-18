@@ -50,12 +50,12 @@ const Navbar = () => {
     <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
       
     <Popover.Group className="hidden lg:flex lg:gap-x-12">
-    <a href="/" className="text-base  font-semibold leading-6 text-gray-900">
+    <a href="/" className="text-lg  font-semibold leading-6 text-gray-900">
           Home
         </a>
 {/* Team */}
         <Popover className="relative">
-          <Popover.Button className="flex items-center gap-x-1 text-base  font-semibold leading-6 text-gray-900">
+          <Popover.Button className="flex items-center gap-x-1 text-lg  font-semibold leading-6 text-gray-900">
            Team
             <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
           </Popover.Button>
@@ -107,7 +107,7 @@ const Navbar = () => {
 {/* Work */}
         <Popover.Group>
         <Popover className="relative">
-          <Popover.Button className="flex items-center gap-x-1 text-base  font-semibold leading-6 text-gray-900">
+          <Popover.Button className="flex items-center gap-x-1 text-lg  font-semibold leading-6 text-gray-900">
             Work
             <ChevronDownIcon
               className="h-5 w-5 flex-none text-gray-800"
@@ -164,7 +164,7 @@ const Navbar = () => {
       <div className="flex mx-auto justify-center lg:flex-1">
         <a href="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Your Company</span>
-          <img className="h-18  w-20 " src={logo} alt="" />
+          
           <Image src={logo} className='h-20 w-20 mx-0 lg:ml-52 ' alt='hello'/>
         </a>
       </div>
@@ -185,11 +185,11 @@ const Navbar = () => {
 
 
       <div className="hidden lg:flex lg:flex-1 lg:justify-end space-x-10">
-      <a href="/Gallery" className="text-base  font-semibold leading-6 text-gray-900">
+      <a href="/Gallery" className="text-lg  font-semibold leading-6 text-gray-900">
           Gallery
         </a>
         
-        <a href="/Contact" className="text-base  font-semibold leading-6 text-gray-900">
+        <a href="/Contact" className="text-lg  font-semibold leading-6 text-gray-900">
           Contact Us <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
