@@ -6,6 +6,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, Pagination, Scrollbar, A11y } from "swiper/modules";
 // Import Swiper styles
 import 'swiper/css';
+import {motion} from "framer-motion"
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 import Image from 'next/image';
 const index = () => {
 
@@ -83,11 +86,188 @@ const index = () => {
       
     
   ]
-  return (
-    <div>
-      <Navbar/>
-      <Image src="" className=" object-cover w-screen h-[39rem] " alt=""/>
+  const itemData = [
+    {
+      img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+      title: "Breakfast",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+      title: "Burger",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
+      title: "Camera",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
+      title: "Coffee",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+      title: "Hats",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+      title: "Honey",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+      title: "Basketball",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+      title: "Fern",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
+      title: "Tomato basil",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
+      title: "Tomato basil",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
+      title: "Sea star",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
+      title: "Bike",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+      title: "Breakfast",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+      title: "Burger",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
+      title: "Camera",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
+      title: "Coffee",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+      title: "Hats",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+      title: "Honey",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+      title: "Basketball",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+      title: "Fern",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
+      title: "Mushrooms",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
+      title: "Tomato basil",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
+      title: "Sea star",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
+      title: "Bike",
+    },
+    
+    {
+      img: "https://images.unsplash.com/photo-1533827432537-70133748f5c8",
+      title: "Hats",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62",
+      title: "Honey",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1516802273409-68526ee1bdd6",
+      title: "Basketball",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1518756131217-31eb79b20e8f",
+      title: "Fern",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25",
+      title: "Mushrooms",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1567306301408-9b74779a11af",
+      title: "Tomato basil",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1",
+      title: "Sea star",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1589118949245-7d38baf380d6",
+      title: "Bike",
+    },
+   
+    
+   
+    
 
+  ];
+  return (
+    <div className='BG-BLACK'>
+      <Navbar/>
+      
+      {/* Header */}
+      <motion.div
+          initial={{ opacity: 0, scale: 0.7 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.4 }}
+          viewport={{ once: true }}
+          className="  max-w-full   bg-transparent overflow-hidden flex items-center justify-center h-full relative "
+        >
+          <div className="flex items-center justify-center m-0 p-0">
+            <ImageList
+              className="overflow-hidden bg-transparent rounded-lg brightness-50 "
+              sx={{ width: 1550, height: 625 }}
+              cols={8}
+              gap={0}
+              rowHeight={200}
+            >
+              {itemData.map((item) => (
+                <ImageListItem key={item.img}>
+                  <img
+                    className="cursor-pointer brightness-50 hover:brightness-100"
+                    src={`${item.img}?w=100&h=100&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=100&h=100&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList>
+          </div>
+          <div className="flex flex-col w-full gap-5 items-center justify-center absolute  bottom-48 left-[50%] translate-x-[-50%] why-us-font">
+            <h1 className="text-5xl md:text-7xl text-white font-semibold ">
+              Mechatrons
+            </h1>
+            <h1 className="text-lg md:text-2xl text-white font-semibold">
+            Dominate the Road
+            </h1>
+            
+            <button className="p-2 px-10 border-2 border-violet-900 mt-6 rounded-xl text-black font-bold text-xl bg-gradient-to-tr from-slate-600 to-slate-50 why-us-shadow">
+              Get Started
+            </button>
+          </div>
+        </motion.div>
         {/* News */}
         <div className=" py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -295,7 +475,7 @@ const index = () => {
               <div className="flex items-center rounded-xl  p-10 gap-x-6  border-violet-900 border-2">
                
                 <div className='mx-auto text-center'>
-                  <h3 className="text-lg font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                  <h3 className="text-lgy font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
                   <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
                 </div>
               </div>
