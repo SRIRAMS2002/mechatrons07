@@ -70,7 +70,7 @@ const Footer = () => {
               
             </div>
             <div className="flex flex-col items-start">
-            <div className="pt-10 w-48 text-white">
+            <div className="p-5 w-48 text-white">
             <div className="text-lg uppercase text-gray-500 font-medium"></div>
             <a className="my-3 block" href="/#">
               Support <span className="text-teal-600 text-xs p-1">New</span>
