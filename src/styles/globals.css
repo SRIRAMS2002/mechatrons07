@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.title-text {
+   
+    text-align: center; /* Center-align the text */
+    opacity: 1; /* Make the text fully opaque */
+    background: url("../../public//title-scrolling.png"); /* Set the background image */
+    background-repeat: repeat-x; /* Repeat the background image horizontally */
+    background-clip: inherit; /* Inherit the background clipping from the parent */
+     -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; /* Make the text transparent */
+    animation: animate 40s linear infinite; /* Apply an animation named "animate" */
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}

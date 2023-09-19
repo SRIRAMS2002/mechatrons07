@@ -9,28 +9,16 @@ import 'swiper/css';
 import {motion} from "framer-motion"
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import Image from 'next/image';
-const index = () => {
 
-  const people = [
-    {
-      name: 'National Events',
-      role: '50',
-    },
-    {
-      name: 'Inter-National Events',
-      role: '50',
-      },
-    {
-      name: 'Projects',
-      role: '15',
-      },
-    {
-      name: 'Cash Awards',
-      role: 'Rs-50000000/-',
-      },
-    // More people...
-  ]
+import CountUp, { useCountUp } from 'react-countup';
+const index = () => {
+  useCountUp({
+    ref: 'counter',
+    end: 1234567,
+    enableScrollSpy: true,
+    scrollSpyDelay: 1000,
+  });
+ 
 
   const posts = [
     {
@@ -256,20 +244,77 @@ const index = () => {
             </ImageList>
           </div>
           <div className="flex flex-col w-full gap-5 items-center justify-center absolute  bottom-48 left-[50%] translate-x-[-50%] why-us-font">
-            <h1 className="text-5xl md:text-7xl text-white font-semibold ">
+            <h1 className="text-5xl md:text-7xl text-white font-bold title-text ">
               Mechatrons
             </h1>
-            <h1 className="text-lg md:text-2xl text-white font-semibold">
-            Dominate the Road
+            <h1 className="text-lg md:text-2xl text-gray-400 font-semibold">
+            @ Dominate the Road
             </h1>
             
-            <button className="p-2 px-10 border-2 border-violet-900 mt-6 rounded-xl text-black font-bold text-xl bg-gradient-to-tr from-slate-600 to-slate-50 why-us-shadow">
+            <button className="p-2 px-10 border-2 border-violet-900 mt-6 rounded-xl text-black font-bold text-xl bg-gradient-to-tr from-slate-300 to-slate-50 why-us-shadow">
               Get Started
             </button>
           </div>
         </motion.div>
+
+
+        {/* About US */}
+
+        <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto grid max-w-7xl gap-x-20 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+        <div className="max-w-2xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Us</h2>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper
+            suspendisse. Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper
+            suspendisse. Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper
+            suspendisse.
+          </p>
+        </div>
+        <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+         
+            <li>
+              <div className="flex items-center rounded-xl  p-12 gap-x-6  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
+               
+                <div className='mx-auto text-center'>
+                  <h3 className="text-2xl font-semibold leading-7 tracking-tight text-gray-900">National Events</h3>
+                  <p className="text-lg pt-5 font-semibold leading-6 text-indigo-600"> <CountUp end={30} enableScrollSpy />+</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-center rounded-xl  p-12 gap-x-6  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
+               
+                <div className='mx-auto text-center'>
+                  <h3 className="text-2xl font-semibold leading-7 tracking-tight text-gray-900">Inter-National Events</h3>
+                  <p className="text-lg pt-5 font-semibold leading-6 text-indigo-600"> <CountUp end={4} enableScrollSpy />+</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-center rounded-xl  p-12 gap-x-6  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
+               
+                <div className='mx-auto text-center'>
+                  <h3 className="text-2xl font-semibold leading-7 tracking-tight text-gray-900">Projects</h3>
+                  <p className="text-lg pt-5 font-semibold leading-6 text-indigo-600"> <CountUp end={20} enableScrollSpy /> +</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-center rounded-xl  p-12 gap-x-6  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
+               
+                <div className='mx-auto text-center'>
+                  <h3 className="text-2xl font-semibold leading-7 tracking-tight text-gray-900">Cash Awards</h3>
+                  <p className="text-lg pt-5 font-semibold leading-6 text-indigo-600"> <CountUp end={250000} enableScrollSpy />+</p>
+                </div>
+              </div>
+            </li>
+       
+        </ul>
+      </div>
+    </div>
         {/* News */}
-        <div className=" py-24 sm:py-32">
+        <div className=" py-12 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
@@ -458,32 +503,7 @@ const index = () => {
         </div>
       </div>
 
-      <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto grid max-w-7xl gap-x-20 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
-        <div className="max-w-2xl">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">About Us</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper
-            suspendisse. Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper
-            suspendisse. Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper
-            suspendisse.
-          </p>
-        </div>
-        <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-          {people.map((person) => (
-            <li key={person.name}>
-              <div className="flex items-center rounded-xl  p-10 gap-x-6  border-violet-900 border-2">
-               
-                <div className='mx-auto text-center'>
-                  <h3 className="text-lgy font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
-                  <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+      
       <Footer/>
     </div>
   )
