@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <div>
       
-    <header className="bg-white">
+    <header className="bg-white ">
     <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
       
     <Popover.Group className="hidden lg:flex lg:gap-x-12">
