@@ -38,22 +38,23 @@ const Members = () => {
           <h2 className="text-3xl font-bold tracking-tight pl-5 text-gray-900 sm:text-4xl">
             Members
           </h2>
+          <p className="text-lg pt-5 pl-5 font-semibold leading-6 text-indigo-600">A diverse team of individuals with unique talents and backgrounds, united by a common goal and exceptional teamwork.</p>
         </div>
 
         <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-900 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"></div>
         <Accordion
           type="multiple"
           collapsible
-          className="w-full flex flex-col gap-10 bg-transparent z-30 relative"
+          className="w-full flex flex-col gap-10 bg-transparent  relative"
         >
           <AccordionItem value="item-2" defaultOpen={true}>
             <AccordionTrigger>
               {" "}
-              <div className="flex items-center rounded-xl gap-x-6 mx-auto px-16 sm:px-36 md:px-[10rem] bg-gradient-to-bl from-violet-200 to-white mb-10 border-box  transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
-                <div className="mx-auto text-center">
-                  <h3 className="text-2xl p-5 font-semibold leading-7 tracking-tight text-gray-900">
-                    2020-2024
-                  </h3>
+              <div className="flex items-center rounded-xl  mx-auto px-16 sm:px-36 md:px-[10rem] mb-10 bg-gradient-to-tr from-slate-200 to-white p-8 gap-x-6  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
+               
+                <div className='mx-auto text-center'>
+                  <h3 className="text-2xl font-semibold leading-7 tracking-tight text-gray-900">2020-2024</h3>
+                
                 </div>
               </div>
             </AccordionTrigger>
@@ -67,7 +68,7 @@ const Members = () => {
                   />
                   <div className="min-w-0 mt-5 m-5 mx-auto text-center">
                     <p className="text-lg font-semibold leading-6 text-gray-900">
-                      DURGADASS V C
+                      DURGADAS V C
                     </p>
                     <p className="mt-1 truncate text-sm leading-5 text-gray-500">
                         MECH
@@ -208,13 +209,13 @@ const Members = () => {
           <AccordionItem value="item-1" defaultOpen={true}>
             <AccordionTrigger>
               {" "}
-              <div className="flex items-center rounded-xl gap-x-6 mx-auto px-16 sm:px-36 md:px-[10rem] bg-gradient-to-bl from-violet-200 to-white mb-10 border-box  transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
-                <div className="mx-auto text-center">
-                  <h3 className="text-2xl p-5 font-semibold leading-7 tracking-tight text-gray-900">
-                    2021-2025
-                  </h3>
-                </div>
-              </div>
+              <div className="flex items-center rounded-xl  mx-auto px-16 sm:px-36 md:px-[10rem] mb-10 bg-gradient-to-tr from-slate-200 to-white p-8 gap-x-6  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
+               
+               <div className='mx-auto text-center'>
+                 <h3 className="text-2xl font-semibold leading-7 tracking-tight text-gray-900">2021-2025</h3>
+               
+               </div>
+             </div>
             </AccordionTrigger>
             <AccordionContent>
               <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
@@ -381,13 +382,13 @@ const Members = () => {
           <AccordionItem value="item-3" defaultOpen={true}>
             <AccordionTrigger>
               {" "}
-              <div className="flex items-center rounded-xl gap-x-6 mx-auto px-16 sm:px-36 md:px-[10rem] bg-gradient-to-bl from-violet-200 to-white mb-10 border-box  transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
-                <div className="mx-auto text-center">
-                  <h3 className="text-2xl p-5 font-semibold leading-7 tracking-tight text-gray-900">
-                    2019-2023
-                  </h3>
-                </div>
-              </div>
+              <div className="flex items-center rounded-xl  mx-auto px-16 sm:px-36 md:px-[10rem] mb-10 bg-gradient-to-tr from-slate-200 to-white p-8 gap-x-6  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
+               
+               <div className='mx-auto text-center'>
+                 <h3 className="text-2xl font-semibold leading-7 tracking-tight text-gray-900">2022-2025</h3>
+               
+               </div>
+             </div>
             </AccordionTrigger>
             <AccordionContent>
               Yes. It adheres to the WAI-ARIA design pattern.
