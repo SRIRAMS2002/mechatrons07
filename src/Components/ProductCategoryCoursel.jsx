@@ -1,22 +1,12 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "@/Components/Navbar";
-import Footer from "@/Components/Footer";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useState } from "react";
 
-import { twMerge } from "tailwind-merge";
+const logos = {
+  section1: "Logo for Section 1",
+  section2: "Logo for Section 2",
+  section3: "Logo for Section 3",
+  // Add more logos for other sections
+};
 
-import 'swiper/css/navigation';
-
-
-import Product from '../Components/ProductCategoryCoursel.jsx'
-import { Navigation } from 'swiper/modules';
-import "swiper/css";
-
-import { GlobeAsiaAustraliaIcon, MagnifyingGlassCircleIcon,} from '@heroicons/react/20/solid'
-import { LiaAwardSolid } from "react-icons/lia";
-import { MdOutlineBikeScooter } from "react-icons/md";
-import { MdOutlineElectricBike } from "react-icons/md";
-import { GrMapLocation } from "react-icons/gr";
 const products = [
   {
     id: 1,
@@ -91,7 +81,8 @@ const products = [
 
   // Add more products here
 ];
-const Achievements = () => {
+
+const TabNavigation = () => {
   const [activeTab, setActiveTab] = useState("section1");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
@@ -123,142 +114,133 @@ const Achievements = () => {
 
     return product.name.toLowerCase().includes(searchQuery.toLowerCase());
   });
+
   return (
-    <div>
-      <Navbar />
-      <div className="mx-auto flex-shrink-0 max-w-3xl px-4 py-10 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8">
+    <div className="container mx-auto ml-10">
 
-      <div className="container mx-auto ml-10">
+      <div className="flex">
+      <div className="flex justify-between items-center mb-4 ">
+        <div className="flex items-center overflow-x-auto space-x-4 max-w-full ">
+          <div className="flex space-x-4">
+            {/* All */}
+            <button
+              onClick={() => handleTabClick("section1")}
+              className="px-5"
+            >
+              All Category Events
+            </button>
+            {/* Inter */}
+            <button onClick={() => handleTabClick("section2")} className="flex">
+              <button
+                className={`mx-2 px-5 py-6 text-sm flex font-medium  rounded-lg hover:text-black focus:outline-none ${
+                  selectedCategory === "international"
+                    ? "bg-white text-black"
+                    : "bg-white text-gray-600"
+                }`}
+                onClick={() => handleCategoryChange("international")}
+              >
+                INTER-NATIONAL EVENTS
+              </button>
+              {/* National */}
 
-<div className="flex">
-<div className="flex justify-between items-center mb-4 ">
-  <div className="flex items-center overflow-x-auto space-x-4 max-w-full ">
-    <div className="flex space-x-4">
-      {/* All */}
-      <button
-        onClick={() => handleTabClick("section1")}
-        className="px-5"
-      >
-        All Category Events
-      </button>
-      {/* Inter */}
-      <button onClick={() => handleTabClick("section2")} className="flex">
-        <button
-          className={`mx-2 px-5 py-6 text-sm flex font-medium  rounded-lg hover:text-black focus:outline-none ${
-            selectedCategory === "international"
-              ? "bg-white text-black"
-              : "bg-white text-gray-600"
-          }`}
-          onClick={() => handleCategoryChange("international")}
-        >
-          INTER-NATIONAL EVENTS
-        </button>
-        {/* National */}
+              <button
+                className={`mx-2 px-5 py-6 text-sm flex font-medium rounded-lg hover:text-black focus:outline-none ${
+                  selectedCategory === "national"
+                    ? "bg-white text-black"
+                    : "bg-white text-gray-600"
+                }`}
+                onClick={() => handleCategoryChange("national")}
+              >
+                NATIONAL EVENTS
+              </button>
 
-        <button
-          className={`mx-2 px-5 py-6 text-sm flex font-medium rounded-lg hover:text-black focus:outline-none ${
-            selectedCategory === "national"
-              ? "bg-white text-black"
-              : "bg-white text-gray-600"
-          }`}
-          onClick={() => handleCategoryChange("national")}
-        >
-          NATIONAL EVENTS
-        </button>
+              {/* Electric */}
 
-        {/* Electric */}
-
-        <button
-          className={`mx-2 border-black  py-6 text-sm flex font-medium rounded-lg hover:text-black focus:outline-none ${
-            selectedCategory === "electric"
-              ? "bg-white text-black"
-              : "bg-white text-gray-600"
-          }`}
-          onClick={() => handleCategoryChange("electric")}
-        >
-          ELECTRIC-BIKE EVENTS
-        </button>
-        {/* Mini-Dirt */}
-        <button
-          className={`mx-2 px-5 py-6 text-sm flex font-medium rounded-lg hover:text-black focus:outline-none ${
-            selectedCategory === "minidirt"
-              ? "bg-white text-black"
-              : "bg-white text-gray-600"
-          }`}
-          onClick={() => handleCategoryChange("minidirt")}
-        >
-          MINI-DIRT BIKE EVENTS
-        </button>
-        {/* Hackathon */}
-        <button
-          className={`mx-2 px-5 py-6 text-sm flex font-medium hover:text-black rounded-lg focus:outline-none ${
-            selectedCategory === "hackathon"
-              ? "bg-white text-black"
-              : "bg-white text-gray-600"
-          }`}
-          onClick={() => handleCategoryChange("hackathon")}
-        >
-          HACKATHON EVENTS
-        </button>
-      </button>
-    </div>
-  </div>
-</div>
-
-<input
-  type="text"
-  placeholder="Search"
-  value={searchQuery}
-  onChange={(e) => setSearchQuery(e.target.value)}
-  className=" px-4 py-2 mb-4 rounded-md border border-gray-300 focus:outline-none"
-/>
-</div>
-
-
-{activeTab === "section1" && (
-  <div>
-    {/* Content for Section 1 */}
-    <p>Section 1 Content Goes Here</p>
-  </div>
-)}
-{activeTab === "section2" && (
-  <div>
-    <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-      {filteredProducts.map((product) => (
-        <div
-          key={product.id}
-          className="border border-gray-300 p-4 rounded-md"
-        >
-          <div className=" mx-auto   ">
-            <img
-              src={product.image}
-              className="h-[25rem] w-[20rem] rounded-lg object-cover object-center group-hover:opacity-75"
-              alt="h"
-              width={300}
-              height={400}
-            />
-            <div className="min-w-0 mt-5 m-5 mx-auto text-center">
-              <p className="text-lg font-semibold leading-6 text-gray-900">
-                {product.name}
-              </p>
-              <p className="mt-1 truncate text-sm leading-5 text-gray-500">
-                {product.name}
-              </p>
-            </div>
+              <button
+                className={`mx-2 border-black  py-6 text-sm flex font-medium rounded-lg hover:text-black focus:outline-none ${
+                  selectedCategory === "electric"
+                    ? "bg-white text-black"
+                    : "bg-white text-gray-600"
+                }`}
+                onClick={() => handleCategoryChange("electric")}
+              >
+                ELECTRIC-BIKE EVENTS
+              </button>
+              {/* Mini-Dirt */}
+              <button
+                className={`mx-2 px-5 py-6 text-sm flex font-medium rounded-lg hover:text-black focus:outline-none ${
+                  selectedCategory === "minidirt"
+                    ? "bg-white text-black"
+                    : "bg-white text-gray-600"
+                }`}
+                onClick={() => handleCategoryChange("minidirt")}
+              >
+                MINI-DIRT BIKE EVENTS
+              </button>
+              {/* Hackathon */}
+              <button
+                className={`mx-2 px-5 py-6 text-sm flex font-medium hover:text-black rounded-lg focus:outline-none ${
+                  selectedCategory === "hackathon"
+                    ? "bg-white text-black"
+                    : "bg-white text-gray-600"
+                }`}
+                onClick={() => handleCategoryChange("hackathon")}
+              >
+                HACKATHON EVENTS
+              </button>
+            </button>
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-)}
-</div>
-        
-    
       </div>
 
-      <Footer />
+      <input
+        type="text"
+        placeholder="Search"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        className=" px-4 py-2 mb-4 rounded-md border border-gray-300 focus:outline-none"
+      />
+      </div>
+     
+
+      {activeTab === "section1" && (
+        <div>
+          {/* Content for Section 1 */}
+          <p>Section 1 Content Goes Here</p>
+        </div>
+      )}
+      {activeTab === "section2" && (
+        <div>
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
+            {filteredProducts.map((product) => (
+              <div
+                key={product.id}
+                className="border border-gray-300 p-4 rounded-md"
+              >
+                <div className=" mx-auto   ">
+                  <img
+                    src={product.image}
+                    className="h-[25rem] w-[20rem] rounded-lg object-cover object-center group-hover:opacity-75"
+                    alt="h"
+                    width={300}
+                    height={400}
+                  />
+                  <div className="min-w-0 mt-5 m-5 mx-auto text-center">
+                    <p className="text-lg font-semibold leading-6 text-gray-900">
+                      {product.name}
+                    </p>
+                    <p className="mt-1 truncate text-sm leading-5 text-gray-500">
+                      {product.name}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default Achievements;
+export default TabNavigation;

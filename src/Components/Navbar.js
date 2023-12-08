@@ -26,7 +26,6 @@ const Navbar = () => {
       { name: "Mentors", href: "/Mentors", icon: UserIcon },
       { name: "Alumini", href: "/Alumini", icon: UsersIcon },
       { name: "Members", href: "/Members", icon: UserGroupIcon },
-      
     ];
     
     const work = [
