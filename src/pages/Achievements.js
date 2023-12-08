@@ -142,7 +142,7 @@ const Achievements = () => {
         All Category Events
       </button>
       {/* Inter */}
-      <button onClick={() => handleTabClick("section2")} className="flex">
+      <div onClick={() => handleTabClick("section2")} className="flex">
         <button
           className={`mx-2 px-5 py-6 text-sm flex font-medium  rounded-lg hover:text-black focus:outline-none ${
             selectedCategory === "international"
@@ -200,7 +200,7 @@ const Achievements = () => {
         >
           HACKATHON EVENTS
         </button>
-      </button>
+      </div>
     </div>
   </div>
 </div>

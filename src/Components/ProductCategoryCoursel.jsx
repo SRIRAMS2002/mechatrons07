@@ -3,7 +3,7 @@
 // const logos = {
 //   section1: "Logo for Section 1",
 //   section2: "Logo for Section 2",
-//   section3: "Logo for Section 3",
+//   section3: "Logo for Section 3"  ,
 //   // Add more logos for other sections
 // };
 
