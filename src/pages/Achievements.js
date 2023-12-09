@@ -490,18 +490,22 @@ const Achievements = () => {
                     <div className=" mx-auto   ">
                       <img
                         src={product.image}
-                        className="h-[25rem] w-[22rem] rounded-lg object-cover object-center group-hover:opacity-75"
+                        className="h-[20rem] w-[22rem] rounded-lg object-cover object-center group-hover:opacity-75"
                         alt="h"
-                        width={300}
+                        width={250}
                         height={400}
                       />
                       <div className="min-w-0 mt-5 m-5 mx-auto text-center">
                         <p className="text-lg font-semibold leading-6 text-gray-900">
                           {product.name}
                         </p>
+                        <div className="flex text-black justify-between">
                         <p className="mt-1 truncate text-sm leading-5 text-gray-500">
-                          {product.name}
+                          DEMO CONTENT
                         </p>
+                        <p>df</p>
+                        </div>
+                       
                       </div>
                     </div>
                   </div>
