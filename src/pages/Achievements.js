@@ -16,7 +16,7 @@ import {
   FunnelIcon,
   MinusIcon,
   PlusIcon,
-  Squares2x2Icon,
+
   GlobeAmericasIcon,
   MapPinIcon,
 } from "@heroicons/react/20/solid";
