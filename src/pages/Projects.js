@@ -8,12 +8,7 @@ import {
   MapPinIcon,
 } from "@heroicons/react/20/solid";
 
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/Components/Accordion";
+
 const Project = () => {
 
   

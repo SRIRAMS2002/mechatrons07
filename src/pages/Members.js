@@ -23,17 +23,17 @@ import Dheedan from "../../public/Team/Members/21-25 DHEEDAN CHAKRAVARTHI.webp";
 import Harevashanth from "../../public/Team/Members/21-25 HAREVASHANTHAN.webp";
 import Jeeva from "../../public/Team/Members/21-25 JEEVABHARATHI M A.webp";
 import Image from "next/image";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/Components/Accordion";
+// import {
+//   Accordion,
+//   AccordionContent,
+//   AccordionItem,
+//   AccordionTrigger,
+// } from "@/Components/Accordion";
 const Members = () => {
   return (
     <div>
       <Navbar />
-      <div className="mx-auto flex-shrink-0 max-w-3xl px-4 py-10 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8">
+      {/* <div className="mx-auto flex-shrink-0 max-w-3xl px-4 py-10 sm:px-6 sm:py-10 lg:max-w-7xl lg:px-8">
         <div className="mx-auto  lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight pl-5 text-gray-900 sm:text-4xl">
             Members
@@ -397,7 +397,7 @@ const Members = () => {
         </Accordion>
       
 
-       </div>
+       </div> */}
 
       <Footer />
     </div>
