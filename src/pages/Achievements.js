@@ -241,10 +241,10 @@ const Achievements = () => {
               {/* ALL */}
               <button onClick={() => handleTabClick("section1")} className="group relative flex items-center rounded-lg p-4 text-md leading-6 hover:bg-gray-50">
                   <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                    <Squares2x2Icon
+                    {/* <Squares2x2Icon
                       className="h-6 w-6 text-gray-600 group-hover:text-violet-600"
                       aria-hidden="true"
-                    />
+                    /> */}
                   </div>
                   <h1 className="block font-semibold text-gray-900">
                   ALL <span className="hidden sm:flex ml-2 ">CATEGORY EVENTS</span>
