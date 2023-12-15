@@ -255,7 +255,7 @@ const Achievements = () => {
 
       {/* Main content */}
 
-      <div className=" fixed top-0 lg:top-0 left-0 right-0 pb-5 ">
+      <div className=" fixed z-10 top-0 lg:top-0 left-0 right-0 pb-5 ">
       <Navbar />
       <div className=" normal sm:flex space-y-5 items-center gap-8 mx-auto flex-shrink-0 max-w-3xl px-4  sm:px-6  lg:max-w-7xl bg-white ">
         <div className="sm:hidden ">
@@ -407,7 +407,7 @@ const Achievements = () => {
         {activeTab === "section1" && (
           <div>
             {/* Content for Section 1 */}
-            <p>Section 1 Content Goes Here</p>
+            <p className="">Section 1 Content Goes Here</p>
           </div>
         )}
         {activeTab === "section2" && (
