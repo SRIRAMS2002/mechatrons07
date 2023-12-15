@@ -1,29 +1,62 @@
 import React, { useState, useEffect, Fragment } from "react";
-import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
+import {
+  Dialog,
+  Disclosure,
+  Menu,
+  Listbox,
+  Transition,
+} from "@headlessui/react";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
-import Kabliesh from "../../public/Team/Members/21-25 KABILESH.webp";
+
 import {
   GlobeAsiaAustraliaIcon,
   MagnifyingGlassCircleIcon,
+  CheckIcon,
+  ChevronUpDownIcon,
 } from "@heroicons/react/20/solid";
-import { LiaAwardSolid } from "react-icons/lia";
-import { MdOutlineBikeScooter } from "react-icons/md";
-import { MdOutlineElectricBike } from "react-icons/md";
-import { GrMapLocation } from "react-icons/gr";
-import {
-  ChevronDownIcon,
-  FunnelIcon,
-  MinusIcon,
-  PlusIcon,
 
-  GlobeAmericasIcon,
-  MapPinIcon,
-} from "@heroicons/react/20/solid";
-import { Bike , BatteryCharging , Medal } from 'lucide-react';
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
+
+const people = [
+  {
+    id: 1,
+    name: "International",
+    category: "international",
+    avatar:
+      "https://as2.ftcdn.net/v2/jpg/06/39/19/89/1000_F_639198995_nTPckzyfTW69TnTdNoszH0Fj18tudJ6e.webp",
+  },
+  {
+    id: 2,
+    name: "National",
+    category: "national",
+    avatar:
+      "https://t3.ftcdn.net/jpg/00/53/75/10/240_F_53751022_Qiwjwh8ouMpcFzpGWIVxBslMhLyt6TTM.jpg",
+  },
+  {
+    id: 3,
+    name: "Electric Bike ",
+    category: "electric",
+    avatar:
+      "https://t3.ftcdn.net/jpg/06/40/08/46/240_F_640084628_NYJXdzoByX4dNVH2B9B522yP2yquXWir.jpg",
+  },
+  {
+    id: 4,
+    name: "Mini Dirt",
+    category: "minidirt",
+    avatar:
+      "https://t3.ftcdn.net/jpg/06/59/71/46/240_F_659714662_iemqQv5nAGwOO7TLXNdZnbbmYF7QgCLr.jpg",
+  },
+  {
+    id: 5,
+    name: "Hackathon",
+    category: "hackathon",
+    avatar:
+      "https://t4.ftcdn.net/jpg/06/73/11/43/240_F_673114357_yqaDvfidZePHVp2Eh5pngf5nHE1LV8zE.jpg",
+  },
+];
 
 const products = [
   {
@@ -183,11 +216,12 @@ const products = [
 
   // Add more products here
 ];
+
 const Achievements = () => {
   const [activeTab, setActiveTab] = useState("section1");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [selected, setSelected] = useState(people[0]);
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
@@ -216,308 +250,203 @@ const Achievements = () => {
     return product.name.toLowerCase().includes(searchQuery.toLowerCase());
   });
   return (
-    <div>
-      <Navbar />
+    <>
       
 
-      {/* DEMO CHECK */}
+      {/* Main content */}
 
-      <div className="mx-auto flex-shrink-0 md:ml-20 px-4 py-10 sm:px-6 sm:py-10 lg:px-8">
-        <div className=" md:flex ">
-          {/* Section 3- */}
-          <div className="  mb-5 flex sm:hidden">
+      <div className=" fixed top-0 lg:top-0 left-0 right-0 pb-5 ">
+      <Navbar />
+      <div className=" normal sm:flex space-y-5 items-center gap-8 mx-auto flex-shrink-0 max-w-3xl px-4  sm:px-6  lg:max-w-7xl bg-white ">
+        <div className="sm:hidden ">
+        <div className="flex rounded-md  shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+            <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
+              Events/
+            </span>
             <input
               type="text"
-              placeholder="Search ..."
-              className="p-3 sm:p-4 flex-1 border-2 mx-5 border-gray-200 hover:border-gray-500 rounded-lg outline-none bg-transparent  text-md sm:text-md"
+              name="username"
+              id="username"
+              autoComplete="username"
+              className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+              placeholder="Search Here"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-
-          <div className="flex">
-            {/* Section 1 */}
-            <div className="items-center">
-              {/* ALL */}
-              <button onClick={() => handleTabClick("section1")} className="group relative flex items-center rounded-lg p-4 text-md leading-6 hover:bg-gray-50">
-                  <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                    {/* <Squares2x2Icon
-                      className="h-6 w-6 text-gray-600 group-hover:text-violet-600"
-                      aria-hidden="true"
-                    /> */}
-                  </div>
-                  <h1 className="block font-semibold text-gray-900">
-                  ALL <span className="hidden sm:flex ml-2 ">CATEGORY EVENTS</span>
-                    
-                  </h1>
-                </button>
-            </div>
-          
-
-            {/* Section 2 */}
-            <div className="">
-              <div
-                onClick={() => handleTabClick("section2")}
-                className="hidden xl:flex"
-              >
-                {/* Inter */}
-                <button onClick={() => handleCategoryChange("international")} className="group relative flex items-center rounded-lg p-4 text-md leading-6 hover:bg-gray-50">
-                  <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                    <GlobeAmericasIcon
-                      className="h-6 w-6 text-gray-600 group-hover:text-violet-600"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h1 className="block font-semibold text-gray-900">
-                  INTER-NATIONAL
-                    
-                  </h1>
-                </button>
-
-                {/* National */}
-                <button onClick={() => handleCategoryChange("national")} className="group relative flex items-center rounded-lg p-4 text-md leading-6 hover:bg-gray-50">
-                  <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                    <MapPinIcon
-                      className="h-6 w-6 text-gray-600 group-hover:text-violet-600"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h1 className="block font-semibold text-gray-900">
-                  NATIONAL
-                    
-                  </h1>
-                </button>
-
-                {/* Electric */}
-                <button onClick={() => handleCategoryChange("electric")} className="group relative flex items-center rounded-lg p-4 text-md leading-6 hover:bg-gray-50">
-                  <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                    <BatteryCharging
-                      className="h-6 w-6 text-gray-600 group-hover:text-violet-600"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h1 className="block font-semibold text-gray-900">
-                  ELECTRIC-BIKE
-                    
-                  </h1>
-                </button>
-
-                {/* Mini-Dirt */}
-                <button onClick={() => handleCategoryChange("minidirt")} className="group relative flex items-center rounded-lg p-4 text-md leading-6 hover:bg-gray-50">
-                  <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                    <Bike
-                      className="h-6 w-6 text-gray-600 group-hover:text-violet-600"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h1 className="block font-semibold text-gray-900">
-                  MINI-DIRT BIKE
-                    
-                  </h1>
-                </button>
-
-                {/* Hackathon */}
-                <button onClick={() => handleCategoryChange("hackathon")} className="group relative flex items-center rounded-lg p-4 text-md leading-6 hover:bg-gray-50">
-                  <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                    <Medal
-                      className="h-6 w-6 text-gray-600 group-hover:text-violet-600"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h1 className="block font-semibold text-gray-900">
-                  HACKATHON
-                    
-                  </h1>
-                </button>
-              </div>
-
-              {/* Mobile */}
-
-              <Menu as="div"   className="relative flex xl:hidden">
-                <div>
-                  <Menu.Button className="group px-10 pt-6 sm:pt-9 mx-10 my-auto items-center justify-center text-lg inline-flex font-semibold text-gray-900 ">
-                    EVENTS
-                    <ChevronDownIcon
-                      className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
-                      aria-hidden="true"
-                    />
-                  </Menu.Button>
-                </div>
-
-                <Transition
-                  as={Fragment}
-                  enter="transition ease-out duration-100"
-                  enterFrom="transform opacity-0 scale-95"
-                  enterTo="transform opacity-100 scale-100"
-                  leave="transition ease-in duration-75"
-                  leaveFrom="transform opacity-100 scale-100"
-                  leaveTo="transform opacity-0 scale-95"
-                >
-                  <Menu.Items onClick={() => handleTabClick("section2")} className="absolute right-0 z-10 mt-12 w-60 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none">
-                    <div className="py-1">
-                      {/* ITEM-1 */}
-                      <Menu.Item>
-                        <div>
-                          <button
-                            onClick={() => handleCategoryChange("international")}
-                            className={`mx-2 px-4 py-3  bg-white text-sm flex font-medium border-b-2 hover:border-violet-700 shadow-md rounded-sm  focus:outline-none ${
-                              selectedCategory === "international"
-                                ? "bg-white text-black"
-                                : "bg-white text-gray-600"
-                            }`}
-                          >
-                            <GlobeAmericasIcon
-                              className="h-5 w-5 mx-2"
-                              aria-hidden="true"
-                            />
-                            INTERNATIONAL
-                          </button>
-                        </div>
-                      </Menu.Item>
-                      {/* ITEM-2 */}
-                      <Menu.Item>
-                        <div>
-                          <button
-                            onClick={() => handleCategoryChange("national")}
-                            className={`mx-2 px-4 py-3  bg-white text-sm flex font-medium border-b-2 hover:border-violet-700 shadow-md rounded-sm  focus:outline-none ${
-                              selectedCategory === "international"
-                                ? "bg-white text-black"
-                                : "bg-white text-gray-600"
-                            }`}
-                          >
-                            <MapPinIcon
-                              className="h-5 w-5 mx-2"
-                              aria-hidden="true"
-                            />
-                            NATIONAL  
-                          </button>
-                        </div>
-                      </Menu.Item>
-                      {/* ITEM-3 */}
-                      <Menu.Item>
-                        <div>
-                          <button
-                            onClick={() =>handleCategoryChange("electric")}
-                            className={`mx-2 px-4 py-3  bg-white text-sm flex font-medium border-b-2 hover:border-violet-700 shadow-md rounded-sm  focus:outline-none ${
-                              selectedCategory === "international"
-                                ? "bg-white text-black"
-                                : "bg-white text-gray-600"
-                            }`}
-                          >
-                            <BatteryCharging
-                              className="h-5 w-5 mx-2"
-                              aria-hidden="true"
-                            />
-                            ELECTRIC BIKE EVENT
-                          </button>
-                        </div>
-                      </Menu.Item>
-                      {/* ITEM-4 */}
-                      <Menu.Item>
-                        <div>
-                          <button
-                            onClick={() => handleCategoryChange("minidirt")}
-                            className={`mx-2 px-4 py-3  bg-white text-sm flex font-medium border-b-2 hover:border-violet-700 shadow-md rounded-sm  focus:outline-none ${
-                              selectedCategory === "international"
-                                ? "bg-white text-black"
-                                : "bg-white text-gray-600"
-                            }`}
-                          >
-                            <Bike
-                              className="h-5 w-5 mx-2"
-                              aria-hidden="true"
-                            />
-                            MINI-DIRT BIKE
-                          </button>
-                        </div>
-                      </Menu.Item>
-                      {/* ITEM-5 */}
-                      <Menu.Item>
-                        <div>
-                          <button
-                            onClick={() =>  handleCategoryChange("hackathon")}
-                            className={`mx-2 px-4 py-3  bg-white text-sm flex font-medium border-b-2 hover:border-violet-700 shadow-md rounded-sm  focus:outline-none ${
-                              selectedCategory === "international"
-                                ? "bg-white text-black"
-                                : "bg-white text-gray-600"
-                            }`}
-                          >
-                            <Medal
-                              className="h-5 w-5 mx-2"
-                              aria-hidden="true"
-                            />
-                            HACKATHONS
-                          </button>
-                        </div>
-                      </Menu.Item>
-                    </div>
-                  </Menu.Items>
-                </Transition>
-              </Menu>
-            </div>
-
-            {/* Section 3- */}
-            <div className=" my-5 ml-5 sm:flex hidden">
-              <input
-                type="text"
-                placeholder="Search ..."
-                className="px-3  flex-1 border-2 border-gray-200 hover:border-gray-500 outline-none bg-transparent rounded-lg text-lg  sm:text-sm"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
-
-
-          </div>
+        </div>
+        {/* Section 1 */}
+        <div className="items-center">
+          {/* ALL */}
+          <button
+            onClick={() => handleTabClick("section1")}
+            className=""
+          >
+            
+            <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+              All Events
+            </h2>
+          </button>
         </div>
 
-        {/* Content */}
-        <div className="mx-auto flex-shrink-0 max-w-3xl px-4 py-3 sm:px-6 sm:py-5 lg:max-w-7xl lg:px-5">
-        {activeTab === "section1" && (
-            <div>
-              {/* Content for Section 1 */}
-              <p>Section 1 Content Goes Here</p>
-            </div>
-          )}
-          {activeTab === "section2" && (
-            <div>
-              <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-                {filteredProducts.map((product) => (
-                  <div
-                    key={product.id}
-                    className="border border-gray-300 p-4 rounded-md"
-                  >
-                    <div className=" mx-auto   ">
+        {/* Section 2 */}
+        <div className=" ">
+          <Listbox value={selected} onChange={setSelected}>
+            {({ open }) => (
+              <>
+                <div className="relative mt-2">
+                  <Listbox.Button
+                    onClick={() => handleTabClick("section2")}
+                    className="block w-full sm:w-[15rem] px-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    >
+                    <span className="flex items-center">
                       <img
-                        src={product.image}
-                        className="h-[20rem] w-[22rem] rounded-lg object-cover object-center group-hover:opacity-75"
-                        alt="h"
-                        width={250}
-                        height={400}
+                        src={selected.avatar}
+                        alt=""
+                        className="h-5 w-5 flex-shrink-0 rounded-full"
                       />
-                      <div className="min-w-0 mt-5 m-5 mx-auto text-center">
-                        <p className="text-lg font-semibold leading-6 text-gray-900">
-                          {product.name}
-                        </p>
-                        <div className="flex text-black justify-between">
+                      <span className="ml-3 block truncate">
+                        {selected.name}
+                      </span>
+                    </span>
+                    <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
+                      <ChevronUpDownIcon
+                        className="h-5 w-5 text-gray-400"
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </Listbox.Button>
+
+                  <Transition
+                    show={open}
+                    as={Fragment}
+                    leave="transition ease-in duration-100"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                  >
+                    <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                      {people.map((person) => (
+                        <Listbox.Option key={person.id} value={person}>
+                          {({ selected, active }) => (
+                            <div
+                              className={classNames(
+                                active
+                                  ? "bg-indigo-600 text-white"
+                                  : "text-gray-900",
+                                "relative cursor-default select-none py-2 pl-3 pr-9"
+                              )}
+                              onClick={() =>
+                                handleCategoryChange(person.category)
+                              } // Update selected value
+                            >
+                              <div className="flex items-center">
+                                <img
+                                  src={person.avatar}
+                                  alt=""
+                                  className="h-5 w-5 flex-shrink-0 rounded-full"
+                                />
+                                <span
+                                  className={classNames(
+                                    selected ? "font-semibold" : "font-normal",
+                                    "ml-3 block truncate"
+                                  )}
+                                >
+                                  {person.name}
+                                </span>
+                              </div>
+                              {selected && (
+                                <span
+                                  className={classNames(
+                                    active ? "text-white" : "text-indigo-600",
+                                    "absolute inset-y-0 right-0 flex items-center pr-4"
+                                  )}
+                                >
+                                  <CheckIcon
+                                    className="h-5 w-5"
+                                    aria-hidden="true"
+                                  />
+                                </span>
+                              )}
+                            </div>
+                          )}
+                        </Listbox.Option>
+                      ))}
+                    </Listbox.Options>
+                  </Transition>
+                </div>
+              </>
+            )}
+          </Listbox>
+        </div>
+
+        {/* Section 3 */}
+        <div className="md:flex hidden ">
+          <div className="flex rounded-md  shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+            <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
+              Events/
+            </span>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              autoComplete="username"
+              className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+              placeholder="Search Here"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
+      </div>
+      </div>
+
+     
+
+      {/* Content */}
+      <div className="mx-auto mt-[17rem] sm:mt-[15rem] flex-shrink-0 max-w-3xl px-4 py-3 sm:px-6 sm:py-5 lg:max-w-7xl lg:px-5">
+        {activeTab === "section1" && (
+          <div>
+            {/* Content for Section 1 */}
+            <p>Section 1 Content Goes Here</p>
+          </div>
+        )}
+        {activeTab === "section2" && (
+          <div>
+            <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
+              {filteredProducts.map((product) => (
+                <div
+                  key={product.id}
+                  className="border border-gray-300 p-4 rounded-md"
+                >
+                  <div className=" mx-auto   ">
+                    <img
+                      src={product.image}
+                      className="h-[20rem] w-[22rem] rounded-lg object-cover object-center group-hover:opacity-75"
+                      alt="h"
+                      width={250}
+                      height={400}
+                    />
+                    <div className="min-w-0 mt-5 m-5 mx-auto text-center">
+                      <p className="text-lg font-semibold leading-6 text-gray-900">
+                        {product.name}
+                      </p>
+                      <div className="flex text-black justify-between">
                         <p className="mt-1 truncate text-sm leading-5 text-gray-500">
                           DEMO CONTENT
                         </p>
                         <p>df</p>
-                        </div>
-                       
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          )}
-        </div>
-
-        
+          </div>
+        )}
       </div>
-    </div>
+
+      <Footer />
+    </>
   );
 };
 
