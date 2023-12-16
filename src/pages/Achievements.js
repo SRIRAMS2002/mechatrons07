@@ -8,12 +8,18 @@ import {
 } from "@headlessui/react";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
-
+import Kabliesh from "../../public/Team/Members/21-25 KABILESH.webp";
+import Event1 from "../../public/Achievements/event1.jpg";
+import Image from "next/image";
+import { Award } from 'lucide-react';
 import {
   GlobeAsiaAustraliaIcon,
   MagnifyingGlassCircleIcon,
   CheckIcon,
   ChevronUpDownIcon,
+  MinusIcon,
+  PlusIcon,
+  CalendarIcon,
 } from "@heroicons/react/20/solid";
 
 function classNames(...classes) {
@@ -216,6 +222,43 @@ const products = [
 
   // Add more products here
 ];
+const filters = [
+  {
+    id: "color",
+    name: "Awards Won",
+    options: [
+      { value: "white", label: "White", checked: false },
+      { value: "beige", label: "Beige", checked: false },
+      { value: "blue", label: "Blue", checked: true },
+      { value: "brown", label: "Brown", checked: false },
+      { value: "green", label: "Green", checked: false },
+      { value: "purple", label: "Purple", checked: false },
+    ],
+  },
+  {
+    id: "category",
+    name: "Venue",
+    options: [
+      { value: "new-arrivals", label: "New Arrivals", checked: false },
+      { value: "sale", label: "Sale", checked: false },
+      { value: "travel", label: "Travel", checked: true },
+      { value: "organization", label: "Organization", checked: false },
+      { value: "accessories", label: "Accessories", checked: false },
+    ],
+  },
+  {
+    id: "size",
+    name: "Event Organiser",
+    options: [
+      { value: "2l", label: "2L", checked: false },
+      { value: "6l", label: "6L", checked: false },
+      { value: "12l", label: "12L", checked: false },
+      { value: "18l", label: "18L", checked: false },
+      { value: "20l", label: "20L", checked: false },
+      { value: "40l", label: "40L", checked: true },
+    ],
+  },
+];
 
 const Achievements = () => {
   const [activeTab, setActiveTab] = useState("section1");
@@ -251,156 +294,151 @@ const Achievements = () => {
   });
   return (
     <>
-      
-
       {/* Main content */}
 
-      <div className=" fixed z-10 top-0 lg:top-0 left-0 right-0 pb-5 ">
-      <Navbar />
-      <div className=" normal sm:flex space-y-5 items-center gap-8 mx-auto flex-shrink-0 max-w-3xl px-4  sm:px-6  lg:max-w-7xl bg-white ">
-        <div className="sm:hidden ">
-        <div className="flex rounded-md  shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-            <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
-              Events/
-            </span>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              autoComplete="username"
-              className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-              placeholder="Search Here"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
+      <div className=" fixed z-10 top-0 lg:top-0 left-0 right-0 ">
+        <Navbar />
+        <div className=" pb-5  sm:flex space-y-5 items-center  gap-8 mx-auto flex-shrink-0 max-w-3xl px-4  sm:px-6  lg:max-w-7xl bg-white ">
+          <div className="sm:hidden ">
+            {/* Search Fn1 */}
+            <div className="flex rounded-md  shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+              <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
+                Events/
+              </span>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                autoComplete="username"
+                className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                placeholder="Search Here"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
           </div>
-        </div>
-        {/* Section 1 */}
-        <div className="items-center">
-          {/* ALL */}
-          <button
-            onClick={() => handleTabClick("section1")}
-            className=""
-          >
-            
-            <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
-              All Events
-            </h2>
-          </button>
-        </div>
+          {/* Section all */}
+          <div className="items-center">
+            {/* ALL */}
+            <button onClick={() => handleTabClick("section1")} className="">
+              <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+                All Events
+              </h2>
+            </button>
+          </div>
 
-        {/* Section 2 */}
-        <div className=" ">
-          <Listbox value={selected} onChange={setSelected}>
-            {({ open }) => (
-              <>
-                <div className="relative mt-2">
-                  <Listbox.Button
-                    onClick={() => handleTabClick("section2")}
-                    className="block w-full sm:w-[15rem] px-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          {/* Section list */}
+          <div className=" ">
+            <Listbox value={selected} onChange={setSelected}>
+              {({ open }) => (
+                <>
+                  <div className="relative mt-2">
+                    <Listbox.Button
+                      onClick={() => handleTabClick("section2")}
+                      className="block w-full sm:w-[15rem] px-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     >
-                    <span className="flex items-center">
-                      <img
-                        src={selected.avatar}
-                        alt=""
-                        className="h-5 w-5 flex-shrink-0 rounded-full"
-                      />
-                      <span className="ml-3 block truncate">
-                        {selected.name}
+                      <span className="flex items-center">
+                        <img
+                          src={selected.avatar}
+                          alt=""
+                          className="h-5 w-5 flex-shrink-0 rounded-full"
+                        />
+                        <span className="ml-3 block truncate">
+                          {selected.name}
+                        </span>
                       </span>
-                    </span>
-                    <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
-                      <ChevronUpDownIcon
-                        className="h-5 w-5 text-gray-400"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </Listbox.Button>
+                      <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
+                        <ChevronUpDownIcon
+                          className="h-5 w-5 text-gray-400"
+                          aria-hidden="true"
+                        />
+                      </span>
+                    </Listbox.Button>
 
-                  <Transition
-                    show={open}
-                    as={Fragment}
-                    leave="transition ease-in duration-100"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                  >
-                    <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                      {people.map((person) => (
-                        <Listbox.Option key={person.id} value={person}>
-                          {({ selected, active }) => (
-                            <div
-                              className={classNames(
-                                active
-                                  ? "bg-indigo-600 text-white"
-                                  : "text-gray-900",
-                                "relative cursor-default select-none py-2 pl-3 pr-9"
-                              )}
-                              onClick={() =>
-                                handleCategoryChange(person.category)
-                              } // Update selected value
-                            >
-                              <div className="flex items-center">
-                                <img
-                                  src={person.avatar}
-                                  alt=""
-                                  className="h-5 w-5 flex-shrink-0 rounded-full"
-                                />
-                                <span
-                                  className={classNames(
-                                    selected ? "font-semibold" : "font-normal",
-                                    "ml-3 block truncate"
-                                  )}
-                                >
-                                  {person.name}
-                                </span>
-                              </div>
-                              {selected && (
-                                <span
-                                  className={classNames(
-                                    active ? "text-white" : "text-indigo-600",
-                                    "absolute inset-y-0 right-0 flex items-center pr-4"
-                                  )}
-                                >
-                                  <CheckIcon
-                                    className="h-5 w-5"
-                                    aria-hidden="true"
+                    <Transition
+                      show={open}
+                      as={Fragment}
+                      leave="transition ease-in duration-100"
+                      leaveFrom="opacity-100"
+                      leaveTo="opacity-0"
+                    >
+                      <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                        {people.map((person) => (
+                          <Listbox.Option key={person.id} value={person}>
+                            {({ selected, active }) => (
+                              <div
+                                className={classNames(
+                                  active
+                                    ? "bg-indigo-600 text-white"
+                                    : "text-gray-900",
+                                  "relative cursor-default select-none py-2 pl-3 pr-9"
+                                )}
+                                onClick={() =>
+                                  handleCategoryChange(person.category)
+                                } // Update selected value
+                              >
+                                <div className="flex items-center">
+                                  <img
+                                    src={person.avatar}
+                                    alt=""
+                                    className="h-5 w-5 flex-shrink-0 rounded-full"
                                   />
-                                </span>
-                              )}
-                            </div>
-                          )}
-                        </Listbox.Option>
-                      ))}
-                    </Listbox.Options>
-                  </Transition>
-                </div>
-              </>
-            )}
-          </Listbox>
-        </div>
+                                  <span
+                                    className={classNames(
+                                      selected
+                                        ? "font-semibold"
+                                        : "font-normal",
+                                      "ml-3 block truncate"
+                                    )}
+                                  >
+                                    {person.name}
+                                  </span>
+                                </div>
+                                {selected && (
+                                  <span
+                                    className={classNames(
+                                      active ? "text-white" : "text-indigo-600",
+                                      "absolute inset-y-0 right-0 flex items-center pr-4"
+                                    )}
+                                  >
+                                    <CheckIcon
+                                      className="h-5 w-5"
+                                      aria-hidden="true"
+                                    />
+                                  </span>
+                                )}
+                              </div>
+                            )}
+                          </Listbox.Option>
+                        ))}
+                      </Listbox.Options>
+                    </Transition>
+                  </div>
+                </>
+              )}
+            </Listbox>
+          </div>
 
-        {/* Section 3 */}
-        <div className="md:flex hidden ">
-          <div className="flex rounded-md  shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-            <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
-              Events/
-            </span>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              autoComplete="username"
-              className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-              placeholder="Search Here"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
+          {/* Search fn 2 */}
+          <div className="md:flex hidden ">
+            <div className="flex rounded-md  shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+              <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
+                Events/
+              </span>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                autoComplete="username"
+                className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                placeholder="Search Here"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
           </div>
         </div>
       </div>
-      </div>
-
-     
 
       {/* Content */}
       <div className="mx-auto mt-[17rem] sm:mt-[15rem] flex-shrink-0 max-w-3xl px-4 py-3 sm:px-6 sm:py-5 lg:max-w-7xl lg:px-5">
@@ -443,6 +481,120 @@ const Achievements = () => {
             </div>
           </div>
         )}
+      </div>
+
+      <div className="mx-auto flex-shrink-0 max-w-3xl px-4  sm:px-6  lg:max-w-7xl bg-white ">
+        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
+          <div className=" mx-auto max-w-[20rem]  ">
+            <Image
+              src={Event1}
+              className="h-[25rem] w-[20rem] rounded-lg object-cover object-center group-hover:opacity-75"
+            />
+            <div className="min-w-0  mt-5 m-5 mx-auto text-center">
+              <p className="text-lg font-semibold leading-6 text-gray-900">
+              IDEATHON 2K23 
+              </p>
+
+              <div className="mt-2 flex mx-auto justify-center items-center text-sm text-gray-500">
+                <CalendarIcon
+                  className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
+                  aria-hidden="true"
+                />
+                <p className="mt-1 truncate text-sm leading-5 text-gray-500">
+                  7 <sup>th</sup> and 8<sup>th</sup> September,2019
+                </p>
+              </div>
+            </div>
+
+            <Disclosure as="div" className="border-b border-gray-200 py-6">
+              {({ open }) => (
+                <>
+                  <h3 className="-my-3 flow-root">
+                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <span className="font-medium text-gray-900">
+                        Awards Won
+                      </span>
+                      <span className="ml-6 flex items-center">
+                        {open ? (
+                          <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                        ) : (
+                          <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                        )}
+                      </span>
+                    </Disclosure.Button>
+                  </h3>
+                  <Disclosure.Panel className="pt-6">
+                    <div className="space-y-4">
+                      <div className="flex  items-center">
+                      
+                      <Award /> Best Innovation idea - $100000
+                      </div>
+                      <div className="flex  items-center">
+                      
+                      Gold Award – 01
+                      </div>
+                    </div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className="border-b border-gray-200 py-6">
+              {({ open }) => (
+                <>
+                  <h3 className="-my-3 flow-root">
+                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <span className="font-medium text-gray-900">Venue</span>
+                      <span className="ml-6 flex items-center">
+                        {open ? (
+                          <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                        ) : (
+                          <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                        )}
+                      </span>
+                    </Disclosure.Button>
+                  </h3>
+                  <Disclosure.Panel className="pt-6">
+                    <div className="space-y-4">
+                      <div className="flex items-center">
+                        <h1>
+                          Vinayaka Mission's Kirupananda Variyar 
+                          Engineering College, Salem
+                        </h1>
+                      </div>
+                    </div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className="border-b border-gray-200 py-6">
+              {({ open }) => (
+                <>
+                  <h3 className="-my-3 flow-root">
+                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <span className="font-medium text-gray-900">Event Organiser</span>
+                      <span className="ml-6 flex items-center">
+                        {open ? (
+                          <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                        ) : (
+                          <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                        )}
+                      </span>
+                    </Disclosure.Button>
+                  </h3>
+                  <Disclosure.Panel className="pt-6">
+                    <div className="space-y-4">
+                      <div className="flex items-center">
+                        <h1>
+                          Vinayaka Mission's 
+                        </h1>
+                      </div>
+                    </div>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          </div>
+        </div>
       </div>
 
       <Footer />
