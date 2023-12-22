@@ -3,6 +3,8 @@ import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 import Image from "next/image";
 import Kabliesh from "../../public/Team/Members/21-25 KABILESH.webp";
+
+
 const Founders = () => {
   return (
     <div>

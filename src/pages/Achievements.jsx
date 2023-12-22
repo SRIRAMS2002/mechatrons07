@@ -11,7 +11,7 @@ import Footer from "@/Components/Footer";
 import Kabliesh from "../../public/Team/Members/21-25 KABILESH.webp";
 import Event1 from "../../public/Achievements/event1.jpg";
 import Image from "next/image";
-import { Award,MapPin,Users } from 'lucide-react';
+import { Award, MapPin, Users } from "lucide-react";
 import {
   GlobeAsiaAustraliaIcon,
   MagnifyingGlassCircleIcon,
@@ -21,6 +21,8 @@ import {
   PlusIcon,
   CalendarIcon,
 } from "@heroicons/react/20/solid";
+
+import FilterCard from "@/Components/FilterCard";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -69,70 +71,146 @@ const products = [
     id: 1,
     name: "International ",
     category: "international",
-    image:
-      "https://mechatrons07.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent1.d32eabc5.jpg&w=828&q=75",
+    image: "20-24 DURGADASS V C",
+    venuedes: "Vinayaka Mission's Kirupananda Variyar Engineering College, Salem",
+    Organiser: "Vinayaka Mission's Kirupananda",
+    date:"07-08 September 2022",
+    Awards: [
+      { value: "Gold Award -1" },
+      { value: "Best Innovation Team -100000" },
+    ],
   },
   {
     id: 2,
     name: "National",
-    category: "national",
-    image:
-      "https://imgs.search.brave.com/nutEZaK-TwRJ-eVYLP_NWNRRB9iXyDFRq5T2cIUelZQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE3/MTk3NDg3Ny9waG90/by9wcmVwYXJpbmct/Zm9yLXRoZS1iaWtl/LXJpZGUuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTcwZG1W/cEJxRWNWWHNlbzk4/YTViSHgwOVNVblFP/ek9mbEMxY2FkMTlo/aGs9",
+    category: "international",
+    image: "20-24 MAHENDRA PRABU T",
+    venuedes: "Sriram Mission's Kirupananda Variyar Engineering College, Salem",
+    Organiser: "Sriram Mission's Kirupananda",
+    date:"30-31 September 2022",
+    Awards: [
+      { value: "Silver Award -1" },
+      { value: "Best Ideation Team -9 Lak" },
+    ],
   },
   {
     id: 3,
     name: "Electric",
     category: "electric",
-    image:
-      "https://imgs.search.brave.com/nutEZaK-TwRJ-eVYLP_NWNRRB9iXyDFRq5T2cIUelZQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE3/MTk3NDg3Ny9waG90/by9wcmVwYXJpbmct/Zm9yLXRoZS1iaWtl/LXJpZGUuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTcwZG1W/cEJxRWNWWHNlbzk4/YTViSHgwOVNVblFP/ek9mbEMxY2FkMTlo/aGs9",
+    image: "20-24 MOHAMED ASRAF M",
+    venuedes: "Sriram Mission's Kirupananda Variyar Engineering College, Salem",
+    Organiser: "Sriram Mission's Kirupananda",
+    date:"30-31 September 2022",
+    Awards: [
+      { value: "Silver Award -1" },
+      { value: "Best Ideation Team -9 Lak" },
+    ],
+
   },
   {
     id: 4,
-    name: "Minidirt",
+    name: "Electric",
     category: "minidirt",
-    image:
-      "https://imgs.search.brave.com/nutEZaK-TwRJ-eVYLP_NWNRRB9iXyDFRq5T2cIUelZQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE3/MTk3NDg3Ny9waG90/by9wcmVwYXJpbmct/Zm9yLXRoZS1iaWtl/LXJpZGUuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTcwZG1W/cEJxRWNWWHNlbzk4/YTViSHgwOVNVblFP/ek9mbEMxY2FkMTlo/aGs9",
+    image: "20-24 MOHAMED ASRAF M",
+    venuedes: "Sriram Mission's Kirupananda Variyar Engineering College, Salem",
+    Organiser: "Sriram Mission's Kirupananda",
+    date:"30-31 September 2022",
+    Awards: [
+      { value: "Silver Award -1" },
+      { value: "Best Ideation Team -9 Lak" },
+    ],
+
   },
   {
     id: 5,
-    name: "Hackathon",
+    name: "Electric",
     category: "hackathon",
-    image:
-      "https://imgs.search.brave.com/nutEZaK-TwRJ-eVYLP_NWNRRB9iXyDFRq5T2cIUelZQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE3/MTk3NDg3Ny9waG90/by9wcmVwYXJpbmct/Zm9yLXRoZS1iaWtl/LXJpZGUuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTcwZG1W/cEJxRWNWWHNlbzk4/YTViSHgwOVNVblFP/ek9mbEMxY2FkMTlo/aGs9",
+    image: "20-24 MOHAMED ASRAF M",
+    venuedes: "Sriram Mission's Kirupananda Variyar Engineering College, Salem",
+    Organiser: "Sriram Mission's Kirupananda",
+    date:"30-31 September 2022",
+    Awards: [
+      { value: "Silver Award -1" },
+      { value: "Best Ideation Team -9 Lak" },
+    ],
+
   },
+  {
+    id: 6,
+    name: "Electric 2.0",
+    category: "hackathon",
+    image: "20-24 MOHAMED ASRAF M",
+    venuedes: "Sriram Mission's Kirupananda Variyar Engineering College, Salem",
+    Organiser: "Sriram Mission's Kirupananda",
+    date:"30-31 September 2023",
+    Awards: [
+      { value: "Silver Award -1" },
+      { value: "Best Ideation Team -9 Lak" },
+    ],
+
+  },
+  {
+    id: 7,
+    name: "Electric 3.0",
+    category: "hackathon",
+    image: "20-24 MOHAMED ASRAF M",
+    venuedes: "Sriram Mission's Kirupananda Variyar Engineering College, Salem",
+    Organiser: "Sriram Mission's Kirupananda",
+    date:"30-31 September 2024",
+    Awards: [
+      { value: "Silver Award -1" },
+      { value: "Best Ideation Team -9 Lak" },
+    ],
+
+  },
+
+  {
+    id: 8,
+    name: "Electric 4.0",
+    category: "hackathon",
+    image: "20-24 MOHAMED ASRAF M",
+    venuedes: "Sriram Mission's Kirupananda Variyar Engineering College, Salem",
+    Organiser: "Sriram Mission's Kirupananda",
+    date:"30-31 September 2025",
+    Awards: [
+      { value: "Silver Award -1" },
+      { value: "Best Ideation Team -9 Lak" },
+    ],
+
+  },
+
+
+
+  
 ];
+
 const filters = [
   {
-    id: "color",
-    name: "Awards Won",
+    id: '1',
+    name: 'Award',
     options: [
-      { value: "white", label: "White", checked: false },
+      { value: 'white', label: 'Gold = 2', icon: CheckIcon },
+      { value: 'white', label: 'Best Innovation -50000', icon: CheckIcon },
+      
     ],
   },
   {
-    id: "category",
-    name: "Venue",
+    id: '2',
+    name: 'Venue',
     options: [
-      { value: "new-arrivals", label: "New Arrivals", checked: false },
-      { value: "sale", label: "Sale", checked: false },
-      { value: "travel", label: "Travel", checked: true },
-      { value: "organization", label: "Organization", checked: false },
-      { value: "accessories", label: "Accessories", checked: false },
+      { value: 'new-arrivals', label: "Vinayaka Mission's Kirupananda Variyar Engineering College, Salem", icon:MinusIcon },
+      
     ],
   },
   {
-    id: "size",
-    name: "Event Organiser",
+    id: '3',
+    name: 'Organiser',
     options: [
-      { value: "2l", label: "2L", checked: false },
-      { value: "6l", label: "6L", checked: false },
-      { value: "12l", label: "12L", checked: false },
-      { value: "18l", label: "18L", checked: false },
-      { value: "20l", label: "20L", checked: false },
-      { value: "40l", label: "40L", checked: true },
+      { value: '2l', label: 'Vinayaka Mission', icon:MinusIcon },
+     
     ],
   },
-];
+]
 
 const Achievements = () => {
   const [activeTab, setActiveTab] = useState("section1");
@@ -169,8 +247,6 @@ const Achievements = () => {
   return (
     <>
       {/* Main content */}
-
-      
 
       <div className=" fixed z-10 top-0 lg:top-0 left-0 right-0 ">
         <Navbar />
@@ -328,149 +404,23 @@ const Achievements = () => {
           <div>
             <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
               {filteredProducts.map((product) => (
-                <div
+                <FilterCard
                   key={product.id}
-                  className="border border-gray-300 p-4 rounded-md"
-                >
-                  <div className=" mx-auto   ">
-                    <Image
-                      src={product.image}
-                      className="h-[20rem] w-[22rem] rounded-lg object-cover object-center group-hover:opacity-75"
-                      alt="h"
-                      width={250}
-                      height={400}
-                    />
-                    <div className="min-w-0 mt-5 m-5 mx-auto text-center">
-                      <p className="text-lg font-semibold leading-6 text-gray-900">
-                        {product.name}
-                      </p>
-                      <div className="flex text-black justify-between">
-                        <p className="mt-1 truncate text-sm leading-5 text-gray-500">
-                          DEMO CONTENT
-                        </p>
-                        <p>df</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  name={product.name}
+                  image={product.image}
+                  venue={product.venuedes}
+                  Organiser={product.Organiser}
+                  date={product.date}
+                  Awards={product.Awards}
+                />
               ))}
             </div>
           </div>
         )}
       </div>
 
-      <div className="mx-auto flex-shrink-0 max-w-3xl px-4  sm:px-6  lg:max-w-7xl bg-white ">
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-          <div className=" mx-auto max-w-[20rem]  pr-5 my-5 ">
-            <Image
-              src={Event1}
-              className="h-[25rem] w-[20rem] rounded-lg object-cover object-center group-hover:opacity-75"
-            />
-            <div className="min-w-0  mt-5 m-5 mx-auto text-center">
-              <p className="text-lg font-semibold leading-6 text-gray-900">
-              IDEATHON 2K23 
-              </p>
-
-              <div className="mt-2 flex mx-auto justify-center items-center text-sm text-gray-500">
-                <CalendarIcon
-                  className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
-                  aria-hidden="true"
-                />
-                <p className="mt-1 truncate text-sm leading-5 text-gray-500">
-                  7 <sup>th</sup> and 8<sup>th</sup> September,2019
-                </p>
-              </div>
-            </div>
-
-            <Disclosure as="div" className="border-b border-gray-200 py-6">
-              {({ open }) => (
-                <>
-                  <h3 className="-my-3 flow-root">
-                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                      <span className="font-semibold text-gray-900">
-                        Awards Won
-                      </span>
-                      <span className="ml-6 flex items-center">
-                        {open ? (
-                          <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                        ) : (
-                          <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                        )}
-                      </span>
-                    </Disclosure.Button>
-                  </h3>
-                  <Disclosure.Panel className="pt-6">
-                    <div className="space-y-4">
-                      <div className="flex  items-center">
-                      
-                      <Award className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" /> Best Innovation idea - ₹ 100000
-                      </div>
-                      
-                    </div>
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
-            <Disclosure as="div" className="border-b border-gray-200 py-6">
-              {({ open }) => (
-                <>
-                  <h3 className="-my-3 flow-root">
-                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                      <span className=" font-semibold text-gray-900">Venue</span>
-                      <span className="ml-6 flex items-center">
-                        {open ? (
-                          <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                        ) : (
-                          <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                        )}
-                      </span>
-                    </Disclosure.Button>
-                  </h3>
-                  <Disclosure.Panel className="pt-6">
-                    <div className="space-y-4">
-                      <div className="flex items-center">
-                      <MapPin className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"/>
-                        <h1>
-                         Vinayaka Mission's Kirupananda Variyar 
-                          Engineering College, Salem
-                        </h1>
-                      </div>
-                    </div>
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
-            <Disclosure as="div" className="border-b border-gray-400 py-6">
-              {({ open }) => (
-                <>
-                  <h3 className="-my-3 flow-root">
-                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                      <span className="font-semibold text-gray-900">Event Organiser</span>
-                      <span className="ml-6 flex items-center">
-                        {open ? (
-                          <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                        ) : (
-                          <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                        )}
-                      </span>
-                    </Disclosure.Button>
-                  </h3>
-                  <Disclosure.Panel className="pt-6">
-                    <div className="space-y-4">
-                      <div className="flex items-center">
-                      <Users className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"/>
-                        <h1>
-                          Vinayaka Mission's 
-                        </h1>
-                      </div>
-                    </div>
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
-          </div>
-        </div>
-      </div>
+      
+                  
 
       <Footer />
     </>
