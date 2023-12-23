@@ -11,7 +11,7 @@ import Footer from "@/Components/Footer";
 import Kabliesh from "../../public/Team/Members/21-25 KABILESH.webp";
 import Event1 from "../../public/Achievements/event1.jpg";
 import Image from "next/image";
-import { Award,MapPin,Users } from 'lucide-react';
+import { Award, MapPin, Users } from "lucide-react";
 import {
   GlobeAsiaAustraliaIcon,
   MagnifyingGlassCircleIcon,
@@ -21,6 +21,8 @@ import {
   PlusIcon,
   CalendarIcon,
 } from "@heroicons/react/20/solid";
+
+import FilterCard from "@/Components/FilterCard";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -65,74 +67,175 @@ const people = [
 ];
 
 const products = [
+  // International Events
   {
     id: 1,
-    name: "International ",
+    name: "I2CreaTE 2021 ",
     category: "international",
-    image:
-      "https://mechatrons07.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fevent1.d32eabc5.jpg&w=828&q=75",
+    image: "Event",
+    venuedes: "Universiti Malaysia Perlis (UniMAP), Malaysia. ",
+    Organiser: "Malaysia Research & Innovation Society (MyRIS) and Ministry of Education Malaysia (MOE)",
+    date:"16 September, 2021",
+    Awards: [
+      { value: "Gold Award – 01" },
+      { value: "Silver Award – 02" },
+      { value: "Bronze Award - 02" },
+    ],
   },
   {
     id: 2,
-    name: "National",
-    category: "national",
-    image:
-      "https://imgs.search.brave.com/nutEZaK-TwRJ-eVYLP_NWNRRB9iXyDFRq5T2cIUelZQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE3/MTk3NDg3Ny9waG90/by9wcmVwYXJpbmct/Zm9yLXRoZS1iaWtl/LXJpZGUuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTcwZG1W/cEJxRWNWWHNlbzk4/YTViSHgwOVNVblFP/ek9mbEMxY2FkMTlo/aGs9",
+    name: "IN-VIDE 2021",
+    category: "international",
+    image: "Event",
+    venuedes: "Universiti Malaysia Perlis (UniMAP), Malaysia",
+    Organiser: "Malaysian Innovation Foundation (YIM) and National Planetarium, Malaysia",
+    date:"31 October, 2021",
+    Awards: [
+      { value: "Silver Award – 02" },
+      { value: "Bronze Award - 02" },
+    ],
   },
   {
     id: 3,
-    name: "Electric",
-    category: "electric",
-    image:
-      "https://imgs.search.brave.com/nutEZaK-TwRJ-eVYLP_NWNRRB9iXyDFRq5T2cIUelZQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE3/MTk3NDg3Ny9waG90/by9wcmVwYXJpbmct/Zm9yLXRoZS1iaWtl/LXJpZGUuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTcwZG1W/cEJxRWNWWHNlbzk4/YTViSHgwOVNVblFP/ek9mbEMxY2FkMTlo/aGs9",
+    name: "IEEE YESIST12 2019",
+    category: "international",
+    image: "Event",
+    venuedes: "Stamford International University, Thailand",
+    Organiser: "IEEE",
+    date:"07 - 08 September, 2019",
+    Awards: [
+      { value: "Grand Finale Event" },
+    ],
   },
+
+  // National Events
   {
     id: 4,
-    name: "Minidirt",
-    category: "minidirt",
-    image:
-      "https://imgs.search.brave.com/nutEZaK-TwRJ-eVYLP_NWNRRB9iXyDFRq5T2cIUelZQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE3/MTk3NDg3Ny9waG90/by9wcmVwYXJpbmct/Zm9yLXRoZS1iaWtl/LXJpZGUuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTcwZG1W/cEJxRWNWWHNlbzk4/YTViSHgwOVNVblFP/ek9mbEMxY2FkMTlo/aGs9",
+    name: "IDEATHON 2023 ",
+    category: "national",
+    image: "Event",
+    venuedes: "Vinayaka Mission's Kirupananda Variyar Engineering College, Salem.",
+    Organiser: "IIC & CIVIL ",
+    date:"09 May 2023 ",
+    Awards: [
+      { value: "Best Innovative Idea – Rs.1000/- " },
+    ],
+
   },
   {
     id: 5,
-    name: "Hackathon",
+    name: "VISAI 2023",
+    category: "national",
+    image: "Event",
+    venuedes: "Vel Tech Rangarajan    Dr.Sagunthala R&D    Institute of Science and    Technology, Chennai",
+    Organiser: "A Joint Collaboration  Event with Indian    National Commission    for Cooperation with    UNESCO",
+    date:"23 - 24 Feb 2023",
+    Awards: [
+      { value: "Second place - Rs.6,000/-" },
+ 
+    ],
+
+  },
+  {
+    id: 6,
+    name: "National Level Project    Competition ",
+    category: "national",
+    image: "Event",
+    venuedes: "Dhanalakshmi    Srinivasan College of    Engineering,    Coimbatore",
+    Organiser: "All Departments",
+    date:"20 May, 2022",
+    Awards: [
+      { value: "Best Project      Award – Rs.2000" },
+     
+    ],
+
+  },
+  // Electric Events
+  {
+    id: 7,
+    name: "Electric Bike Challenge    Season 3    ",
+    category: "electric",
+    image: "Event",
+    venuedes: "Galgotias University,    Noida.",
+    Organiser: "Hero electric    &    ISIE India",
+    date:"14th – 18th    April 2023",
+    Awards: [
+      { value: "Best Business Plan & Cost – Rs.10,000" },
+      { value: "Best Hill Climb – Rs.10,000" },
+      { value: "Future Award – Rs.5000" },
+    ],
+
+  },
+  {
+    id: 8,
+    name: "National Electric Bike    Challenge (NEBC’23)    Season 1 ",
+    category: "electric",
+    image: "Event",
+    venuedes: "Kumaraguru College of    Technology, Coimbatore",
+    Organiser: "KCT Garage",
+    date:"25 – 26    February 2023",
+    Awards: [
+      { value: "Overall Championship – Rs.50,000/-" },
+      { value: "Best Endurance  – Rs.10,000" },
+      { value: "Best Acceleration – Rs.5000" },
+      { value: "Best Manoeuvrability – Rs.5000" },
+      { value: "Best Bump Test – Rs.5000" },
+      { value: "Best Autocross – Rs.5000" },
+    ],
+
+  },
+// Mini-Dirt Event
+  {
+    id: 4,
+    name: "National Level Mini Dirt    Bike Race (RIVALS’23)    Season 4",
+    category: "minidirt",
+    image: "Event",
+    venuedes: "Karpagam Institute of    Technology, Coimbatore",
+    Organiser: "Department of    Mechanical    Engineering",
+    date:"4 Mar 2023",
+    Awards: [
+      { value: "Best Driver Award      " },
+      
+    ],
+
+  },
+  // Hackathon
+  {
+    id: 5,
+    name: "Tech Zeal 2K23,    A 32 Hours State Level    Hackathon",
     category: "hackathon",
-    image:
-      "https://imgs.search.brave.com/nutEZaK-TwRJ-eVYLP_NWNRRB9iXyDFRq5T2cIUelZQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE3/MTk3NDg3Ny9waG90/by9wcmVwYXJpbmct/Zm9yLXRoZS1iaWtl/LXJpZGUuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTcwZG1W/cEJxRWNWWHNlbzk4/YTViSHgwOVNVblFP/ek9mbEMxY2FkMTlo/aGs9",
+    image: "Event",
+    venuedes: "Sona College of    Technology, Salem",
+    Organiser: "Smart bridge India    Private Limited,    Hyderabad.",
+    date:"10 - 11 Feb, 2023.",
+    Awards: [
+      { value: "Champions - Rs.10,000" },
+      
+    ],
+
   },
+  {
+    id: 6,
+    name: "Tata Crucible Hackathon",
+    category: "hackathon",
+    image: "Event",
+    venuedes: "Christ University,    Bangalore",
+    Organiser: "TATA Groups",
+    date:"16 March 2019",
+    Awards: [
+      { value: "Finalist" },
+     
+    ],
+
+  },
+
+
+
+
+  
 ];
-const filters = [
-  {
-    id: "color",
-    name: "Awards Won",
-    options: [
-      { value: "white", label: "White", checked: false },
-    ],
-  },
-  {
-    id: "category",
-    name: "Venue",
-    options: [
-      { value: "new-arrivals", label: "New Arrivals", checked: false },
-      { value: "sale", label: "Sale", checked: false },
-      { value: "travel", label: "Travel", checked: true },
-      { value: "organization", label: "Organization", checked: false },
-      { value: "accessories", label: "Accessories", checked: false },
-    ],
-  },
-  {
-    id: "size",
-    name: "Event Organiser",
-    options: [
-      { value: "2l", label: "2L", checked: false },
-      { value: "6l", label: "6L", checked: false },
-      { value: "12l", label: "12L", checked: false },
-      { value: "18l", label: "18L", checked: false },
-      { value: "20l", label: "20L", checked: false },
-      { value: "40l", label: "40L", checked: true },
-    ],
-  },
-];
+
+
 
 const Achievements = () => {
   const [activeTab, setActiveTab] = useState("section1");
@@ -169,13 +272,9 @@ const Achievements = () => {
   return (
     <>
       {/* Main content */}
-
-      
-
-      <div className=" fixed z-10 top-0 lg:top-0 left-0 right-0 ">
-        <Navbar />
-        <div className=" pb-5  sm:flex space-y-5 items-center  gap-8 mx-auto flex-shrink-0 max-w-3xl px-4  sm:px-6  lg:max-w-7xl bg-white ">
-          <div className="sm:hidden ">
+      <div  className=" fixed z-20 top-0 lg:top-0 left-0 right-0 ">
+      <Navbar />
+      <div className="sm:hidden mx-5 bg-white ">
             {/* Search Fn1 */}
             <div className="flex rounded-md  shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
               <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
@@ -193,6 +292,11 @@ const Achievements = () => {
               />
             </div>
           </div>
+      </div>
+      <div>
+       
+        <div className=" pb-5 mt-[11rem] sm:mt-[8rem] sm:flex space-y-5 items-center  gap-8 mx-auto flex-shrink-0 max-w-3xl px-4  sm:px-6  lg:max-w-7xl bg-white ">
+          
           {/* Section all */}
           <div className="items-center">
             {/* ALL */}
@@ -202,9 +306,10 @@ const Achievements = () => {
               </h2>
             </button>
           </div>
+          
 
           {/* Section list */}
-          <div className=" ">
+          <div className="sm:hidden">
             <Listbox value={selected} onChange={setSelected}>
               {({ open }) => (
                 <>
@@ -294,10 +399,11 @@ const Achievements = () => {
               )}
             </Listbox>
           </div>
+        
 
           {/* Search fn 2 */}
-          <div className="md:flex hidden ">
-            <div className="flex rounded-md  shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+          <div className="sm:flex hidden ">
+            <div className="flex rounded-md  shadow-sm ring-1 ring-inset ring-indigo-600 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
               <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
                 Events/
               </span>
@@ -306,7 +412,7 @@ const Achievements = () => {
                 name="username"
                 id="username"
                 autoComplete="username"
-                className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                className="block flex-1  bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6"
                 placeholder="Search Here"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -317,7 +423,7 @@ const Achievements = () => {
       </div>
 
       {/* Content */}
-      <div className="mx-auto mt-[17rem] sm:mt-[15rem] flex-shrink-0 max-w-3xl px-4 py-3 sm:px-6 sm:py-5 lg:max-w-7xl lg:px-5">
+      <div className="mx-auto  flex-shrink-0 max-w-3xl px-4 py-3 sm:px-6 sm:py-5 lg:max-w-7xl lg:px-5">
         {activeTab === "section1" && (
           <div>
             {/* Content for Section 1 */}
@@ -328,149 +434,23 @@ const Achievements = () => {
           <div>
             <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
               {filteredProducts.map((product) => (
-                <div
+                <FilterCard
                   key={product.id}
-                  className="border border-gray-300 p-4 rounded-md"
-                >
-                  <div className=" mx-auto   ">
-                    <Image
-                      src={product.image}
-                      className="h-[20rem] w-[22rem] rounded-lg object-cover object-center group-hover:opacity-75"
-                      alt="h"
-                      width={250}
-                      height={400}
-                    />
-                    <div className="min-w-0 mt-5 m-5 mx-auto text-center">
-                      <p className="text-lg font-semibold leading-6 text-gray-900">
-                        {product.name}
-                      </p>
-                      <div className="flex text-black justify-between">
-                        <p className="mt-1 truncate text-sm leading-5 text-gray-500">
-                          DEMO CONTENT
-                        </p>
-                        <p>df</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  name={product.name}
+                  image={product.image}
+                  venue={product.venuedes}
+                  Organiser={product.Organiser}
+                  date={product.date}
+                  Awards={product.Awards}
+                />
               ))}
             </div>
           </div>
         )}
       </div>
 
-      <div className="mx-auto flex-shrink-0 max-w-3xl px-4  sm:px-6  lg:max-w-7xl bg-white ">
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-          <div className=" mx-auto max-w-[20rem]  pr-5 my-5 ">
-            <Image
-              src={Event1}
-              className="h-[25rem] w-[20rem] rounded-lg object-cover object-center group-hover:opacity-75"
-            />
-            <div className="min-w-0  mt-5 m-5 mx-auto text-center">
-              <p className="text-lg font-semibold leading-6 text-gray-900">
-              IDEATHON 2K23 
-              </p>
-
-              <div className="mt-2 flex mx-auto justify-center items-center text-sm text-gray-500">
-                <CalendarIcon
-                  className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
-                  aria-hidden="true"
-                />
-                <p className="mt-1 truncate text-sm leading-5 text-gray-500">
-                  7 <sup>th</sup> and 8<sup>th</sup> September,2019
-                </p>
-              </div>
-            </div>
-
-            <Disclosure as="div" className="border-b border-gray-200 py-6">
-              {({ open }) => (
-                <>
-                  <h3 className="-my-3 flow-root">
-                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                      <span className="font-semibold text-gray-900">
-                        Awards Won
-                      </span>
-                      <span className="ml-6 flex items-center">
-                        {open ? (
-                          <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                        ) : (
-                          <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                        )}
-                      </span>
-                    </Disclosure.Button>
-                  </h3>
-                  <Disclosure.Panel className="pt-6">
-                    <div className="space-y-4">
-                      <div className="flex  items-center">
-                      
-                      <Award className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" /> Best Innovation idea - ₹ 100000
-                      </div>
-                      
-                    </div>
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
-            <Disclosure as="div" className="border-b border-gray-200 py-6">
-              {({ open }) => (
-                <>
-                  <h3 className="-my-3 flow-root">
-                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                      <span className=" font-semibold text-gray-900">Venue</span>
-                      <span className="ml-6 flex items-center">
-                        {open ? (
-                          <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                        ) : (
-                          <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                        )}
-                      </span>
-                    </Disclosure.Button>
-                  </h3>
-                  <Disclosure.Panel className="pt-6">
-                    <div className="space-y-4">
-                      <div className="flex items-center">
-                      <MapPin className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"/>
-                        <h1>
-                         Vinayaka Mission's Kirupananda Variyar 
-                          Engineering College, Salem
-                        </h1>
-                      </div>
-                    </div>
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
-            <Disclosure as="div" className="border-b border-gray-400 py-6">
-              {({ open }) => (
-                <>
-                  <h3 className="-my-3 flow-root">
-                    <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                      <span className="font-semibold text-gray-900">Event Organiser</span>
-                      <span className="ml-6 flex items-center">
-                        {open ? (
-                          <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                        ) : (
-                          <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                        )}
-                      </span>
-                    </Disclosure.Button>
-                  </h3>
-                  <Disclosure.Panel className="pt-6">
-                    <div className="space-y-4">
-                      <div className="flex items-center">
-                      <Users className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"/>
-                        <h1>
-                          Vinayaka Mission's 
-                        </h1>
-                      </div>
-                    </div>
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
-          </div>
-        </div>
-      </div>
+      
+                  
 
       <Footer />
     </>

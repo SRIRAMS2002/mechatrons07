@@ -17,12 +17,12 @@ import Image from "next/image";
 
 
 const FilterCard = ({ name, image,date,venue,Organiser, Awards }) => {
-  const imageUrl = image ? `/Team/Members/${image}.webp` : "/placeholder.gif";
+  const imageUrl = image ? `/Achievements/${image}.webp` : "/placeholder.gif";
   return (
     
-    <div className="mx-auto flex-shrink-0 max-w-3xl px-4  sm:px-6  lg:max-w-7xl bg-white ">
-      <div>
-        <div className=" mx-auto  pr-5 my-5 ">
+    <div className="max-w-[20rem] bg-white ">
+      <div className="">
+        <div className=" mx-auto  my-5 ">
           <img
             src={imageUrl}
             className="h-[20rem] w-[20rem] rounded-lg object-cover object-center group-hover:opacity-75"
