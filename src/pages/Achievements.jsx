@@ -334,7 +334,7 @@ const Achievements = () => {
                   <BiCategoryAlt className="mr-1 h-8 w-6 flex-shrink-0 text-gray-400"/>
                     <span className="font-semibold"
                     >
-                      All Events
+                      All
                     </span>
                   </div>
                 </button>
