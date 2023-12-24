@@ -30,6 +30,7 @@ import { RiMotorbikeFill } from "react-icons/ri";
 import { BiCategoryAlt } from "react-icons/bi";
 
 import FilterCard from "@/Components/FilterCard";
+import AllEvent from "@/Components/AllEventPage";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -40,7 +41,7 @@ const people = [
     id: 1,
     name: "International",
     category: "international",
-   icon: GlobeAmericasIcon,
+    icon: GlobeAmericasIcon,
   },
   {
     id: 2,
@@ -64,7 +65,7 @@ const people = [
     id: 5,
     name: "Hackathon",
     category: "hackathon",
-    icon:AcademicCapIcon,
+    icon: AcademicCapIcon,
   },
 ];
 
@@ -244,70 +245,75 @@ const Achievements = () => {
     <>
       <Navbar />
       <div className="bg-white min-h-screen pb-24">
-        <div className="px-4 sm:px-6 lg:px-8 py-5">
+        <div className="px-4 sm:px-6 lg:px-8 py-2">
           {/* Search bar */}
           <div className="max-w-3xl mx-auto mb-8">
             <div className="flex items-center border-b-2 border-indigo-400 hover:border-indigo-900">
               <span className="text-gray-500 mr-2 sm:text-lg">Events/</span>
-             
+
               <input
                 type="text"
                 className="flex-1 bg-transparent py-2 px-2 sm:text-lg placeholder-gray-400 focus:outline-none"
                 placeholder="Search Here"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-              
               />
-               {searchQuery === "" ? (
-                  <MagnifyingGlassIcon className="h-5 w-5 text-zinc-500   bg-white" />
-                ) : (
-                  <XMarkIcon
-                    onClick={() => {
-                      setSearchQuery("");
-                    }}
-                    className="h-8 w-8 cursor-pointer animate-pulse text-zinc-700    bg-slate-300/70 rounded-full p-2"
-                  />
-                )}
+              {searchQuery === "" ? (
+                <MagnifyingGlassIcon className="h-5 w-5 text-zinc-500   bg-white" />
+              ) : (
+                <XMarkIcon
+                  onClick={() => {
+                    setSearchQuery("");
+                  }}
+                  className="h-8 w-8 cursor-pointer animate-pulse text-zinc-700    bg-slate-300/70 rounded-full p-2"
+                />
+              )}
             </div>
-           
           </div>
 
           <div className="max-w-7xl mx-auto ">
             <div className="flex items-center justify-evenly">
               {/* Category Tabs */}
 
-              <div className="hidden lg:block space-x-5" >
+              <div className="hidden lg:block space-x-5 border-b-2 border-gray-400">
                 {/* All */}
-              <button
-                  
+               
+                <button
                   className={classNames(
-                    "py-2 px-2 border-b-2 shadow-lg hover:shadow-xl border-b-indigo-400 hover:border-b-indigo-900 uppercase focus:outline-none",      
+                    "py-2 px-2 border-b-2 shadow-lg hover:shadow-xl hover:border-b-indigo-900 uppercase focus:outline-none",
+                   
                   )}
                   onClick={() => handleTabClick("section1")}
                 >
                   <div className="flex items-center">
-                  <BiCategoryAlt className="mr-1.5 h-8 w-6 flex-shrink-0 text-gray-400"/>
-                    <span className="font-semibold"
-                    >
+                    <BiCategoryAlt className="mr-1.5 h-8 w-6 flex-shrink-0 text-gray-400" />
+                    <span className="font-semibold">
                       All <span className="lg:hidden">Events</span>
                     </span>
                   </div>
                 </button>
+                 
 
                 {/* Events Buttons */}
                 {people.map((person) => (
                   <button
                     key={person.id}
                     className={classNames(
-                      "py-2 px-4 hover:shadow-xl  uppercase focus:outline-none border-b-2 border-b-indigo-300",
+                      "py-2 px-4 hover:shadow-xl  uppercase focus:outline-none border-b-2",
                       selectedCategory === person.category
                         ? "border-b-indigo-900 shadow-lg text-gray-900"
                         : "text-gray-600 hover:border-indigo-600"
                     )}
                     onClick={() => handleTabClick("section2")}
                   >
-                    <div className="flex items-center"   onClick={() => handleCategoryChange(person.category)}>
-                      <person.icon  className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true"/>
+                    <div
+                      className="flex items-center"
+                      onClick={() => handleCategoryChange(person.category)}
+                    >
+                      <person.icon
+                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                        aria-hidden="true"
+                      />
                       <span
                         className={classNames(
                           selected ? "font-semibold" : "font-normal",
@@ -323,19 +329,15 @@ const Achievements = () => {
 
               {/* Mobile Category Dropdown */}
               <div className="lg:hidden flex space-x-5">
-              <button
-                  
+                <button
                   className={classNames(
-                    "py-2 px-2 border-b-2 shadow-lg hover:shadow-xl border-b-indigo-400 hover:border-b-indigo-900 uppercase focus:outline-none",      
+                    "py-2 px-2 border-b-2 shadow-lg hover:shadow-xl border-b-indigo-400 hover:border-b-indigo-900 uppercase focus:outline-none"
                   )}
                   onClick={() => handleTabClick("section1")}
                 >
                   <div className="flex items-center">
-                  <BiCategoryAlt className="mr-1 h-8 w-6 flex-shrink-0 text-gray-400"/>
-                    <span className="font-semibold"
-                    >
-                      All
-                    </span>
+                    <BiCategoryAlt className="mr-1 h-8 w-6 flex-shrink-0 text-gray-400" />
+                    <span className="font-semibold">All</span>
                   </div>
                 </button>
 
@@ -348,8 +350,7 @@ const Achievements = () => {
                           className="block w-full  px-10 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         >
                           <span className="flex items-center">
-                            
-                             {/* <person.icon src={selected.icon}
+                            {/* <person.icon src={selected.icon}
                                         className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true"/> */}
                             <span className="ml-3 block truncate">
                               {selected.name}
@@ -387,8 +388,10 @@ const Achievements = () => {
                                   >
                                     <div className="flex items-center">
                                       <person.icon
-                                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true"/>
-                                      
+                                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                                        aria-hidden="true"
+                                      />
+
                                       <span
                                         className={classNames(
                                           selected
@@ -432,15 +435,11 @@ const Achievements = () => {
             <div className="mx-auto flex-shrink-0 max-w-7xl px-4 sm:px-6 lg:px-8">
               {activeTab === "section1" && (
                 <div className="text-center mt-10">
-                  <h2 className="text-3xl font-bold text-gray-900">
-              jhvkjvhviiv
-                  </h2>
-                  {/* Content for Section 1 */}
-                  {/* Update as per your requirement */}
+                  <AllEvent />
                 </div>
               )}
               {activeTab === "section2" && (
-                <div className="mt-[2rem] grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
+                <div className="mt-[2rem] place-content-center place-items-center grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
                   {filteredProducts.map((product) => (
                     <FilterCard
                       key={product.id}
