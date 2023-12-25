@@ -187,7 +187,7 @@ const index = () => {
     </div>
 
     {/* Testimonials */}
-    <div className="text-center p-5">
+    {/* <div className="text-center p-5">
         <h1 className="text-3xl uppercase font-bold">Testimonials</h1>
         <h4 className="text-md leading-7 my-3 text-lg font-light opacity-75">Learn how to grow your business with our expert advice.</h4>
         <div className="flex max-w-5xl mx-auto gap-8">
@@ -324,7 +324,7 @@ const index = () => {
           </SwiperSlide>
           </Swiper>
         </div>
-      </div>
+      </div> */}
 
       
       <Footer/>
