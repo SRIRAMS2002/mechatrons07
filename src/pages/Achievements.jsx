@@ -271,7 +271,7 @@ const Achievements = () => {
             </div>
           </div>
 
-          <div className="max-w-7xl mx-auto ">
+          <div className="max-w-7xl mx-auto  bg-white">
             <div className="flex items-center justify-evenly">
               {/* Category Tabs */}
 
