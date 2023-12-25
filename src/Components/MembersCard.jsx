@@ -15,12 +15,12 @@ const MembersCard = ({ name, image,dept,role }) => {
             <p className="text-lg font-semibold leading-6 text-gray-900">
               {name}
             </p>
-            <div className="flex justify-evenly mt-2">
+            <div className="flex justify-center space-x-5 items-center mt-2">
               <p className="mt-1 truncate font-semibold text-sm leading-5 text-gray-600">
                 {dept}
               </p>
-              -
-              <p className="mt-1 truncate text-sm leading-5 text-gray-600">{role}</p>
+              
+              <p className="mt-1 truncate font-semibold leading-6 text-indigo-600 hover:text-indigo-500">{role}</p>
             </div>
           </div>
         </div>
