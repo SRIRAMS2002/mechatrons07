@@ -3,6 +3,44 @@ import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 import Image from "next/image";
 
+const Founders = [
+  {
+    id: 1,
+    name: "Sedhu Madhavan K",
+    image: "Founder-4",
+    dept: "ECE",
+    role: "Team Leader (Hackathon)",
+  },
+  {
+    id: 2,
+    name: "Ramya T",
+    image: "Founder-5-1",
+    dept: "ECE",
+    role: "Team Manager",
+  },
+  {
+    id: 5,
+    name: "Vijayalakshmi R",
+    image: "Founder-2",
+    dept: "ECE",
+    role: "Software Developer",
+  },
+  {
+    id: 6,
+    name: "Saranya U",
+    image: "Founder-1",
+    dept: "ECE",
+    role: "PCB Designer",
+  },
+  {
+    id: 13,
+    name: "SIVAKUMAR B  ",
+    image: "Sivakumar-1",
+    dept: "Mechanical",
+    role: " ",
+  },
+  
+];
 
 const FoundersPage = () => {
   return (
