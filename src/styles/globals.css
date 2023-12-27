@@ -7,7 +7,7 @@
    
     text-align: center; /* Center-align the text */
     opacity: 1; /* Make the text fully opaque */
-    background: url("../../public//title-scrolling.png"); /* Set the background image */
+    
     background-repeat: repeat-x; /* Repeat the background image horizontally */
     background-clip: inherit; /* Inherit the background clipping from the parent */
      -webkit-background-clip: text; 

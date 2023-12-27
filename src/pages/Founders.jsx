@@ -3,29 +3,6 @@ import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 import Image from "next/image";
 
-const Founders = [
-  {
-    id: 1,
-    name: "Sriram",
-    image: "Founder-1",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 2,
-    name: "Sriram",
-    image: "Founder-2",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 3,
-    name: "Sriram",
-    image: "Founder-3",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-];
 
 const FoundersPage = () => {
   return (
@@ -52,11 +29,11 @@ const FoundersPage = () => {
                 className="h-[23rem] w-[20rem] rounded-t-lg object-cover object-center group-hover:opacity-75"
               />
               <div className="p-5 text-center">
-                <p className="text-lg font-semibold leading-6 text-gray-900">{people.name}</p>
-                <div className="flex justify-evenly mt-2">
+                <p className="text-xl font-bold  uppercase text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-pink-600 leading-6">{people.name}</p>
+                <div className="flex items-center justify-evenly mt-4">
                   <p className="mt-1 truncate font-semibold text-sm leading-5 text-gray-600">{people.dept}</p>
-                  -
-                  <p className="mt-1 truncate text-sm leading-5 text-gray-600">{people.role}</p>
+                  
+                  <p className="mt-1 truncate font-semibold leading-6 text-indigo-600">{people.role}</p>
                 </div>
               </div>
             </div>

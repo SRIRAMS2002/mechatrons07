@@ -21,363 +21,160 @@ import {
   CalendarIcon,
   AcademicCapIcon,
 } from "@heroicons/react/20/solid";
-
+import Aluminicard from "@/Components/AluminiPoscard";
+function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
 const people = [
   {
     id: 1,
-    name: "Batch-2024",
-    category: "2024",
+    name: "Batch-2020",
+    category: "2020",
   },
   {
     id: 2,
-    name: "Batch-2025",
-    category: "2025",
+    name: "Batch-2021",
+    category: "2021",
     icon: "",
   },
   {
     id: 3,
-    name: "Batch-2026 ",
-    category: "2026",
+    name: "Batch-2022 ",
+    category: "2022",
   },
-
+  {
+    id: 4,
+    name: "Batch-2023",
+    category: "2023",
+  },
  
 ];
 
 const products = [
-  {
-    id: 1,
-    name: "DURGADASS V C",
-    category: "2024",
-    image: "20-24 DURGADASS V C",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 2,
-    name: "MAHENDRA PRABU T",
-    category: "2024",
-    image: "20-24 MAHENDRA PRABU T",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 3,
-    name: "MOHAMED ASRAF M",
-    category: "2024",
-    image: "20-24 MOHAMED ASRAF M",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 4,
-    name: "SIFAS S",
-    category: "2024",
-    image: "20-24 SIFAS S",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 5,
-    name: "VIGNESH J V",
-    category: "2024",
-    image: "20-24 VIGNESH J V",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 6,
-    name: "VISHNU PRASATH  J",
-    category: "2024",
-    image: "20-24 VISHNU PRASATH  J",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 7,
-    name: "TUSITA M",
-    category: "2024",
-    image: "20-24 TUSITA M",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 8,
-    name: "SHRIMATHI C M",
-    category: "2024",
-    image: "20-24 SHRIMATHI C M",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 9,
-    name: "SRIRAM S",
-    category: "2024",
-    image: "",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 10,
-    name: "ROGAN PRASANTH",
-    category: "2024",
-    image: "",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 11,
-    name: "AKSHANTH ROA G",
-    category: "2025",
-    image: "21-25 AKSHANTH ROA G",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 12,
-    name: " BALAMURUGAN S",
-    category: "2025",
-    image: "21-25 BALAMURUGAN S",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  
-  {
-    id: 13,
-    name: "DHEEDAN CHAKRAVARTHI",
-    category: "2025",
-    image: "21-25 DHEEDAN CHAKRAVARTHI",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 14,
-    name: "HAREVASHANTHAN",
-    category: "2025",
-    image: "21-25 HAREVASHANTHAN",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 15,
-    name: "JEEVABHARATHI M A",
-    category: "2025",
-    image: "21-25 JEEVABHARATHI M A",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 16,
-    name: "KABILESH",
-    category: "2025",
-    image: "21-25 KABILESH",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 17,
-    name: "MARI ESWAR S ",
-    category: "2025",
-    image: "21-25 MARI ESWAR S",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  
-  {
-    id: 18,
-    name: " SURYA M",
-    category: "2025",
-    image: "21-25 SURYA M",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 19,
-    name: "THIRUMALAINAMBI M ",
-    category: "2025",
-    image: "21-25 THIRUMALAINAMBI M",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id: 20,
-    name: "YUKENDRAN S ",
-    category: "2025",
-    image: "21-25 YUKENDRAN S",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id:21,
-    name: " MOHANA SUNDAR ",
-    category: "2025",
-    image: "21-25 MOHANA SUNDAR",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id:22,
-    name: " KARTHIGEYAN ",
-    category: "2024",
-    image: "",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id:23,
-    name: " TANISH ",
-    category: "2025",
-    image: "21-25 TANISH",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id:24,
-    name: " HARIHARAN ",
-    category: "2025",
-    image: "21 - 26 HARIHARAN",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  // 2026
-  {
-    id:25,
-    name: "ASHWANTH N",
-    category: "2026",
-    image: "",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id:26,
-    name: "GOKUL RAJ ",
-    category: "2026",
-    image: "",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id:27,
-    name: "NARENDRAN M",
-    category: "2026",
-    image: "",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id:28,
-    name: "LAKSHAY RAAJ T",
-    category: "2026",
-    image: "",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id:29,
-    name: "DHANAJEYAN A",
-    category: "2026",
-    image: "",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id:30,
-    name: "SYED HAROON FAREED S",
-    category: "2026",
-    image: "",
-    dept: "CSE",
-    role: "Team Leader",
-  },
-  {
-    id:31,
-    name: "IMAYAVARANBHAN K S",
-    category: "2026",
-    image: "",
-    dept: "CSE",
-    role: "Team Leader",
-  }, {
-    id:32,
-    name: "vithya lakshimi A",
-    category: "2025",
-    image: "",
-    dept: "ECE",
-    role: "Team Leader",
-  },
-  {
-    id:33,
-    name: "Monica M",
-    category: "2025",
-    image: "",
-    dept: "ECE",
-    role: "Team Leader",
-  },
-  {
-    id:34,
-    name: "Harini S V",
-    category: "2025",
-    image: "Haraini-26",
-    dept: "ECE",
-    role: "Team Leader",
-  },
-  {
-    id:35,
-    name: "Nivetha S",
-    category: "2025",
-    image: "",
-    dept: "ECE",
-    role: "Team Leader",
-  },
-  {
-    id:39,
-    name: "Ashwathi",
-    category: "2025",
-    image: "",
-    dept: "ECE",
-    role: "Team Leader",
-  },
-
+    {
+        id: 1,
+        name: "Sedhu Madhavan K",
+        image: "Founder-4",
+        category: "2021",
+        dept: "ECE",
+        role: "Team Leader",
+      },
+      {
+        id: 2,
+        name: "Ramya T",
+        image: "Founder-5",
+        category: "2022",
+        dept: "ECE",
+        role: "Team Manager",
+      },
+      {
+        id: 1,
+        name: "Sedhu Madhavan K",
+        image: "Founder-4",
+        category: "2020",
+        dept: "ECE",
+        role: "Team Leader",
+      },
+      {
+        id: 3,
+        name: "Vijayalakshmi R",
+        image: "Founder-2",
+        category: "2020",
+        dept: "ECE",
+        role: "Software Developer",
+      },
+      {
+        id: 4,
+        name: "Saranya U",
+        image: "Founder-1",
+        category: "2020",
+        dept: "ECE",
+        role: "PCB Designer",
+      },
+      {
+        id: 5,
+        name: "Sneha S",
+        image: "Founder-",
+        category: "2020",
+        dept: "ECE",
+        role: "Team Leader",
+      },
+      {
+        id: 6,
+        name: "Vidhyapriya S",
+        image: "Founder-",
+        category: "2020",
+        dept: "ECE",
+        role: "Team Manager",
+      },
+      {
+        id: 7,
+        name: "Indhu V",
+        image: "Founder-",
+        category: "2020",
+        dept: "ECE",
+        role: "Software Developer",
+      },
+      {
+        id: 8,
+        name: " Keerthana M",
+        image: "Founder-",
+        category: "2020",
+        dept: "CSE",
+        role: "PCB Designer",
+      },
+      {
+        id: 9,
+        name: "Dhanakumar B",
+        image: "Founder-",
+        category: "2020",
+        dept: "Mechanical",
+        role: "Team Leader",
+      },
+     
+      
 ];
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-const Members = () => {
-  const [selectedCategory, setSelectedCategory] = useState("2024");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selected, setSelected] = useState(people[0]);
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-    setSearchQuery("");
-  };
-
-  const filteredProducts = products.filter((product) => {
-    if (selectedCategory === "all" && !searchQuery) {
-      return true;
-    }
-
-    if (selectedCategory !== "all" && searchQuery) {
-      return (
-        product.category === selectedCategory &&
-        product.name.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-
-    if (selectedCategory !== "all") {
-      return product.category === selectedCategory;
-    }
-
-    return product.name.toLowerCase().includes(searchQuery.toLowerCase());
-  });
+const Aluminiposition = () => {
+    const [selectedCategory, setSelectedCategory] = useState("2020");
+    const [searchQuery, setSearchQuery] = useState("");
+    const [selected, setSelected] = useState(people[0]);
+    const handleCategoryChange = (category) => {
+      setSelectedCategory(category);
+      setSearchQuery("");
+    };
+  
+    const filteredProducts = products.filter((product) => {
+      if (selectedCategory === "all" && !searchQuery) {
+        return true;
+      }
+  
+      if (selectedCategory !== "all" && searchQuery) {
+        return (
+          product.category === selectedCategory &&
+          product.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+      }
+  
+      if (selectedCategory !== "all") {
+        return product.category === selectedCategory;
+      }
+  
+      return product.name.toLowerCase().includes(searchQuery.toLowerCase());
+    });
   return (
     <div>
+       <div>
       <Navbar />
 
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Members 
-        </h2>
-        <p className="text-lg pt-5 font-semibold leading-6 text-indigo-600">
-          A diverse team of individuals with unique talents and backgrounds,
-          united by a common goal and exceptional teamwork.
-        </p>
+      <div className="mx-auto max-w-7xl  px-4 py-10 sm:px-6 sm:py-10">
+       
+        <div className="max-w-7xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"> Alumini Positions- Meet our leadership</h2>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper
+            suspendisse.
+          </p>
+        </div>
 
         {/* Fliter content */}
         <div className="flex mt-10 items-center justify-evenly">
@@ -507,12 +304,13 @@ const Members = () => {
 
         <div className="mt-[2rem] place-content-center place-items-center grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
           {filteredProducts.map((product) => (
-            <MembersCard
+            <Aluminicard
               key={product.id}
               name={product.name}
               image={product.image}
               dept={product.dept}
               role={product.role}
+              
             />
           ))}
         </div>
@@ -521,7 +319,8 @@ const Members = () => {
 
       <Footer />
     </div>
-  );
-};
+    </div>
+  )
+}
 
-export default Members;
+export default Aluminiposition

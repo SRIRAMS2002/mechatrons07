@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '@/Components/Navbar'
 import Footer from '@/Components/Footer';
-import Headerimg from '../../public/2.jpg';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay, Pagination, Scrollbar, A11y } from "swiper/modules";
 // Import Swiper styles

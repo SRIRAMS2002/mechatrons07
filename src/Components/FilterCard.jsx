@@ -11,7 +11,7 @@ import {
   CalendarIcon,
 } from "@heroicons/react/20/solid";
 import { Award, MapPin, Users } from "lucide-react";
-import Image from "next/image";
+
 
 
 
