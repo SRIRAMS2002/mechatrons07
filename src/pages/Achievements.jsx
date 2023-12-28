@@ -85,6 +85,7 @@ const products = [
       { value: "Silver Award – 02" },
       { value: "Bronze Award - 02" },
     ],
+    location:"Chennai",
   },
   {
     id: 2,

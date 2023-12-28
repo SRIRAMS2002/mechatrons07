@@ -35,7 +35,7 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
   return (
     
     <div className="mx-auto   place-content-center place-items-center max-w-6xl">
-    <div className="bg-white p-3 mx-2 rounded-xl shadow-lg hover:shadow-xl shadow-indigo-600 hover:shadow-indigo-600 mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+    <div className="bg-white p-5  rounded-lg shadow-lg hover:shadow-xl shadow-indigo-500/50 hover:shadow-indigo-500/50 mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
       <div>
         <div>
           <p className="text-sm leading-4 font-medium text-slate-600">
@@ -56,16 +56,8 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
             <span className="text-slate-600">{date}</span>
           </dd>
           <dt className="sr-only">Location</dt>
-          <dd className="flex items-center text-slate-600">
-            <svg
-              width="2"
-              height="2"
-              aria-hidden="true"
-              fill="currentColor"
-              class="mx-3 text-slate-400"
-            >
-              <circle cx="1" cy="1" r="1" />
-            </svg>
+          <dd className="flex items-center ml-2 text-slate-600">
+           
             <MapPin className="mr-1.5 h-4 w-5 flex-shrink-0 text-indigo-600" />
             {location}
           </dd>
@@ -73,8 +65,8 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
 
         <dl className="mt-8 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2  lg:gap-x-8">
           <div className="border-t border-gray-300 pt-4">
-            <dt className="font-medium text-gray-900">Awards</dt>
-            <dd className="mt-5  text-md text-gray-700">
+            <dt className="font-semibold text-gray-900">Awards</dt>
+            <dd className="mt-5  text-md text-gray-800">
               
               {Awards ? (
                 Awards.map((award, index) => (
@@ -89,16 +81,16 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
             </dd>
           </div>
           <div className="border-t border-gray-300 pt-4">
-            <dt className="font-medium text-gray-900">Venue</dt>
-            <dd className="mt-5 flex text-md text-gray-500">
-              <MapPin className="mr-1.5 h-5 w-5 flex-shrink-0 text-indigo-600" />
+            <dt className="font-semibold text-gray-900">Venue</dt>
+            <dd className="mt-5 flex text-md text-gray-800">
+              <MapPin className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-900" />
               {venue}
             </dd>
           </div>
           <div className="border-t border-gray-300 pt-4">
-            <dt className="font-medium text-gray-900">Organiser</dt>
-            <dd className="mt-5 flex text-md gap-x-2 text-gray-500">
-              <Users className="mr-1.5 h-5 w-5 flex-shrink-0 text-indigo-600" />
+            <dt className="font-semibold text-gray-900">Organiser</dt>
+            <dd className="mt-5 flex text-md gap-x-2 text-gray-800">
+              <Users className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-900" />
               {Organiser}
             </dd>
           </div>
@@ -125,7 +117,7 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
           <SwiperSlide>
             <div className=" bg-white border-2  text-center  rounded-xl">
               <img
-                className="h-[12rem] w-[10rem] mx-auto"
+                className="h-[15rem] w-[15rem] mx-auto"
                 src={imageUrl}
                 alt=""
               />
@@ -134,7 +126,7 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
           <SwiperSlide>
             <div className=" bg-white border-2  text-center  rounded-xl">
               <img
-                className="h-[12rem] w-[10rem]  mx-auto"
+                className="h-[15rem] w-[15rem] mx-auto"
                 src={imageUrl}
                 alt=""
               />
@@ -143,7 +135,7 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
           <SwiperSlide>
             <div className=" bg-white border-2  text-center  rounded-xl">
               <img
-                className="h-[12rem] w-[10rem] mx-auto"
+                className="h-[15rem] w-[15rem] mx-auto"
                 src={imageUrl}
                 alt=""
               />
@@ -152,7 +144,7 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
           <SwiperSlide>
             <div className=" bg-white border-2  text-center  rounded-xl">
               <img
-                className="h-[12rem] w-[10rem] mx-auto"
+                className="h-[15rem] w-[15rem] mx-auto"
                 src={imageUrl}
                 alt=""
               />
