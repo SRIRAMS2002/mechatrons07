@@ -30,8 +30,12 @@ function classNames(...classes) {
 
 
 
-const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
-  const imageUrl = image ? `/Achievements/${image}.webp` : "/placeholder.gif";
+const FilterCard = ({ name, image1 ,image2 ,image3 ,image4 ,image5 ,date,venue,Organiser, Awards,location }) => {
+  const imageUrl1 = image1 ? `/Achievements/${image1}.webp` : "/placeholder.gif";
+  const imageUrl2 = image2 ? `/Achievements/${image2}.webp` : "/placeholder.gif";
+  const imageUrl3 = image3 ? `/Achievements/${image3}.webp` : "/placeholder.gif";
+  const imageUrl4 = image4 ? `/Achievements/${image4}.webp` : "/placeholder.gif";
+  const imageUrl5 = image5 ? `/Achievements/${image5}.webp` : "/placeholder.gif";
   return (
     
     <div className="mx-auto   place-content-center place-items-center max-w-6xl">
@@ -97,7 +101,7 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
         </dl>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 max-w-[20rem] max-h-[25rem]">
         
         <Swiper
       
@@ -112,13 +116,13 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
           pagination={{ clickable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
-          className="max-w-[20rem] max-h-[25rem]"
+          className=""
         >
           <SwiperSlide>
             <div className=" bg-white border-2  text-center  rounded-xl">
               <img
-                className="h-[15rem] w-[15rem] mx-auto"
-                src={imageUrl}
+                className="h-[15rem] w-[15rem] lg:w-[20rem] lg:h-[25rem] mx-auto"
+                src={imageUrl1}
                 alt=""
               />
             </div>
@@ -127,7 +131,7 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
             <div className=" bg-white border-2  text-center  rounded-xl">
               <img
                 className="h-[15rem] w-[15rem] mx-auto"
-                src={imageUrl}
+                src={imageUrl2}
                 alt=""
               />
             </div>
@@ -136,7 +140,7 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
             <div className=" bg-white border-2  text-center  rounded-xl">
               <img
                 className="h-[15rem] w-[15rem] mx-auto"
-                src={imageUrl}
+                src={imageUrl3}
                 alt=""
               />
             </div>
@@ -145,7 +149,7 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
             <div className=" bg-white border-2  text-center  rounded-xl">
               <img
                 className="h-[15rem] w-[15rem] mx-auto"
-                src={imageUrl}
+                src={imageUrl4}
                 alt=""
               />
             </div>
@@ -154,20 +158,12 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
             <div className=" bg-white border-2  text-center  rounded-xl">
               <img
                 className="h-[12rem] w-[10rem]  mx-auto"
-                src={imageUrl}
+                src={imageUrl5}
                 alt=""
               />
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <div className=" bg-white border-2  text-center  rounded-xl">
-              <img
-                className="h-[12rem] w-[10rem] mx-auto"
-                src={imageUrl}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
+         
         </Swiper>
       </div>
 

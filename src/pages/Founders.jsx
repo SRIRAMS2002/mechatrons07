@@ -9,7 +9,7 @@ const Founders = [
     name: "Sedhu Madhavan K",
     image: "Founder-4",
     dept: "ECE",
-    role: "Team Leader (Hackathon)",
+    role: "Team Leader",
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const Founders = [
     name: "SIVAKUMAR B  ",
     image: "Sivakumar-1",
     dept: "Mechanical",
-    role: " ",
+    role: "Design Engineer",
   },
   
 ];
