@@ -12,7 +12,7 @@ const MembersCard = ({ name, image,dept,role }) => {
             className="h-[23rem] w-[20rem] rounded-t-lg object-cover object-center group-hover:opacity-75"
           />
           <div className="p-5 text-center">
-            <p className="text-lg font-semibold uppercase leading-6 text-gray-900">
+            <p className="text-xl font-bold  uppercase text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-pink-600 leading-6">
               {name}
             </p>
             <div className="flex justify-center space-x-5 items-center mt-2">
@@ -20,7 +20,7 @@ const MembersCard = ({ name, image,dept,role }) => {
                 {dept}
               </p>
               
-              <p className="mt-1 truncate font-semibold leading-6 text-indigo-600 hover:text-indigo-500">{role}</p>
+              <p className="mt-1 truncate font-semibold leading-6 text-indigo-600">{role}</p>
             </div>
           </div>
         </div>
