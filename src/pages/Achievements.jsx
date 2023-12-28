@@ -432,10 +432,14 @@ const Achievements = () => {
               </div>
             </div>
 
-            {/* Content */}
-            <div className="mx-auto flex-shrink-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+           
+          </div>
+        </div>
+
+         {/* Content */}
+         <div className="mx-auto flex-shrink-0 max-w-7xl ">
               {activeTab === "section1" && (
-                <div className="text-center mt-10">
+                <div className="text-center mt-10 px-4 sm:px-6 lg:px-8">
                   <AllEvent />
                 </div>
               )}
@@ -456,8 +460,6 @@ const Achievements = () => {
                 </div>
               )}
             </div>
-          </div>
-        </div>
       </div>
 
       <Footer />
