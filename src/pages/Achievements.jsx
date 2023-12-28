@@ -439,7 +439,7 @@ const Achievements = () => {
                 </div>
               )}
               {activeTab === "section2" && (
-                <div className="mt-[2rem] place-content-center place-items-center grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
+                <div className="mt-[2rem] place-content-center place-items-center ">
                   {filteredProducts.map((product) => (
                     <FilterCard
                       key={product.id}
@@ -449,6 +449,7 @@ const Achievements = () => {
                       Organiser={product.Organiser}
                       date={product.date}
                       Awards={product.Awards}
+                      location={product.location}
                     />
                   ))}
                 </div>
