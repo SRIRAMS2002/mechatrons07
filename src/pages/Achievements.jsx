@@ -211,7 +211,7 @@ const products = [
 
 const Achievements = () => {
   const [activeTab, setActiveTab] = useState("section1");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState("international");
   const [searchQuery, setSearchQuery] = useState("");
   const [selected, setSelected] = useState(people[0]);
   const handleTabClick = (tab) => {

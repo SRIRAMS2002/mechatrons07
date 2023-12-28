@@ -74,12 +74,12 @@ const FilterCard = ({ name, image,date,venue,Organiser, Awards,location }) => {
         <dl className="mt-8 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2  lg:gap-x-8">
           <div className="border-t border-gray-300 pt-4">
             <dt className="font-medium text-gray-900">Awards</dt>
-            <dd className="mt-5  text-md text-gray-500">
+            <dd className="mt-5  text-md text-gray-700">
               
               {Awards ? (
                 Awards.map((award, index) => (
                   <div key={index} className="flex items-center">
-                    <Award className="mr-1.5 h-5 w-5 flex-shrink-0 text-indigo-600" />
+                    <Award className="mr-1.5 h-5 w-5 flex-shrink-0 text-orange-500" />
                     <h1>{award.value}</h1>
                   </div>
                 ))
