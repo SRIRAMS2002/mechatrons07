@@ -38,9 +38,9 @@ const FilterCard = ({ name, image1 ,image2 ,image3 ,image4 ,image5 ,date,venue,O
   const imageUrl5 = image5 ? `/Achievements/${image5}.webp` : "/placeholder.gif";
   return (
     
-    <div className="mx-auto   place-content-center place-items-center max-w-6xl">
-    <div className="bg-white p-5  rounded-lg shadow-lg hover:shadow-xl shadow-indigo-500/50 hover:shadow-indigo-500/50 mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-      <div>
+    <div className="mx-auto   place-content-center place-items-center max-w-5xl">
+    <div className="bg-white p-5  rounded-lg shadow-lg hover:shadow-xl shadow-indigo-500/50 hover:shadow-indigo-500/50 mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
+      <div className="">
         <div>
           <p className="text-sm leading-4 font-medium text-slate-600">
             Event
@@ -75,7 +75,7 @@ const FilterCard = ({ name, image1 ,image2 ,image3 ,image4 ,image5 ,date,venue,O
               {Awards ? (
                 Awards.map((award, index) => (
                   <div key={index} className="flex items-center">
-                    <Award className="mr-1.5 h-5 w-5 flex-shrink-0 text-orange-500" />
+                    <Award className="mr-1.5 h-5 w-5 flex-shrink-0 text-indigo-700" />
                     <h1>{award.value}</h1>
                   </div>
                 ))
@@ -87,77 +87,77 @@ const FilterCard = ({ name, image1 ,image2 ,image3 ,image4 ,image5 ,date,venue,O
           <div className="border-t border-gray-300 pt-4">
             <dt className="font-semibold text-gray-900">Venue</dt>
             <dd className="mt-5 flex text-md text-gray-800">
-              <MapPin className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-900" />
+              <MapPin className="mr-1.5 h-5 w-5 flex-shrink-0 text-indigo-700" />
               {venue}
             </dd>
           </div>
           <div className="border-t border-gray-300 pt-4">
             <dt className="font-semibold text-gray-900">Organiser</dt>
             <dd className="mt-5 flex text-md gap-x-2 text-gray-800">
-              <Users className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-900" />
+              <Users className="mr-1.5 h-5 w-5 flex-shrink-0 text-indigo-700" />
               {Organiser}
             </dd>
           </div>
         </dl>
       </div>
 
-      <div className="mt-5 max-w-[20rem] max-h-[25rem]">
+      <div className="mt-5 md:ml-10 ">
         
-        <Swiper
-      
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-          }}
-          modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
-          slidesPerView={1}
-          spaceBetween={20}
-          navigation
-          pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
-          className=""
-        >
+      <Swiper
+  autoplay={{
+    delay: 3500,
+    disableOnInteraction: false,
+  }}
+  modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
+  slidesPerView={1}
+  spaceBetween={10}
+  navigation={true}
+
+  pagination={{ clickable: true }}
+  onSwiper={(swiper) => console.log(swiper)}
+  onSlideChange={() => console.log("slide change")}
+
+>
           <SwiperSlide>
-            <div className=" bg-white border-2  text-center  rounded-xl">
+            <div className="bg-white border-2 rounded-xl">
               <img
-                className="h-[15rem] w-[15rem] lg:w-[20rem] lg:h-[25rem] mx-auto"
+                className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl1}
                 alt=""
               />
             </div>
           </SwiperSlide>{" "}
           <SwiperSlide>
-            <div className=" bg-white border-2  text-center  rounded-xl">
+          <div className="bg-white border-2 rounded-xl">
               <img
-                className="h-[15rem] w-[15rem] mx-auto"
+                className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl2}
                 alt=""
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className=" bg-white border-2  text-center  rounded-xl">
+          <div className="bg-white border-2 rounded-xl">
               <img
-                className="h-[15rem] w-[15rem] mx-auto"
+                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl3}
                 alt=""
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className=" bg-white border-2  text-center  rounded-xl">
+          <div className="bg-white border-2 rounded-xl">
               <img
-                className="h-[15rem] w-[15rem] mx-auto"
+                className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl4}
                 alt=""
               />
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className=" bg-white border-2  text-center  rounded-xl">
+          <div className="bg-white border-2 rounded-xl">
               <img
-                className="h-[12rem] w-[10rem]  mx-auto"
+                className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl5}
                 alt=""
               />
