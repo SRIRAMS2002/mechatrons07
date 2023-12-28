@@ -112,7 +112,7 @@ const products = [
     id: 9,
     name: "SRIRAM S",
     category: "2024",
-    image: "Sriram2",
+    image: "Sriram24",
     dept: "CSE",
     role: "Team Leader",
   },
