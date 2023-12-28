@@ -5,7 +5,7 @@ import hero from "../../public/hero.png";
 const NewHero = () => {
   return (
     <>
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-center p-4 lg:p-8 h-fit w-full  bg-cover px-10">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-center p-4 lg:p-8 h-fit w-full bg-gradient-to-b from-violet-500 to-transparent  bg-cover px-10">
         {/* bg-[url('/bgs/bgGradLine.svg')] */}
         <motion.div
           initial={{ x: -100, y: 100, opacity: 0 }}
@@ -24,7 +24,7 @@ const NewHero = () => {
           </div>
           <h1 className="text-5xl sm:text-7xl text-center lg:text-left font-semibold w-full lg:w-[80%]">
             Hero{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-violet-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-violet-200">
               Section
             </span>{" "}
             Power Title

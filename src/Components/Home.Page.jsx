@@ -48,6 +48,7 @@ const HomePage = () => {
         <div className="inline-block min-h-[5rem] sm:min-h-[4rem] lg:hidden w-full" />
         <NewHero />
         <About />
+        <Projects />
         <News />
         <Footer />
       </div>

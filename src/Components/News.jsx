@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {motion} from "framer-motion"
 const News = () => {
   const posts = [
@@ -58,8 +59,14 @@ const News = () => {
   ];
   return (
     <>
-      <div className=" py-12 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className=" py-12 sm:py-24 w-full relative overflow-hidden">
+        {/* <Image
+          src="/bgs/triangle.svg"
+          className="absolute z-30 bottom-0 right-0 rotate-0 transform -scale-x-100"
+          width={500}
+          height={800}
+        /> */}
+        <div className="mx-auto px-6 lg:px-8 z-40 relative">
           <motion.div
             initial={{ x: -100, y: 100, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}

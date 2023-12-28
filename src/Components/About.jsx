@@ -1,6 +1,7 @@
 import React from "react";
 import CountUp, { useCountUp } from "react-countup";
 import { motion } from "framer-motion";
+import Image from "next/image";
 const About = () => {
   useCountUp({
     ref: "counter",
@@ -10,8 +11,9 @@ const About = () => {
   });
   return (
     <>
-      <div className=" py-10 lg:py-6">
-        <div className="mx-auto grid gap-x-20 gap-y-20 px-6 lg:px-8 xl:grid-cols-3 w-full">
+      <div className=" py-10 lg:py-6 relative overflow-hidden">
+        {/* <Image src="/bgs/triangle.svg" className="absolute z-30 bottom-0 left-0 rotate-0" width={500} height={800} /> */}
+        <div className="relative z-40 mx-auto grid gap-x-20 gap-y-20 px-6 lg:px-8 xl:grid-cols-3 w-full">
           <motion.div
             initial={{ x: -100, y: 100, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
@@ -27,7 +29,7 @@ const About = () => {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               About Us
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 w-full text-gray-500">
               Libero fames augue nisl porttitor nisi, quis. Id ac elit odio
               vitae elementum enim vitae ullamcorper suspendisse. Libero fames
               augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum
