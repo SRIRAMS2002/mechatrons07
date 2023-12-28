@@ -112,7 +112,7 @@ const products = [
     id: 9,
     name: "SRIRAM S",
     category: "2024",
-    image: "Sriram24",
+    image: "ezgif-3-2c2d1a0b24",
     dept: "CSE",
     role: "Team Leader",
   },
