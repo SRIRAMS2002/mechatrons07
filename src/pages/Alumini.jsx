@@ -297,14 +297,7 @@ const products = [
     role: "Cheif Technician",
   },
  
-  {
-    id: 32,
-    name: "MADHUBALAN ",
-    category: "2022",
-    image: "",
-    dept: "Mechanical",
-    role: "Team Member",
-  },
+
   {
     id: 33,
     name: "VENKATESH J",
@@ -391,7 +384,7 @@ const products = [
   },
   {
     id: 43,
-    name: "MAKESH BOOPATHI m",
+    name: "MAHESH BOOPATHI m",
     category: "2023",
     image: "Mahesh23",
     dept: "Mechanical",
@@ -499,7 +492,7 @@ const products = [
     name: "shanmathi ",
     category: "2021",
     image: "shanmathi1",
-    dept: "Mechanical",
+    dept: "EEE",
     role: "Controller Designer",
   },
   {
