@@ -21,7 +21,7 @@ const Founders = [
   {
     id: 5,
     name: "Vijayalakshmi R",
-    image: "Founder-2",
+    image: "Vijalakshmi20",
     dept: "ECE",
     role: "Software Developer",
   },

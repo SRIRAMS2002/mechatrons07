@@ -105,7 +105,7 @@ const FilterCard = ({ name, image1 ,image2 ,image3 ,image4 ,image5 ,date,venue,O
         
       <Swiper
   autoplay={{
-    delay: 3500,
+    delay: 2500,
     disableOnInteraction: false,
   }}
   modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}

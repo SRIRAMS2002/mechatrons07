@@ -38,6 +38,13 @@ const MentorList = [
     dept: 'Mechanical',
     role: 'Innovation Head',
   },
+  {
+    id: 5,
+    name: 'Dr. D.Binu M.E,Ph.D',
+    image: 'Binu Founder',
+    dept: 'ECE',
+    role: 'Internet of Things',
+  },
   // Add more members as needed
 ];
 

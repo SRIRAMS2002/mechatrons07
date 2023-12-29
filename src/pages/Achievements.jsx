@@ -86,7 +86,7 @@ const products = [
       { value: "Silver Award – 02" },
       { value: "Bronze Award - 02" },
     ],
-    location:"Chennai",
+    location:"Malaysia",
   },
   {
     id: 2,
@@ -102,6 +102,7 @@ const products = [
       "Malaysian Innovation Foundation (YIM) and National Planetarium, Malaysia",
     date: "31 October, 2021",
     Awards: [{ value: "Silver Award – 02" }, { value: "Bronze Award - 02" }],
+    location:"Malaysia",
   },
   {
     id: 3,
@@ -116,6 +117,7 @@ const products = [
     Organiser: "IEEE",
     date: "07 - 08 September, 2019",
     Awards: [{ value: "Grand Finale Event" }],
+    location:"Thailand",
   },
 
   // National Events
@@ -133,6 +135,7 @@ const products = [
     Organiser: "IIC & CIVIL ",
     date: "09 May 2023 ",
     Awards: [{ value: "Best Innovative Idea – Rs.1000/- " }],
+    location:"Salem",
   },
   {
     id: 5,
@@ -149,6 +152,7 @@ const products = [
       "A Joint Collaboration  Event with Indian    National Commission    for Cooperation with    UNESCO",
     date: "23 - 24 Feb 2023",
     Awards: [{ value: "Second place - Rs.6,000/-" }],
+    location:"Chennai",
   },
   {
     id: 6,
@@ -164,6 +168,7 @@ const products = [
     Organiser: "All Departments",
     date: "20 May, 2022",
     Awards: [{ value: "Best Project      Award – Rs.2000" }],
+    location:"Coimbatore",
   },
   // Electric Events
   {
@@ -183,6 +188,7 @@ const products = [
       { value: "Best Hill Climb – Rs.10,000" },
       { value: "Future Award – Rs.5000" },
     ],
+    location:"Noida",
   },
   {
     id: 8,
@@ -204,6 +210,7 @@ const products = [
       { value: "Best Bump Test – Rs.5000" },
       { value: "Best Autocross – Rs.5000" },
     ],
+    location:"Coimbatore",
   },
   // Mini-Dirt Event
   {
@@ -219,6 +226,7 @@ const products = [
     Organiser: "Department of    Mechanical    Engineering",
     date: "4 Mar 2023",
     Awards: [{ value: "Best Driver Award      " }],
+    location:"Coimbatore",
   },
   // Hackathon
   {
@@ -234,6 +242,7 @@ const products = [
     Organiser: "Smart bridge India    Private Limited,    Hyderabad.",
     date: "10 - 11 Feb, 2023.",
     Awards: [{ value: "Champions - Rs.10,000" }],
+    location:"Hyderabad",
   },
   {
     id: 6,
@@ -248,6 +257,7 @@ const products = [
     Organiser: "TATA Groups",
     date: "16 March 2019",
     Awards: [{ value: "Finalist" }],
+    location:"Bangalore",
   },
 ];
 
