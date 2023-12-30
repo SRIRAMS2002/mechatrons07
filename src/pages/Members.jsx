@@ -61,14 +61,6 @@ const products = [
     role: "Vice Captain",
   },
   {
-    id: 2,
-    name: "MAHENDRA PRABU T",
-    category: "2024",
-    image: "20-24 MAHENDRA PRABU T",
-    dept: "Mechanical",
-    role: "Team Manager",
-  },
-  {
     id: 3,
     name: "MOHAMED ASRAF M",
     category: "2024",
@@ -76,6 +68,23 @@ const products = [
     dept: "Mechanical",
     role: "Co Driver",
   },
+  {
+    id:22,
+    name: " KARTHIGEYAN L",
+    category: "2024",
+    image: "Karthikeyan24",
+    dept: "Mechanical",
+    role: "Design Engineer",
+  },
+  {
+    id: 2,
+    name: "MAHENDRA PRABU T",
+    category: "2024",
+    image: "20-24 MAHENDRA PRABU T",
+    dept: "Mechanical",
+    role: "Team Manager",
+  },
+
   {
     id: 4,
     name: "SIFAS S",
@@ -93,6 +102,32 @@ const products = [
     dept: "Mechanical",
     role: "Technician",
   },
+
+
+  {
+    id: 9,
+    name: "SRIRAM S",
+    category: "2024",
+    image: "ezgif-3-2c2d1a0b24",
+    dept: "CSE",
+    role: "Full Stack Web Developer",
+  },
+  {
+    id: 10,
+    name: "ROGAN PRASANTH",
+    category: "2024",
+    image: "Rogan-24",
+    dept: "CSE",
+    role: "Software Developer",
+  },
+  {
+    id:40,
+    name: "Mounica",
+    category: "2024",
+    image: "Mounica24",
+    dept: "CSE",
+    role: "Driver",
+  },
   {
     id: 7,
     name: "TUSITA M",
@@ -109,29 +144,14 @@ const products = [
     dept: "CSE",
     role: "UI  Designer",
   },
-  {
-    id: 9,
-    name: "SRIRAM S",
-    category: "2024",
-    image: "ezgif-3-2c2d1a0b24",
-    dept: "CSE",
-    role: "Full Stack Developer",
-  },
-  {
-    id: 10,
-    name: "ROGAN PRASANTH",
-    category: "2024",
-    image: "Rogan-24",
-    dept: "CSE",
-    role: "Software Developer",
-  },
+  // 2025
   {
     id: 16,
-    name: "KABILESH",
+    name: "KABILESH S",
     category: "2025",
     image: "21-25 KABILESH",
     dept: "Mechanical",
-    role: "Team Leader",
+    role: "Team Captain",
   },
   {
     id: 11,
@@ -140,6 +160,14 @@ const products = [
     image: "21-25 AKSHANTH ROA G",
     dept: "Mechanical",
     role: " Vice Captain",
+  },
+  {
+    id: 18,
+    name: " SURYA M",
+    category: "2025",
+    image: "21-25 SURYA M",
+    dept: "Mechanical",
+    role: "Driver",
   },
   {
     id: 12,
@@ -184,14 +212,7 @@ const products = [
     role: "Technician",
   },
   
-  {
-    id: 18,
-    name: " SURYA M",
-    category: "2025",
-    image: "21-25 SURYA M",
-    dept: "Mechanical",
-    role: "Driver",
-  },
+
   {
     id: 19,
     name: "THIRUMALAINAMBI M ",
@@ -216,14 +237,7 @@ const products = [
     dept: "Mechanical",
     role: "Technician",
   },
-  {
-    id:22,
-    name: " KARTHIGEYAN L",
-    category: "2024",
-    image: "Karthikeyan24",
-    dept: "Mechanical",
-    role: "Design Engineer",
-  },
+  
   {
     id:23,
     name: " TANISH ",
@@ -337,14 +351,7 @@ const products = [
     dept: "ECE",
     role: "Technician",
   },
-  {
-    id:40,
-    name: "Mounica",
-    category: "2024",
-    image: "Mounica24",
-    dept: "CSE",
-    role: "Driver",
-  },
+
 
 ];
 function classNames(...classes) {

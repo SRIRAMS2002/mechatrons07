@@ -82,6 +82,16 @@ const products = [
     dept: "ECE",
     role: "Team Manager",
   },
+
+  {
+    id: 6,
+    name: "Saranya U",
+    image: "Founder-1",
+    category: "2020",
+    dept: "ECE",
+    role: "PCB Designer",
+  },
+
   {
     id: 5,
     name: "Vijayalakshmi R",
@@ -91,12 +101,12 @@ const products = [
     role: "Software Developer",
   },
   {
-    id: 6,
-    name: "Saranya U",
-    image: "Founder-1",
+    id: 8,
+    name: "KEERTHANA M  ",
     category: "2020",
-    dept: "ECE",
-    role: "PCB Designer",
+    image: "KEERTHANA-20",
+    dept: "CSE",
+    role: "App Developer",
   },
   {
     id: 7,
@@ -105,14 +115,6 @@ const products = [
     image: "Vidhyapriya-20",
     dept: "ECE",
     role: "Controller Design",
-  },
-  {
-    id: 8,
-    name: "KEERTHANA M  ",
-    category: "2020",
-    image: "KEERTHANA-20",
-    dept: "CSE",
-    role: "App Developer",
   },
   {
     id: 9,
@@ -131,6 +133,8 @@ const products = [
     dept: "ECE",
     role: "Wireless Communication",
   },
+
+
   // 2021
   {
     id: 11,
@@ -139,6 +143,14 @@ const products = [
     image: "Ramkumar-21-1",
     dept: "Mechanical",
     role: "Team Captain",
+  },
+  {
+    id: 16,
+    name: "SIVAKUMAR B  ",
+    category: "2021",
+    image: "Sivakumar-1",
+    dept: "Mechanical",
+    role: "Vice Captain",
   },
   {
     id: 12,
@@ -172,13 +184,14 @@ const products = [
     dept: "Mechanical",
     role: "Cheif Technician",
   },
+
   {
-    id: 16,
-    name: "SIVAKUMAR B  ",
+    id: 20,
+    name: "NITHEESHRAJ M  ",
     category: "2021",
-    image: "Sivakumar-1",
+    image: "Nitheeshraj-21",
     dept: "Mechanical",
-    role: "Design Engineer",
+    role: "Team Manager",
   },
   {
     id: 17,
@@ -186,7 +199,7 @@ const products = [
     category: "2021",
     image: "VIGNESHWARAN-21",
     dept: "Mechanical",
-    role: "Deisgn Engineer",
+    role: "Design Engineer",
   },
   {
     id: 18,
@@ -197,14 +210,7 @@ const products = [
     role: "Team Admin",
   },
  
-  {
-    id: 20,
-    name: "NITHEESHRAJ M  ",
-    category: "2021",
-    image: "Nitheeshraj-21",
-    dept: "Mechanical",
-    role: "Team Manager",
-  },
+
   {
     id: 21,
     name: "KIRTHIK R  ",
@@ -212,6 +218,22 @@ const products = [
     image: "krithik-21",
     dept: "Mechanical",
     role: "CAE Analyst",
+  },
+  {
+    id: 54,
+    name: " Nithin S",
+    category: "2021",
+    image: "nithin21",
+    dept: "Mechanical",
+    role: "CFD Analyst",
+  },
+  {
+    id: 57,
+    name: "Sudharasan S",
+    category: "2021",
+    image: "Sudharasan21",
+    dept: "Mechanical",
+    role: "Modelling & Drafting",
   },
 
   {
@@ -224,19 +246,30 @@ const products = [
   },
   {
     id: 23,
-    name: " SATHISH ",
+    name: " SATHISH S",
     category: "2021",
     image: "Sathish21",
     dept: "Mechanical",
     role: "Chassis & Suspension",
   },
+
+  {
+    id: 55,
+    name: "Kowshik B",
+    category: "2021",
+    image: "Kowshik21",
+    dept: "Mechanical",
+    role: " Electrical System",
+  },
+
+
   {
     id: 24,
     name: "RABINASRI V",
     category: "2021",
     image: "Rabina21",
     dept: "CSE",
-    role: "Hardware Analyst",
+    role: "Software Analyst",
   },
   {
     id: 25,
@@ -254,6 +287,15 @@ const products = [
     dept: "ECE",
     role: "Innovation Head",
   },
+  {
+    id: 56,
+    name: "shanmathi C",
+    category: "2021",
+    image: "shanmathi1",
+    dept: "EEE",
+    role: "Controller Designer",
+  },
+
   // 2022
   {
     id: 27,
@@ -289,6 +331,33 @@ const products = [
   },
 
   {
+    id: 58,
+    name: "Surya ",
+    category: "2022",
+    image: "SuryaCS22",
+    dept: "CSE",
+    role: "Software Developer",
+  },
+
+  {
+    id: 60,
+    name: "Praveen Kumar",
+    category: "2022",
+    image: "Praveen22",
+    dept: "ECE",
+    role: "Innovation Member",
+  },
+  {
+    id: 64,
+    name: "Reyman  ",
+    category: "2022",
+    image: "Reyman22",
+    dept: "Mechanical",
+    role: "CAD /CAE",
+  },
+
+  
+  {
     id: 31,
     name: "SELVAKUMAR D",
     category: "2022",
@@ -297,7 +366,14 @@ const products = [
     role: "Cheif Technician",
   },
  
-
+  {
+    id: 65,
+    name: "Prasanth B K  ",
+    category: "2022",
+    image: "prasanth22",
+    dept: "Mechanical",
+    role: "Technician",
+  },
   {
     id: 33,
     name: "VENKATESH J",
@@ -314,6 +390,16 @@ const products = [
     dept: "Mechanical",
     role: "Team Member",
   },
+  {
+    id: 59,
+    name: "Uthish Krishnan ",
+    category: "2022",
+    image: "Uthish Krishnan...Mech....2022",
+    dept: "Mechanical",
+    role: "Team Member",
+  },
+
+
   // 2023
   {
     id: 35,
@@ -341,31 +427,9 @@ const products = [
   },
 
  
-  {
-    id: 37,
-    name: "POOBESH GUPTA M",
-    category: "2023",
-    image: "Poobesh23",
-    dept: "Mechanical",
-    role: "Software Developer",
-  },
+  
 
-  {
-    id: 39,
-    name: "naveen r",
-    category: "2023",
-    image: "Naveen23",
-    dept: "Mechanical",
-    role: "Technician",
-  },
-  {
-    id: 40,
-    name: "prabahar v m",
-    category: "2023",
-    image: "Prabaharan23",
-    dept: "Mechanical",
-    role: "Chief Technician",
-  },
+ 
   {
     id: 41,
     name: "Sakthi S",
@@ -383,6 +447,22 @@ const products = [
     role: "Chassis & Suspension",
   },
   {
+    id: 46,
+    name: "GOWTHAM S",
+    category: "2023",
+    image: "Gowtham23",
+    dept: "Mechanical",
+    role: "CAD / CAE ",
+  },
+  {
+    id: 60,
+    name: "Dhanapal D",
+    category: "2023",
+    image: "Dhanapal 23",
+    dept: "Mechanical",
+    role: "Chief Mechanic",
+  },
+  {
     id: 43,
     name: "MAHESH BOOPATHI m",
     category: "2023",
@@ -390,14 +470,7 @@ const products = [
     dept: "Mechanical",
     role: "Chief Mechanic",
   },
-  {
-    id: 44,
-    name: "ARUNKUMAR  T",
-    category: "2023",
-    image: "Arun23",
-    dept: "Mechanical",
-    role: "Technician",
-  },
+
   {
     id: 45,
     name: "KARTHICK B",
@@ -406,13 +479,22 @@ const products = [
     dept: "Mechanical",
     role: "Chief Technician",
   },
+
   {
-    id: 46,
-    name: "GOWTHAM S",
+    id: 40,
+    name: "prabahar v m",
     category: "2023",
-    image: "Gowtham23",
+    image: "Prabaharan23",
     dept: "Mechanical",
-    role: "CAD / CAE ",
+    role: "Chief Technician",
+  },
+  {
+    id: 39,
+    name: "naveen r",
+    category: "2023",
+    image: "Naveen23",
+    dept: "Mechanical",
+    role: "Technician",
   },
   {
     id: 47,
@@ -423,10 +505,18 @@ const products = [
     role: "Technician ",
   },
   {
+    id: 44,
+    name: "ARUNKUMAR  T",
+    category: "2023",
+    image: "Arun23",
+    dept: "Mechanical",
+    role: "Technician",
+  },
+  {
     id: 48,
     name: "DINESH M",
     category: "2023",
-    image: "",
+    image: "DINESH23",
     dept: "CSE",
     role: "Web Developer",
   },
@@ -434,16 +524,24 @@ const products = [
     id: 49,
     name: "MATHIVANAN S",
     category: "2023",
-    image: "",
+    image: "S. Mathivanan23",
     dept: "CSE",
     role: "Software Analyst",
+  },
+  {
+    id: 37,
+    name: "POOBESH GUPTA M",
+    category: "2023",
+    image: "Poobesh23",
+    dept: "CSE",
+    role: "Software Developer",
   },
 
   {
     id: 50,
     name: "HARIRATHNA U",
     category: "2023",
-    image: "",
+    image: "harirathna23",
     dept: "CSE",
     role: "UI Designer",
   },
@@ -451,7 +549,7 @@ const products = [
     id: 51,
     name: "KARTHICK  T",
     category: "2023",
-    image: "",
+    image: "KARTHICKCse23",
     dept: "CSE",
     role: "UX Designer",
   },
@@ -463,6 +561,7 @@ const products = [
     dept: "ECE",
     role: "Team Captain",
   },
+
   {
     id: 53,
     name: "PUJA S",
@@ -472,69 +571,17 @@ const products = [
     role: "Driver",
   },
   {
-    id: 54,
-    name: " Nithin S",
-    category: "2021",
-    image: "nithin21",
-    dept: "Mechanical",
-    role: "CFD Analyst",
-  },
-  {
-    id: 55,
-    name: "Kowshik B",
-    category: "2021",
-    image: "Kowshik21",
-    dept: "Mechanical",
-    role: " Electrical System",
-  },
-  {
-    id: 56,
-    name: "shanmathi ",
-    category: "2021",
-    image: "shanmathi1",
-    dept: "EEE",
-    role: "Controller Designer",
-  },
-  {
-    id: 57,
-    name: "Sudharasan S",
-    category: "2021",
-    image: "Sudharasan21",
-    dept: "Mechanical",
-    role: "Modelling & Drafting",
-  },
-  {
-    id: 58,
-    name: "Surya ",
-    category: "2022",
-    image: "SuryaCS22",
-    dept: "CSE",
-    role: "Software Developer",
-  },
-  {
-    id: 59,
-    name: "Uthish Krishnan ",
-    category: "2022",
-    image: "Uthish Krishnan...Mech....2022",
-    dept: "Mechanical",
-    role: "Team Member",
-  },
-  {
-    id: 60,
-    name: "Praveen Kumar",
-    category: "2022",
-    image: "Praveen22",
-    dept: "ECE",
-    role: "Innovation Member",
-  },
-  {
-    id: 60,
-    name: "Dhanapal ",
+    id: 63,
+    name: "Sathya  ",
     category: "2023",
-    image: "Dhanapal 23",
-    dept: "Mechanical",
-    role: "Chief Mechanic",
+    image: "Sathya23",
+    dept: "CSE",
+    role: "Co Driver",
   },
+ 
+
+  
+ 
   {
     id: 61,
     name: "Sruthi B ",
@@ -551,30 +598,8 @@ const products = [
     dept: "ECE",
     role: "Internet Of Things",
   },
-  {
-    id: 63,
-    name: "Sathya  ",
-    category: "2023",
-    image: "Sathya23",
-    dept: "CSE",
-    role: "Co Driver",
-  },
-  {
-    id: 64,
-    name: "Reyman  ",
-    category: "2022",
-    image: "Reyman22",
-    dept: "Mechanical",
-    role: "CAD /CAE",
-  },
-  {
-    id: 65,
-    name: "Prasanth B K  ",
-    category: "2022",
-    image: "prasanth22",
-    dept: "Mechanical",
-    role: "Technician",
-  },
+ 
+
   
 ];
 
