@@ -1,273 +1,156 @@
 import React from 'react'
 import Navbar from '@/Components/Navbar';
 import Footer from '@/Components/Footer';
+import GalleryPage from '@/Components/GalleryPage';
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Navigation,
+  Autoplay,
+  Pagination,
+  Scrollbar,
+  A11y,
+} from "swiper/modules";
+// Import Swiper styles
+import "swiper/css";
 const Gallery = () => {
+  const Intro = [
+    {
+      id: 1,
+      imageUrl: "Founder-4",
+    },
+    {
+      id: 2,
+      imageUrl: "Founder-4",
+    },
+    {
+      id: 3,
+      imageUrl: "Founder-4",
+    },
+    {
+      id: 4,
+      imageUrl: "Founder-4",
+    },
+  ];
+  const products = [
+    {
+      id: 1,
+      location:"Chattisgarh",
+      date:"05 September 2023",
+      name: "EBDC Season 2 ",
+      Desc:"Collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help when you need it.",
+      image: "Hero",
+      image1: "Hero",
+      image2: "Thailand",
+      image3: "",
+      image4: "",
+      image5: "",
+      image6: "",
+      image7: "",
+      image8: "",
+      image9: "",
+      image10: "",
+      image11: "",
+      image12: "",
+      
+    },
+    {
+      id: 1,
+      location:"Chattisgarh",
+      date:"05 September 2023",
+      name: "EBDC Season 2 ",
+      Desc:"Collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help when you need it.",
+      image: "Hero",
+      image1: "Hero",
+      image2: "Thailand",
+      image3: "",
+      image4: "",
+      image5: "",
+      image6: "",
+      image7: "",
+      image8: "",
+      image9: "",
+      image10: "",
+      image11: "",
+      image12: "",
+      
+    },
+   
+  ];
+
   return (
     <div>
-      <Navbar/>
+      <Navbar className=""/>
 
-      <div className='relative'>
+      <div className=" max-w-lg mx-auto">
+      <div className=" space-y-3 text-center   bg-white p-5 mt-5 ">
+            <h1 className="mt-1 text-3xl font-semibold text-black sm:text-slate-900 md:text-2xl">
+         Gallery
+          </h1>
+            <p className="text-sm md:text-lg font-normal text-center mx-10">
+            Collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find{" "}
+            </p>
+            <Swiper
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+  }}
+  modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
+  slidesPerView={1}
+  spaceBetween={10}
+  navigation={true}
 
+  pagination={{ clickable: true }}
+  onSwiper={(swiper) => console.log(swiper)}
+  onSlideChange={() => console.log("slide change")}
 
-        <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-        <div className="mx-auto  lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight pl-5 text-gray-900 sm:text-4xl">Memories</h2>
+>
+{Intro.map((people, index) => (
+          <SwiperSlide>
+            <div className="bg-white lg:ml-10 h-[20rem] w-[22rem] place-content-center place-items-center border-2 rounded-xl">
+              <img
+                className="object-cover w-full h-full"
+                src={`/Team/Founders/${people.imageUrl}.webp`}
+                alt=""
+              />
+            </div>
+          </SwiperSlide>
+              ))}
+        
+         
+        </Swiper>
+    
+          </div>
+
           
-        </div>
-        
-        <div className=" mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-900 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"></div>
-        
-     
-
-
-
-   
- <div className="lightbox grid xl:grid-cols-3 gap-6  mx-auto  sm:grid-cols-1 md:grid-cols-2 w-5/6 pt-6">
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="ga llery" 
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full  p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        
-
-        <div className=" grid w-full p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-            data-mdb-img="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        <div className=" grid w-full p-1 md:p-2">
-          <img
-            alt="gallery"
-            className="block h-full w-full rounded-lg object-cover object-center"
-            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-        </div>
-
-        
       </div>
-      </div>
+
+      <div className=''>
+
+{products.map((product) => (
+            <GalleryPage
+              key={product.id}
+              location={product.location}
+              date={product.date}
+              name={product.name}
+              Desc={product.Desc}
+              image={product.image}
+              image1={product.image1}
+              image2={product.image2}
+              image3={product.image3}
+              image4={product.image4}
+              image5={product.image5}
+              image6={product.image6}
+              image7={product.image7}
+              image8={product.image8}
+              image9={product.image9}
+              image10={product.image10}
+              image11={product.image11}
+              image12={product.image12}
+             
+              
+            />
+          ))}
+       
       </div>
 
       <Footer/>
