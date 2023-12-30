@@ -36,18 +36,18 @@ const Footer = () => {
             <div className="flex flex-col items-start">
             <div className="p-5 w-48 text-white">
             <div className="text-md uppercase text-gray-500 font-medium">Team</div>
-            <a className="my-3 block" href="/#">
-              Members
-            </a>
-            <a className="my-3 block" href="/#">
-              Mentors
-            </a>
-            <a className="my-3 block" href="/#">
-              Alumini
-            </a>
-            <a className="my-3 block" href="/#">
+            <a className="my-3 block" href="/Founders">
               Founders 
             </a>
+            
+            <a className="my-3 block" href="/Mentors">
+              Mentors
+            </a>
+            <a className="my-3 block" href="/Members">
+              Members
+            </a>
+           
+           
            
           </div>
               
@@ -57,29 +57,27 @@ const Footer = () => {
             <div className="text-md uppercase text-gray-500 font-medium">Work</div>
            
             
-            <a className="my-3 block" href="/#">
+            <a className="my-3 block" href="/Projects">
               Projects <span className="text-teal-600 text-xs p-1">New</span>
             </a>
-            <a className="my-3 block" href="/#">
+            <a className="my-3 block" href="/Achievements">
              Achievements <span className="text-teal-600 text-xs p-1">New</span>
             </a>
-            <a className="my-3 block" href="/#">
-              Surveys <span className="text-teal-600 text-xs p-1">New</span>
+            <a className="my-3 block" href="/Gallery">
+              Gallery <span className="text-teal-600 text-xs p-1">New</span>
             </a>
           </div>
               
             </div>
             <div className="flex flex-col items-start">
-            <div className="p-5 w-48 text-white">
-            <div className="text-lg uppercase text-gray-500 font-medium"></div>
-            <a className="my-3 block" href="/#">
-              Support <span className="text-teal-600 text-xs p-1">New</span>
+            <div className="p-5 w-52 text-white">
+            <div className="text-md uppercase text-gray-500 font-medium">Graduates</div>
+            
+            <a className="my-3 block" href="/Alumini">
+              Alumini <span className="text-teal-600 text-xs p-1"></span>
             </a>
-            <a className="my-3 block" href="/#">
-              Privacy Policy <span className="text-teal-600 text-xs p-1"></span>
-            </a>
-            <a className="my-3 block" href="/#">
-              Conditions <span className="text-teal-600 text-xs p-1"></span>
+            <a className="my-3 block" href="/Aluminiposition">
+            Alumni Positions <span className="text-teal-600 text-xs p-1">New</span>
             </a>
            
           </div>

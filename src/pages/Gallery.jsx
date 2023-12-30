@@ -81,17 +81,24 @@ const Gallery = () => {
     <div>
       <Navbar className=""/>
 
-      <div className=" max-w-lg mx-auto">
-      <div className=" space-y-3 text-center   bg-white p-5 mt-5 ">
-            <h1 className="mt-1 text-3xl font-semibold text-black sm:text-slate-900 md:text-2xl">
-         Gallery
-          </h1>
-            <p className="text-sm md:text-lg font-normal text-center mx-10">
-            Collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find{" "}
-            </p>
-            <Swiper
+      <div className="mx-auto   place-content-center place-items-center max-w-5xl">
+    <div className="bg-white p-5  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
+    <div className="sm:max-w-lg">
+              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                Gallery
+              </h1>
+              <p className="mt-4 text-xl text-gray-500">
+                We dared to dream beyond the numerical count of achievements
+                lies a deeper impact. Our endeavors are not just about the
+                bottom line; they resonate with apurpose that extends beyond
+                profit margins.
+              </p>
+            </div>
+
+      <div className="mt-5 md:ml-10 ">
+      <Swiper
   autoplay={{
-    delay: 2500,
+    delay: 3500,
     disableOnInteraction: false,
   }}
   modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
@@ -118,11 +125,16 @@ const Gallery = () => {
         
          
         </Swiper>
-    
-          </div>
-
-          
+     
       </div>
+
+    </div>
+
+
+   
+  </div>
+
+     
 
       <div className=''>
 
