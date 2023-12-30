@@ -1,5 +1,9 @@
-import '@/styles/globals.css'
+// pages/_app.js
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import '../styles/GlobalCards.css'; // Replace 'GlobalCards.css' with your global CSS file path
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
+
+export default MyApp;

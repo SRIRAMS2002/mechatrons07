@@ -1,12 +1,18 @@
-import React from 'react';
-import Navbar from '@/Components/Navbar';
-import Footer from '@/Components/Footer';
+import React from "react";
+import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/Footer";
+
 const Projects = () => {
   return (
     <div>
-      <Navbar/>
-      {/* Your component JSX here */}
-      <Footer/>
+      <Navbar />
+
+      
+
+      {/* projects */}
+      <div className="pt-[10rem]">d</div>
+
+      <Footer />
     </div>
   );
 };

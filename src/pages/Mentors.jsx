@@ -5,24 +5,45 @@ import Footer from '@/Components/Footer';
 const MentorList = [
   {
     id: 1,
-    name: 'Sriram',
-    image: 'Founder-1',
-    dept: 'CSE',
-    role: 'Team Leader',
+    name: 'Mr.S.Veerakumar M.E,(Ph.D)',
+    image: 'Veerakumar1',
+    dept: '',
+    role: 'Electic & Hybrid Vechicles Technology',
   },
   {
     id: 2,
-    name: 'Sriram',
-    image: 'Founder-2',
-    dept: 'CSE',
-    role: 'Team Leader',
+    name: 'Mr. B.Varun M.E,(Ph.D)',
+    image: 'varun1',
+    dept: 'Mechanical',
+    role: 'Design Engineer',
   },
   {
     id: 3,
-    name: 'Sriram',
-    image: 'Founder-3',
-    dept: 'CSE',
-    role: 'Team Leader',
+    name: 'Mr. L.JerryRajKumar M.E',
+    image: 'jeery1',
+    dept: 'Mechanical',
+    role: 'R & D Head',
+  },
+  {
+    id: 4,
+    name: 'Mr. R.Tamilselvan M.E,(Ph.D)',
+    image: 'Tamilselvan',
+    dept: 'Mechanical',
+    role: 'Electrical Head',
+  },
+  {
+    id: 5,
+    name: 'Dr. M.Veeramani M.E,Ph.D',
+    image: 'veeramani1',
+    dept: 'Mechanical',
+    role: 'Innovation Head',
+  },
+  {
+    id: 5,
+    name: 'Dr. D.Binu M.E,Ph.D',
+    image: 'Binu Founder',
+    dept: 'ECE',
+    role: 'Internet of Things',
   },
   // Add more members as needed
 ];
@@ -43,16 +64,16 @@ const Mentors = () => {
           {MentorList.map((people, index) => (
             <div key={index} className="mx-auto bg-white rounded-lg shadow-lg hover:shadow-xl shadow-indigo-500/50 hover:shadow-indigo-500/50 overflow-hidden">
               <img
-                src={`/Team/Founders/${people.image}.webp`}
+                src={`/Team/Mentors/${people.image}.webp`}
                 alt={people.name}
                 className="h-[23rem] w-[20rem] rounded-t-lg object-cover object-center group-hover:opacity-75"
               />
               <div className="p-5 text-center">
-                <p className="text-lg font-semibold leading-6 text-gray-900">{people.name}</p>
-                <div className="flex justify-evenly mt-2">
+              <p className="text-xl font-bold   text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-pink-600 leading-6">{people.name}</p>
+                <div className="flex items-center justify-evenly mt-4">
                   <p className="mt-1 truncate font-semibold text-sm leading-5 text-gray-600">{people.dept}</p>
-                  -
-                  <p className="mt-1 truncate text-sm leading-5 text-gray-600">{people.role}</p>
+                  
+                  <p className="mt-1 truncate text-center font-semibold leading-6 text-indigo-600">{people.role}</p>
                 </div>
               </div>
             </div>

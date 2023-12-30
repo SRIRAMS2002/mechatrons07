@@ -1,162 +1,75 @@
-import { Fragment, useState } from "react";
-import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
-import {
-  ChevronDownIcon,
-  FunnelIcon,
-  MinusIcon,
-  PlusIcon,
-  Squares2X2Icon,
-  CheckIcon,
-  CalendarIcon,
-} from "@heroicons/react/20/solid";
-import { Award, MapPin, Users } from "lucide-react";
+import React from "react";
+import "./GlobalCards.css"
 
-
-
-
-
-const FilterCard = ({ name, image,date,venue,Organiser, Awards }) => {
-  const imageUrl = image ? `/Achievements/${image}.webp` : "/placeholder.gif";
+const GroupCards = () => {
   return (
-    
-    <div className="max-w-[20rem] bg-white ">
-      <div className="">
-        <div className=" mx-auto  my-5 ">
-          <img
-            src={imageUrl}
-            className="h-[20rem] w-[20rem] rounded-lg object-cover object-center group-hover:opacity-75"
-            alt=""
-          />
-          <div className="min-w-0  mt-5 m-5 mx-auto text-center">
-            <p className="text-lg font-semibold leading-6 text-gray-900">
-              {name}
-            </p>
-
-            <div className="mt-2 flex mx-auto justify-center items-center text-sm text-gray-500">
-              <CalendarIcon
-                className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"
-                aria-hidden="true"
-              />
-              <p className="mt-1 truncate text-sm leading-5 text-gray-500">
-               {date}
-              </p>
+    <>
+      <div className="overflow-hidden pt-0  pb-80 p-0 lg:p-16 block w-screen relative -mt-96 sm:-mt-72 lg:-mt-40 mg-10 sm:mb-16 lg:mb-40">
+        <div className="h-[800px] pt-12 text-center items-center justify-center w-full max-w-[110%] block my-0 mx-auto">
+          <div className="flex items-center justify-center h-[535px] md:h-[700px]">
+            <div className="absolute z-30 top-6 left-1/2 -translate-x-1/2 grid place-items-center grid-cols-8 h-full w-[260%] sm:w-[150%] md:w-[1500px]">
+              <div className="relative z-30 col-span-1 col-start-1 h-[800px] flex flex-col gap-6 items-center justify-center mt-80">
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+              </div>
+              <div className="relative z-30 col-span-1 col-start-2 h-[800px] flex flex-col gap-6 items-center justify-center">
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+              </div>
+              <div className="relative z-30 col-span-1 col-start-3 h-[800px] flex flex-col gap-6 items-center justify-center">
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+              </div>
+              <div className="relative z-30 col-span-2 col-start-4 h-[800px] flex flex-col gap-6 items-start justify-center -mt-20">
+                <div className="h-[220px] md:h-[356px] p-[30px] md:p-[35px] w-[220px] md:w-[356px] grid place-items-center neomorphism"></div>
+              </div>
+              <div className="relative z-30 col-span-1 col-start-6 h-[800px] flex flex-col gap-6 items-center justify-center">
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+              </div>
+              <div className="relative z-30 col-span-1 col-start-7 h-[800px] flex flex-col gap-6 items-center justify-center">
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+              </div>
+              <div className="relative z-30 col-span-1 col-start-8 h-[800px] flex flex-col gap-6 items-center justify-center mt-80">
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
+              </div>
             </div>
           </div>
-
-
-           {/* Awards */}
-         
-           <Disclosure as="div" className="border-t max-w-[25rem] flex-row border-gray-200 px-4 py-6">
-  {({ open }) => (
-    <>
-      <h3 className="-mx-2 -my-3 flow-root">
-        <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
-          <span className="font-medium text-gray-900">Awards Won</span>
-          <span className="ml-6 flex items-center">
-            {open ? (
-              <MinusIcon className="h-5 w-5" aria-hidden="true" />
-            ) : (
-              <PlusIcon className="h-5 w-5" aria-hidden="true" />
-            )}
-          </span>
-        </Disclosure.Button>
-      </h3>
-      <Disclosure.Panel className="pt-6">
-        <div className="space-y-6">
-        {Awards ? (
-                  Awards.map((award, index) => (
-                    <div key={index} className="flex items-center">
-                      <Award className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400" />
-                      <h1>{award.value}</h1>
-                    </div>
-                  ))
-                ) : (
-                  <p>No awards found</p>
-                )}
         </div>
-      </Disclosure.Panel>
-    </>
-  )}
-</Disclosure>
-
-
-        
-       {/* venue */}
-          <Disclosure as="div"  className="border-t max-w-[25rem] flex-row border-gray-200 px-4 py-6">
-            {({ open }) => (
-              <>
-                <h3 className="-mx-2 -my-3 flow-root">
-                  <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
-                    <span className="font-medium text-gray-900">Venue</span>
-                    <span className="ml-6 flex items-center">
-                      {open ? (
-                        <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                      ) : (
-                        <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                      )}
-                    </span>
-                  </Disclosure.Button>
-                </h3>
-                <Disclosure.Panel className="pt-6">
-                  <div className="space-y-6">
-                   
-                      <div  className="flex items-center">
-                      <MapPin className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"/>
-                        <h1
-                        >
-                          {venue}
-                        </h1>
-                      </div>
-                    
-                  </div>
-                </Disclosure.Panel>
-              </>
-            )}
-          </Disclosure>
-
-          {/* Organiser */}
-          <Disclosure as="div"  className="border-t max-w-[25rem] flex-row border-gray-200 px-4 py-6">
-            {({ open }) => (
-              <>
-                <h3 className="-mx-2 -my-3 flow-root">
-                  <Disclosure.Button className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
-                    <span className="font-medium text-gray-900">Organiser</span>
-                    <span className="ml-6 flex items-center">
-                      {open ? (
-                        <MinusIcon className="h-5 w-5" aria-hidden="true" />
-                      ) : (
-                        <PlusIcon className="h-5 w-5" aria-hidden="true" />
-                      )}
-                    </span>
-                  </Disclosure.Button>
-                </h3>
-                <Disclosure.Panel className="pt-6">
-                  <div className="space-y-6">
-                   
-                      <div  className="flex items-center">
-                      <Users className="mr-1.5 h-5 w-5 flex-shrink-0 text-gray-400"/>
-                        <h1
-                        >
-                          {Organiser}
-                        </h1>
-                      </div>
-                    
-                  </div>
-                </Disclosure.Panel>
-              </>
-            )}
-          </Disclosure>
-        
-        
-                      
-                         
-
-         
+        <div className="mx-auto w-[90vw] mt-0 sm:mt-40 lg:-mt-10 p-3 h-[10rem] sm:h-[13rem] lg:h-[20rem] flex items-center justify-start flex-col gap-6">
+          <p className="text-slate-500 font-sans leading-3 font-semibold text-lg">
+            A Global Commercial Product
+          </p>
+          <h1 className="text-3xl md:text-5xl font-extrabold max-w-xl text-center">
+            Trusted by our Customers, Open to Everyone
+          </h1>
+          <p className="text-sm md:text-lg font-normal text-center max-w-lg mt-6">
+            Est labore mollit esse eu. Magna dolore exercitation ex incididunt
+            irure amet. Do cillum exercitation in minim eu tempor duis est amet
+            voluptate ad.{" "}
+          </p>
+          <div className="flex items-center justify-center gap-6 w-full">
+            <button className="p-4 min-w-[100px] md:min-w-[200px] bg-green-500 text-white rounded-full text-center">
+              Learn more
+            </button>
+            <button className="p-4 min-w-[100px] md:min-w-[200px] border-green-500 border text-green-500 rounded-full text-center">
+              Join the community
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+
+    
+    </>
   );
 };
 
-export default FilterCard;
+export default GroupCards;

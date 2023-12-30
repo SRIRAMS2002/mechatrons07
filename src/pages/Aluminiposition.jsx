@@ -1,166 +1,255 @@
-import React, { useState, useEffect, Fragment } from "react";
-import {
-  Dialog,
-  Disclosure,
-  Menu,
-  Listbox,
-  Transition,
-} from "@headlessui/react";
+import React from "react";
+
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
-import MembersCard from "@/Components/MembersCard";
-import {
-  GlobeAsiaAustraliaIcon,
-  MagnifyingGlassIcon,
-  CheckIcon,
-  ChevronUpDownIcon,
-  GlobeAmericasIcon,
-  XMarkIcon,
-  MinusIcon,
-  PlusIcon,
-  CalendarIcon,
-  AcademicCapIcon,
-} from "@heroicons/react/20/solid";
-import Aluminicard from "@/Components/AluminiPoscard";
+
+import { TbMail } from "react-icons/tb";
+
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
-const people = [
+
+
+const Position = [
   {
     id: 1,
-    name: "Batch-2020",
-    category: "2020",
+    name: "RAMYA T",
+    image: "Founder-5-1",
+    Company: "Booma Innovative Solutions Pvt Ltd, ",
+    location:"Coimbatore.",
+    role: "Design Engineer",
+    email:"ramyaece278@gmail.com",
+   
   },
   {
     id: 2,
-    name: "Batch-2021",
-    category: "2021",
-    icon: "",
+    name: "VIJAYALAKSHIMI R",
+    image: "Founder-2",
+    Company: "Hexaware Technologies Ltd,",
+    location:"Chennai.",
+    role: "Software Developer",
+    email:"vijiprabakar98@gmail.com",
   },
   {
     id: 3,
-    name: "Batch-2022 ",
-    category: "2022",
+    name: "KEERTHANA M",
+    image: "KEERTHANA-20",
+    Company: "Financial Software & Systems Pvt Ltd,",
+    location:"Chennai.",
+    role: "Senior Software Engineer",
+    email:"keerthu0926@gmail.com",
+  },
+  {
+    id: 15,
+    name: "RAMKUMAR K  ",
+    
+    image: "Ramkumar-21-1",
+    Company: " National Innovative Technology,",
+    location:"Cairo,Egypt.",
+    role: "Design Engineer ",
+    email:"ramkumar.1705117@gmail.com",
+  
+  },
+  {
+    id: 16,
+    name: "ASKAR K  ",
+    image: "Askar-21",
+    Company: " National Innovative Technology,",
+    location:"Cairo,Egypt.",
+    role: "Design Engineer ",
+    email:"askarkalil2000@gmail.com",
+  
+  },
+  {
+    id: 5,
+    name: "VIBESH R  ",
+    image: "vibesh-21",
+    Company: "Al Futtaim Technologies LLC",
+    location:"Dubai.",
+    role: "Unified Communication Engineer",
+    email:"vibeshraja@gmail.com",
+  },
+  {
+    id: 6,
+    name: "RUMAN B  ",
+    image: "rumaan-21",
+    Company: "Renault Nissan India Pvt Ltd",
+    location:"Chennai.",
+    role: "Design Engineer",
+    email:"rumaanrbrsr2000@gmail.com",
+  
   },
   {
     id: 4,
-    name: "Batch-2023",
-    category: "2023",
+    name: "SIVAKUMAR B  ",
+    image: "Sivakumar-1",
+    Company: "LogixHealth Solutions Pvt Ltd",
+    location:"Chennai.",
+    role: "Senior Specialist",
+    email:"sivakumarbaval@gmail.com",
   },
- 
-];
 
-const products = [
-    {
-        id: 1,
-        name: "Sedhu Madhavan K",
-        image: "Founder-4",
-        category: "2021",
-        dept: "ECE",
-        role: "Team Leader",
-      },
-      {
-        id: 2,
-        name: "Ramya T",
-        image: "Founder-5",
-        category: "2022",
-        dept: "ECE",
-        role: "Team Manager",
-      },
-      {
-        id: 1,
-        name: "Sedhu Madhavan K",
-        image: "Founder-4",
-        category: "2020",
-        dept: "ECE",
-        role: "Team Leader",
-      },
-      {
-        id: 3,
-        name: "Vijayalakshmi R",
-        image: "Founder-2",
-        category: "2020",
-        dept: "ECE",
-        role: "Software Developer",
-      },
-      {
-        id: 4,
-        name: "Saranya U",
-        image: "Founder-1",
-        category: "2020",
-        dept: "ECE",
-        role: "PCB Designer",
-      },
-      {
-        id: 5,
-        name: "Sneha S",
-        image: "Founder-",
-        category: "2020",
-        dept: "ECE",
-        role: "Team Leader",
-      },
-      {
-        id: 6,
-        name: "Vidhyapriya S",
-        image: "Founder-",
-        category: "2020",
-        dept: "ECE",
-        role: "Team Manager",
-      },
-      {
-        id: 7,
-        name: "Indhu V",
-        image: "Founder-",
-        category: "2020",
-        dept: "ECE",
-        role: "Software Developer",
-      },
-      {
-        id: 8,
-        name: " Keerthana M",
-        image: "Founder-",
-        category: "2020",
-        dept: "CSE",
-        role: "PCB Designer",
-      },
-      {
-        id: 9,
-        name: "Dhanakumar B",
-        image: "Founder-",
-        category: "2020",
-        dept: "Mechanical",
-        role: "Team Leader",
-      },
-     
-      
+  {
+    id: 8,
+    name: "RAGU B  ",
+    image: "ragu",
+    Company: "Ingo Electric pvt ltd",
+    location:"Bangalore.",
+    role: "R&D Enginner (Simulation & Testing)",
+    email:"raguragav692@gmail.com",
+  
+  },
+  {
+    id: 17,
+    name: "RANJITHPRABU V S  ",
+    image: "Ranjit-21",
+    Company: " TEKsystems, Inc.,",
+    location:"Chennai.",
+    role: "Candidate Manager",
+    email:"ranjithvs5351@gmail.com",
+  
+  },
+  {
+    id: 18,
+    name: "VIGNESHWARAN C",
+    image: "VIGNESHWARAN-21",
+    Company: " CADOpt Technologies Pvt. Ltd.",
+    location:"Coimbatore.",
+    role: "Design Engineer trainee",
+    email:"Vigneshwaranc@cadopt.com",
+  
+  },
+  {
+    id: 19,
+    name: " SATHISH S",
+ 
+    image: "Sathish21",
+    Company: "Al qasaem trad & cont .co",
+    location:"Muscat,Oman.",
+    role: "Health & safety  engineer ",
+    email:"sathissk2539@gmail.com",
+  
+  },
+  {
+    id: 21,
+    name: "KIRTHIK R  ",
+    image: "krithik-21",
+    Company: "Shanthi Gears Ltd.",
+    location:"Coimbatore.",
+    role: "Graduate Engineer Trainee",
+    email:"",
+  
+  },
+  {
+    id: 22,
+    name: " Nithin S",
+    image: "nithin21",
+    Company: "Propel Industries Private Limited",
+    location:"Coimbatore.",
+    role: "Assistant Engineer",
+    email:"",
+  
+  },
+  {
+    id: 20,
+    name: "shanmathi C",
+    image: "shanmathi1",
+    Company: "Cognizant Technology Solutions  Pvt Ltd",
+    location:"Coimbatore.",
+    role: "Programmer Analyst",
+    email:"shankcmathi@gmail.com",
+  
+  },
+  {
+    id: 7,
+    name: "VIGNESHWARAN Y ",
+    image: "Vigneshwaran 22",
+    Company: "Ingo Electric pvt ltd",
+    location:"Bangalore.",
+    role: "R&D Enginner (Designer)",
+    email:"vigneshwaranyuvaraj19@gmail.com",
+  
+  },
+
+  {
+    id: 9,
+    name: "SIVARAMAKRISHNAN P   ",
+    image: "Sivaramakrihanam-22",
+    Company: "SecureKloud Technologies Ltd",
+    location:"Chennai.",
+    role: "Associate - Cloud",
+    email:"sivaram28032001@gmail.com",
+  
+  },
+  {
+    id: 11,
+    name: "BALAJI T",
+    category: "2023",
+    image: "balaji 23",
+    Company: " Stanadyne India Pvt Ltd ",
+    location:"Chennai.",
+    role: "Production Engineer",
+    email:"balathangaraj2@gmail.com",
+  
+  },
+  
+  {
+    id: 12,
+    name: "MAHESH BOOPATHI m",
+
+    image: "Mahesh23",
+    Company: "  ",
+    location:".",
+    role: "",
+    email:"@gmail.com",
+  
+  },
+  {
+    id: 13,
+    name: "Dhanapal D",
+    image: "Dhanapal 23",
+    Company: "Shree sai Technologies",
+    location:"Coimbatore.",
+    role: "Design Engineer",
+    email:"dharun16122001@gmail.com",
+  
+  },
+  {
+    id: 14,
+    name: "Sathya  ",
+    
+    image: "Sathya23",
+    Company: "Protiviti India Member pvt Ltd  ",
+    location:"Coimbatore.",
+    role: "Technology Consultant",
+    email:"sathya.1902097@gmail.com",
+  
+  },
+  
+ 
+ 
+
+  {
+    id: 22,
+    name: "HARIRATHNA U",
+    image: "harirathna23",
+    Company: "Cognizant Technology Solutions Pvt Ltd",
+    location:"Coimbatore.",
+    role: "Assistant Engineer",
+    email:"harirathna.u.k@gmail.com",
+  
+  },
+  
+  
+  
 ];
 const Aluminiposition = () => {
-    const [selectedCategory, setSelectedCategory] = useState("2020");
-    const [searchQuery, setSearchQuery] = useState("");
-    const [selected, setSelected] = useState(people[0]);
-    const handleCategoryChange = (category) => {
-      setSelectedCategory(category);
-      setSearchQuery("");
-    };
-  
-    const filteredProducts = products.filter((product) => {
-      if (selectedCategory === "all" && !searchQuery) {
-        return true;
-      }
-  
-      if (selectedCategory !== "all" && searchQuery) {
-        return (
-          product.category === selectedCategory &&
-          product.name.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-      }
-  
-      if (selectedCategory !== "all") {
-        return product.category === selectedCategory;
-      }
-  
-      return product.name.toLowerCase().includes(searchQuery.toLowerCase());
-    });
+  const handleMailClick = (email) => {
+    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+    window.open(gmailComposeUrl, '_blank');
+    
+  };
+ 
   return (
     <div>
        <div>
@@ -176,144 +265,47 @@ const Aluminiposition = () => {
           </p>
         </div>
 
-        {/* Fliter content */}
-        <div className="flex mt-10 items-center justify-evenly">
-          {/* Category Tabs */}
 
-          <div className="hidden lg:block space-x-5 border-b-2 border-gray-400">
-            {/* All */}
+        <div className="">
+        <ul role="list" className="mt-20 grid gap-x-4 gap-y-5 sm:grid-cols-3 sm:gap-y-16 xl:col-span-3">
+        {Position.map((people, index) => (
+            <li key={index}>
+              <div className="flex items-center rounded-xl p-3 gap-x-6  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
+               
+               <div className='mx-auto '>
+               <div className="flex items-center gap-x-6">
+               <img className="h-20 w-20 rounded-full" src={`/Team/Founders/${people.image}.webp`}
+                alt="" />
+               <div>
+                 <h3 className="text-lg font-bold  uppercase text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-pink-600 leading-6">{people.name}</h3>
+                 <p className="text-sm font-semibold leading-6 text-red-800">{people.role}</p>
+                 <p className="text-sm font-semibold leading-6 text-gray-700">{people.Company}</p>
+                 <p className="text-sm font-semibold leading-6 text-gray-700">{people.location}</p>
 
-            {/* Events Buttons */}
-            {people.map((person) => (
-              <button
-                key={person.id}
-                className={classNames(
-                  "py-2 px-4 hover:shadow-xl  uppercase focus:outline-none border-b-2",
-                  selectedCategory === person.category
-                    ? "border-b-indigo-900 shadow-lg text-gray-900"
-                    : "text-gray-600 hover:border-indigo-600"
-                )}
-              >
-                <div
-                  className="flex items-center"
-                  onClick={() => handleCategoryChange(person.category)}
-                >
-                  {/* <person.icon
-                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                        aria-hidden="true"
-                      /> */}
-                  <span
-                    className={classNames(
-                      selected ? "font-semibold" : "font-normal",
-                      "ml-1 block truncate"
-                    )}
-                  >
-                    {person.name}
-                  </span>
-                </div>
-              </button>
-            ))}
-          </div>
-
-          {/* Mobile Category Dropdown */}
-          <div className="lg:hidden flex space-x-5">
-            <Listbox value={selected} onChange={setSelected} className=" ">
-              {({ open }) => (
-                <>
-                  <div className="relative mt-2">
-                    <Listbox.Button className="block w-full  px-10 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                      <span className="flex items-center">
-                        {/* <person.icon src={selected.icon}
-                                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true"/> */}
-                        <span className="ml-3 block truncate">
-                          {selected.name}
-                        </span>
-                      </span>
-                      <span className="pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2">
-                        <ChevronUpDownIcon
-                          className="h-5 w-5 text-gray-400"
-                          aria-hidden="true"
-                        />
-                      </span>
-                    </Listbox.Button>
-
-                    <Transition
-                      show={open}
-                      as={Fragment}
-                      leave="transition ease-in duration-100"
-                      leaveFrom="opacity-100"
-                      leaveTo="opacity-0"
-                    >
-                      <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                        {people.map((person) => (
-                          <Listbox.Option key={person.id} value={person}>
-                            {({ selected, active }) => (
-                              <div
-                                className={classNames(
-                                  active
-                                    ? "bg-indigo-600 text-white"
-                                    : "text-gray-900",
-                                  "relative cursor-default select-none py-2 pl-3 pr-9"
-                                )}
-                                onClick={() =>
-                                  handleCategoryChange(person.category)
-                                } // Update selected value
-                              >
-                                <div className="flex items-center">
-                                  {/* <person.icon
-                                        className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                                        aria-hidden="true"
-                                      /> */}
-
-                                  <span
-                                    className={classNames(
-                                      selected
-                                        ? "font-semibold"
-                                        : "font-normal",
-                                      "ml-3 block truncate"
-                                    )}
-                                  >
-                                    {person.name}
-                                  </span>
-                                </div>
-                                {selected && (
-                                  <span
-                                    className={classNames(
-                                      active ? "text-white" : "text-indigo-600",
-                                      "absolute inset-y-0 right-0 flex items-center pr-4"
-                                    )}
-                                  >
-                                    <CheckIcon
-                                      className="h-5 w-5"
-                                      aria-hidden="true"
-                                    />
-                                  </span>
-                                )}
-                              </div>
-                            )}
-                          </Listbox.Option>
-                        ))}
-                      </Listbox.Options>
-                    </Transition>
-                  </div>
-                </>
-              )}
-            </Listbox>
-          </div>
-        </div>
-
-        <div className="mt-[2rem] place-content-center place-items-center grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-          {filteredProducts.map((product) => (
-            <Aluminicard
-              key={product.id}
-              name={product.name}
-              image={product.image}
-              dept={product.dept}
-              role={product.role}
+                 <p className="mt-1 truncate text-sm leading-5 text-gray-500">{people.email}</p>
+               
+               </div>
               
-            />
+             </div>
+             <div className=" justify-evenly flex">
+            
+          
+             </div>
+           
+               </div>
+             </div>
+            </li>
           ))}
+        </ul>
         </div>
+
+
+        
+       
+   
+
+    
+       
         
       </div>
 

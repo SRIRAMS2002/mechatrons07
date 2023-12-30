@@ -8,10 +8,7 @@ import {
 } from "@headlessui/react";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
-import Kabliesh from "../../public/Team/Members/21-25 KABILESH.webp";
-import Event1 from "../../public/Achievements/event1.jpg";
-import Image from "next/image";
-import { Award, MapPin, Users, Globe2 } from "lucide-react";
+
 import {
   GlobeAsiaAustraliaIcon,
   MagnifyingGlassIcon,
@@ -75,7 +72,11 @@ const products = [
     id: 1,
     name: "I2CreaTE 2021 ",
     category: "international",
-    image: "Event",
+    image1: "-1",
+    image2: "-2",
+    image3: "-3",
+    image4: "-4",
+    image5: "-5",
     venuedes: "Universiti Malaysia Perlis (UniMAP), Malaysia. ",
     Organiser:
       "Malaysia Research & Innovation Society (MyRIS) and Ministry of Education Malaysia (MOE)",
@@ -85,28 +86,38 @@ const products = [
       { value: "Silver Award – 02" },
       { value: "Bronze Award - 02" },
     ],
-    location:"Chennai",
+    location:"Malaysia",
   },
   {
     id: 2,
     name: "IN-VIDE 2021",
     category: "international",
-    image: "Event",
+    image1: "-1",
+    image2: "-2",
+    image3: "-3",
+    image4: "-4",
+    image5: "-5",
     venuedes: "Universiti Malaysia Perlis (UniMAP), Malaysia",
     Organiser:
       "Malaysian Innovation Foundation (YIM) and National Planetarium, Malaysia",
     date: "31 October, 2021",
     Awards: [{ value: "Silver Award – 02" }, { value: "Bronze Award - 02" }],
+    location:"Malaysia",
   },
   {
     id: 3,
     name: "IEEE YESIST12 2019",
     category: "international",
-    image: "Event",
+    image1: "Thailand",
+    image2: "Thailand-2",
+    image3: "Thailand-3",
+    image4: "Thailand-4",
+    image5: "Thailand-1",
     venuedes: "Stamford International University, Thailand",
     Organiser: "IEEE",
     date: "07 - 08 September, 2019",
     Awards: [{ value: "Grand Finale Event" }],
+    location:"Thailand",
   },
 
   // National Events
@@ -114,42 +125,61 @@ const products = [
     id: 4,
     name: "IDEATHON 2023 ",
     category: "national",
-    image: "Event",
+    image1: "-1",
+    image2: "-2",
+    image3: "-3",
+    image4: "-4",
+    image5: "-5",
     venuedes:
       "Vinayaka Mission's Kirupananda Variyar Engineering College, Salem.",
     Organiser: "IIC & CIVIL ",
     date: "09 May 2023 ",
     Awards: [{ value: "Best Innovative Idea – Rs.1000/- " }],
+    location:"Salem",
   },
   {
     id: 5,
     name: "VISAI 2023",
     category: "national",
-    image: "Event",
+    image1: "-1",
+    image2: "-2",
+    image3: "-3",
+    image4: "-4",
+    image5: "-5",
     venuedes:
       "Vel Tech Rangarajan    Dr.Sagunthala R&D    Institute of Science and    Technology, Chennai",
     Organiser:
       "A Joint Collaboration  Event with Indian    National Commission    for Cooperation with    UNESCO",
     date: "23 - 24 Feb 2023",
     Awards: [{ value: "Second place - Rs.6,000/-" }],
+    location:"Chennai",
   },
   {
     id: 6,
     name: "National Level Project    Competition ",
     category: "national",
-    image: "Event",
+    image1: "-1",
+    image2: "-2",
+    image3: "-3",
+    image4: "-4",
+    image5: "-5",
     venuedes:
       "Dhanalakshmi    Srinivasan College of    Engineering,    Coimbatore",
     Organiser: "All Departments",
     date: "20 May, 2022",
     Awards: [{ value: "Best Project      Award – Rs.2000" }],
+    location:"Coimbatore",
   },
   // Electric Events
   {
     id: 7,
     name: "Electric Bike Challenge    Season 3    ",
     category: "electric",
-    image: "Event",
+    image1: "-1",
+    image2: "-2",
+    image3: "-3",
+    image4: "-4",
+    image5: "-5",
     venuedes: "Galgotias University,    Noida.",
     Organiser: "Hero electric    &    ISIE India",
     date: "14th – 18th    April 2023",
@@ -158,12 +188,17 @@ const products = [
       { value: "Best Hill Climb – Rs.10,000" },
       { value: "Future Award – Rs.5000" },
     ],
+    location:"Noida",
   },
   {
     id: 8,
     name: "National Electric Bike    Challenge (NEBC’23)    Season 1 ",
     category: "electric",
-    image: "Event",
+    image1: "-1",
+    image2: "-2",
+    image3: "-3",
+    image4: "-4",
+    image5: "-5",
     venuedes: "Kumaraguru College of    Technology, Coimbatore",
     Organiser: "KCT Garage",
     date: "25 – 26    February 2023",
@@ -175,38 +210,54 @@ const products = [
       { value: "Best Bump Test – Rs.5000" },
       { value: "Best Autocross – Rs.5000" },
     ],
+    location:"Coimbatore",
   },
   // Mini-Dirt Event
   {
     id: 4,
     name: "National Level Mini Dirt    Bike Race (RIVALS’23)    Season 4",
     category: "minidirt",
-    image: "Event",
+    image1: "-1",
+    image2: "-2",
+    image3: "-3",
+    image4: "-4",
+    image5: "-5",
     venuedes: "Karpagam Institute of    Technology, Coimbatore",
     Organiser: "Department of    Mechanical    Engineering",
     date: "4 Mar 2023",
     Awards: [{ value: "Best Driver Award      " }],
+    location:"Coimbatore",
   },
   // Hackathon
   {
     id: 5,
     name: "Tech Zeal 2K23,    A 32 Hours State Level    Hackathon",
     category: "hackathon",
-    image: "Event",
+    image1: "-1",
+    image2: "-2",
+    image3: "-3",
+    image4: "-4",
+    image5: "-5",
     venuedes: "Sona College of    Technology, Salem",
     Organiser: "Smart bridge India    Private Limited,    Hyderabad.",
     date: "10 - 11 Feb, 2023.",
     Awards: [{ value: "Champions - Rs.10,000" }],
+    location:"Hyderabad",
   },
   {
     id: 6,
     name: "Tata Crucible Hackathon",
     category: "hackathon",
-    image: "Event",
+    image1: "-1",
+    image2: "-2",
+    image3: "-3",
+    image4: "-4",
+    image5: "-5",
     venuedes: "Christ University,    Bangalore",
     Organiser: "TATA Groups",
     date: "16 March 2019",
     Awards: [{ value: "Finalist" }],
+    location:"Bangalore",
   },
 ];
 
@@ -449,7 +500,11 @@ const Achievements = () => {
                     <FilterCard
                       key={product.id}
                       name={product.name}
-                      image={product.image}
+                      image1={product.image1}
+                      image2={product.image2}
+                      image3={product.image3}
+                      image4={product.image4}
+                      image5={product.image5}
                       venue={product.venuedes}
                       Organiser={product.Organiser}
                       date={product.date}
