@@ -8,7 +8,7 @@ import {
 } from "@headlessui/react";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
-import Aluminicard from '@/Components/AluminiCard';
+import Aluminicard from "@/Components/AluminiCard";
 import {
   GlobeAsiaAustraliaIcon,
   MagnifyingGlassIcon,
@@ -21,8 +21,7 @@ import {
   CalendarIcon,
   AcademicCapIcon,
 } from "@heroicons/react/20/solid";
-
-
+import { motion } from "framer-motion";
 
 const people = [
   {
@@ -46,7 +45,6 @@ const people = [
     name: "Batch-2023",
     category: "2023",
   },
- 
 ];
 
 const products = [
@@ -124,7 +122,7 @@ const products = [
     dept: "ECE",
     role: "Hardware Designer",
   },
- 
+
   {
     id: 10,
     name: "SNEHA S  ",
@@ -133,7 +131,6 @@ const products = [
     dept: "ECE",
     role: "Wireless Communication",
   },
-
 
   // 2021
   {
@@ -209,7 +206,6 @@ const products = [
     dept: "Mechanical",
     role: "Team Admin",
   },
- 
 
   {
     id: 21,
@@ -261,7 +257,6 @@ const products = [
     dept: "Mechanical",
     role: " Electrical System",
   },
-
 
   {
     id: 24,
@@ -356,7 +351,6 @@ const products = [
     role: "CAD /CAE",
   },
 
-  
   {
     id: 31,
     name: "SELVAKUMAR D",
@@ -365,7 +359,7 @@ const products = [
     dept: "Mechanical",
     role: "Cheif Technician",
   },
- 
+
   {
     id: 65,
     name: "Prasanth B K  ",
@@ -399,7 +393,6 @@ const products = [
     role: "Team Member",
   },
 
-
   // 2023
   {
     id: 35,
@@ -426,10 +419,6 @@ const products = [
     role: "Driver",
   },
 
- 
-  
-
- 
   {
     id: 41,
     name: "Sakthi S",
@@ -578,10 +567,7 @@ const products = [
     dept: "CSE",
     role: "Co Driver",
   },
- 
 
-  
- 
   {
     id: 61,
     name: "Sruthi B ",
@@ -598,11 +584,7 @@ const products = [
     dept: "ECE",
     role: "Internet Of Things",
   },
- 
-
-  
 ];
-
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -635,27 +617,49 @@ const Alumini = () => {
 
     return product.name.toLowerCase().includes(searchQuery.toLowerCase());
   });
-  
+
   return (
     <div>
-    <Navbar />
-    <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
-      <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-        Alumini
-      </h2>
-      <p className="text-lg pt-5 font-semibold leading-6 text-indigo-600">
-        A diverse team of individuals with unique talents and backgrounds,
-        united by a common goal and exceptional teamwork.
-      </p>
-      {/* Fliter content */}
-      <div className="flex mt-10 items-center justify-evenly">
+      <Navbar />
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
+        <motion.h2
+          initial={{ x: -100, y: 100, opacity: 0 }}
+          whileInView={{ x: 0, y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            delay: 0.3,
+            type: "spring",
+            stiffness: 100,
+          }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+        >
+          Alumini
+        </motion.h2>
+        <motion.p
+          initial={{ x: -100, y: 100, opacity: 0 }}
+          whileInView={{ x: 0, y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            delay: 0.3,
+            type: "spring",
+            stiffness: 100,
+          }}
+          viewport={{ once: true }}
+          className="text-lg pt-5 font-semibold leading-6 text-indigo-600"
+        >
+          A diverse team of individuals with unique talents and backgrounds,
+          united by a common goal and exceptional teamwork.
+        </motion.p>
+        {/* Fliter content */}
+        <div className="flex mt-10 items-center justify-evenly">
           {/* Category Tabs */}
 
           <div className="hidden lg:block space-x-5 border-b-2 border-gray-400">
             {/* All */}
 
             {/* Events Buttons */}
-            {people.map((person) => (
+            {people.map((person, index) => (
               <button
                 key={person.id}
                 className={classNames(
@@ -774,8 +778,9 @@ const Alumini = () => {
         </div>
 
         <div className="mt-[2rem] place-content-center place-items-center grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-         {filteredProducts.map((product) => (
+          {filteredProducts.map((product, index) => (
             <Aluminicard
+              index={index}
               key={product.id}
               name={product.name}
               image={product.image}
@@ -784,10 +789,10 @@ const Alumini = () => {
             />
           ))}
         </div>
+      </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
-  )
-}
+  );
+};
 
-export default Alumini
+export default Alumini;

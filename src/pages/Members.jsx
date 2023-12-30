@@ -21,6 +21,7 @@ import {
   CalendarIcon,
   AcademicCapIcon,
 } from "@heroicons/react/20/solid";
+import { motion } from "framer-motion";
 
 const people = [
   {
@@ -39,8 +40,6 @@ const people = [
     name: "Batch-2026 ",
     category: "2026",
   },
-
- 
 ];
 
 const products = [
@@ -69,7 +68,7 @@ const products = [
     role: "Co Driver",
   },
   {
-    id:22,
+    id: 22,
     name: " KARTHIGEYAN L",
     category: "2024",
     image: "Karthikeyan24",
@@ -103,7 +102,6 @@ const products = [
     role: "Technician",
   },
 
-
   {
     id: 9,
     name: "SRIRAM S",
@@ -121,7 +119,7 @@ const products = [
     role: "Software Developer",
   },
   {
-    id:40,
+    id: 40,
     name: "Mounica",
     category: "2024",
     image: "Mounica24",
@@ -177,7 +175,7 @@ const products = [
     dept: "Mechanical",
     role: "Cheif Technician",
   },
-  
+
   {
     id: 13,
     name: "DHEEPAN CHAKRAVARTHI",
@@ -202,7 +200,7 @@ const products = [
     dept: "EEE",
     role: "R&D Head",
   },
- 
+
   {
     id: 17,
     name: "MARI ESWAR S ",
@@ -211,7 +209,6 @@ const products = [
     dept: "Mechanical",
     role: "Technician",
   },
-  
 
   {
     id: 19,
@@ -230,16 +227,16 @@ const products = [
     role: "PowerTrain",
   },
   {
-    id:21,
+    id: 21,
     name: " MOHANA SUNDAR ",
     category: "2025",
     image: "21-25 MOHANA SUNDAR",
     dept: "Mechanical",
     role: "Technician",
   },
-  
+
   {
-    id:23,
+    id: 23,
     name: " TANISH ",
     category: "2025",
     image: "21-25 TANISH",
@@ -247,7 +244,7 @@ const products = [
     role: "Software Developer",
   },
   {
-    id:24,
+    id: 24,
     name: " HARIHARAN ",
     category: "2025",
     image: "21 - 26 HARIHARAN",
@@ -256,7 +253,7 @@ const products = [
   },
   // 2026
   {
-    id:25,
+    id: 25,
     name: "ASHWANTH N",
     category: "2026",
     image: "ASHWANTH N26",
@@ -264,7 +261,7 @@ const products = [
     role: "Team Captain",
   },
   {
-    id:28,
+    id: 28,
     name: "LAKSHAY RAAJ T",
     category: "2026",
     image: "Lakshaay26",
@@ -272,7 +269,7 @@ const products = [
     role: "Vice Captain",
   },
   {
-    id:26,
+    id: 26,
     name: "GOKUL RAJ ",
     category: "2026",
     image: "gokul26",
@@ -280,7 +277,7 @@ const products = [
     role: "Driver",
   },
   {
-    id:27,
+    id: 27,
     name: "NARENDRAN M",
     category: "2026",
     image: "Narendran26",
@@ -289,7 +286,7 @@ const products = [
   },
 
   {
-    id:29,
+    id: 29,
     name: "DHANAJEYAN A",
     category: "2026",
     image: "Dhanajeyan 26",
@@ -297,7 +294,7 @@ const products = [
     role: "Cheif Electrician",
   },
   {
-    id:30,
+    id: 30,
     name: "SYED HAROON FAREED S",
     category: "2026",
     image: "Syed26",
@@ -305,14 +302,15 @@ const products = [
     role: "Team Manager",
   },
   {
-    id:31,
+    id: 31,
     name: "IMAYAVARANBHAN K S",
     category: "2026",
     image: "IMAYAVARANBHAN K S26",
     dept: "Mechanical",
     role: "Design Engineer",
-  }, {
-    id:32,
+  },
+  {
+    id: 32,
     name: "vithya lakshimi A",
     category: "2025",
     image: "vithya25",
@@ -320,7 +318,7 @@ const products = [
     role: "Innovation Head",
   },
   {
-    id:33,
+    id: 33,
     name: "Monica M",
     category: "2025",
     image: "monika25",
@@ -328,7 +326,7 @@ const products = [
     role: "Internet Of Things",
   },
   {
-    id:34,
+    id: 34,
     name: "Harini S V",
     category: "2025",
     image: "Haraini-26",
@@ -336,7 +334,7 @@ const products = [
     role: "Wireless Communication",
   },
   {
-    id:35,
+    id: 35,
     name: "Nivetha S",
     category: "2025",
     image: "nivetha25",
@@ -344,15 +342,13 @@ const products = [
     role: "Controller Designer",
   },
   {
-    id:39,
+    id: 39,
     name: "Ashwathi",
     category: "2025",
     image: "aswathi25",
     dept: "ECE",
     role: "Technician",
   },
-
-
 ];
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -389,13 +385,35 @@ const Members = () => {
       <Navbar />
 
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Members 
-        </h2>
-        <p className="text-lg pt-5 font-semibold leading-6 text-indigo-600">
+        <motion.h2
+          initial={{ x: -100, y: 100, opacity: 0 }}
+          whileInView={{ x: 0, y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            delay: 0.3,
+            type: "spring",
+            stiffness: 100,
+          }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+        >
+          Members
+        </motion.h2>
+        <motion.p
+          initial={{ x: -100, y: 100, opacity: 0 }}
+          whileInView={{ x: 0, y: 0, opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            delay: 0.3,
+            type: "spring",
+            stiffness: 100,
+          }}
+          viewport={{ once: true }}
+          className="text-lg pt-5 font-semibold leading-6 text-indigo-600"
+        >
           A diverse team of individuals with unique talents and backgrounds,
           united by a common goal and exceptional teamwork.
-        </p>
+        </motion.p>
 
         {/* Fliter content */}
         <div className="flex mt-10 items-center justify-evenly">
@@ -524,8 +542,9 @@ const Members = () => {
         </div>
 
         <div className="mt-[2rem] place-content-center place-items-center grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-          {filteredProducts.map((product) => (
+          {filteredProducts.map((product, index) => (
             <MembersCard
+              index={index}
               key={product.id}
               name={product.name}
               image={product.image}
@@ -534,7 +553,6 @@ const Members = () => {
             />
           ))}
         </div>
-        
       </div>
 
       <Footer />
