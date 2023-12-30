@@ -1,5 +1,6 @@
-import React from "react";
-
+"use client";
+import React, { useState, useEffect } from "react";
+import Load from "@/Components/Load";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 
@@ -223,92 +224,106 @@ const Aluminiposition = () => {
     const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
     window.open(gmailComposeUrl, "_blank");
   };
-
+const [loading, setLoading] = useState(false);
+useEffect(() => {
+  setLoading(true);
+  setTimeout(() => {
+    setLoading(false);
+  }, 2000);
+}, []);
   return (
-    <div>
-      <div>
-        <Navbar />
+    <>
+      {loading ? (
+        <div className="flex items-center justify-center h-screen">
+          <Load />
+        </div>
+      ) : (
+        <div>
+          <div>
+            <Navbar />
 
-        <div className="mx-auto max-w-7xl  px-4 py-10 sm:px-6 sm:py-10">
-          <motion.div
-            initial={{ x: -100, y: 100, opacity: 0 }}
-            whileInView={{ x: 0, y: 0, opacity: 1 }}
-            transition={{
-              duration: 0.3,
-              delay: 0.3,
-              type: "spring",
-              stiffness: 100,
-            }}
-            viewport={{ once: true }}
-            className="max-w-7xl"
-          >
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              {" "}
-              Alumini Positions- Meet our leadership
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Libero fames augue nisl porttitor nisi, quis. Id ac elit odio
-              vitae elementum enim vitae ullamcorper suspendisse.
-            </p>
-          </motion.div>
+            <div className="mx-auto max-w-7xl  px-4 py-10 sm:px-6 sm:py-10">
+              <motion.div
+                initial={{ x: -100, y: 100, opacity: 0 }}
+                whileInView={{ x: 0, y: 0, opacity: 1 }}
+                transition={{
+                  duration: 0.3,
+                  delay: 0.3,
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                viewport={{ once: true }}
+                className="max-w-7xl"
+              >
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  {" "}
+                  Alumini Positions- Meet our leadership
+                </h2>
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                  Libero fames augue nisl porttitor nisi, quis. Id ac elit odio
+                  vitae elementum enim vitae ullamcorper suspendisse.
+                </p>
+              </motion.div>
 
-          <div className="">
-            <ul
-              role="list"
-              className="mt-20 grid gap-x-4 gap-y-5 sm:grid-cols-3 sm:gap-y-16 xl:col-span-3"
-            >
-              {Position.map((people, index) => (
-                <motion.li
-                  initial={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{
-                    duration: 0.3,
-                    delay: 0.3 + (index % 3) * 0.2,
-                    type: "spring",
-                    stiffness: 100,
-                  }}
-                  viewport={{ once: true }}
-                  key={index}
+              <div className="">
+                <ul
+                  role="list"
+                  className="mt-20 grid gap-x-4 gap-y-5 sm:grid-cols-3 sm:gap-y-16 xl:col-span-3"
                 >
-                  <div className="flex items-center rounded-xl min-h-[14rem] p-3 gap-x-6 bg-white  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
-                    <div className="mx-auto ">
-                      <div className="flex items-center gap-x-6">
-                        <img
-                          className="h-20 w-20 rounded-full border-2 border-violet-800"
-                          src={`/Team/Founders/${people.image}.webp`}
-                          alt=""
-                        />
-                        <div>
-                          <h3 className="text-lg font-bold  uppercase text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-pink-600 leading-6">
-                            {people.name}
-                          </h3>
-                          <p className="text-sm font-semibold leading-6 text-red-800">
-                            {people.role}
-                          </p>
-                          <p className="text-sm font-semibold leading-6 text-gray-700">
-                            {people.Company}
-                          </p>
-                          <p className="text-sm font-semibold leading-6 text-gray-700">
-                            {people.location}
-                          </p>
+                  {Position.map((people, index) => (
+                    <motion.li
+                      initial={{ y: 100, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 0.3,
+                        delay: 0.3 + (index % 3) * 0.2,
+                        type: "spring",
+                        stiffness: 100,
+                      }}
+                      viewport={{ once: true }}
+                      key={index}
+                    >
+                      <div className="flex items-center rounded-xl min-h-[14rem] p-3 gap-x-6 bg-white  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
+                        <div className="mx-auto ">
+                          <div className="flex items-center gap-x-6">
+                            <img
+                              className="h-20 w-20 rounded-full border-2 border-violet-800"
+                              src={`/Team/Founders/${people.image}.webp`}
+                              alt=""
+                            />
+                            <div>
+                              <h3 className="text-lg font-bold  uppercase text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-pink-600 leading-6">
+                                {people.name}
+                              </h3>
+                              <p className="text-sm font-semibold leading-6 text-red-800">
+                                {people.role}
+                              </p>
+                              <p className="text-sm font-semibold leading-6 text-gray-700">
+                                {people.Company}
+                              </p>
+                              <p className="text-sm font-semibold leading-6 text-gray-700">
+                                {people.location}
+                              </p>
 
-                          <p className="mt-1 truncate text-sm leading-5 text-gray-500">
-                            {people.email}
-                          </p>
+                              <p className="mt-1 truncate text-sm leading-5 text-gray-500">
+                                {people.email}
+                              </p>
+                            </div>
+                          </div>
+                          <div className=" justify-evenly flex"></div>
                         </div>
                       </div>
-                      <div className=" justify-evenly flex"></div>
-                    </div>
-                  </div>
-                </motion.li>
-              ))}
-            </ul>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <Footer />
           </div>
         </div>
-
-        <Footer />
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
