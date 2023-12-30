@@ -58,7 +58,7 @@ const HomePage = () => {
           <div className="w-full" id="target">
             <NewNavbar view={isSectionInView} />
           </div>
-          <div className="inline-block min-h-[5rem] sm:min-h-[4rem] lg:hidden w-full" />
+          {/* <div className="inline-block min-h-[5rem] sm:min-h-[4rem] lg:hidden w-full" /> */}
           <NewHero />
           <About />
           <Projects />
