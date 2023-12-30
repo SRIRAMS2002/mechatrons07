@@ -52,8 +52,8 @@ const NewNavbar = ({view}) => {
     <>
       <nav
         className={twMerge(
-          "fixed top-0 w-full h-20 py-2 flex items-center justify-center z-50 left-0 right-0",
-          view ? "text-black bg-white shadow-lg" : "text-black bg-transparent"
+          "fixed top-0 w-full h-24 py-2 flex items-center justify-center z-50 left-0 right-0 transition-all duration-300 delay-100 ease-linear",
+          view ? "text-black bg-white shadow-lg h-20" : "text-black bg-transparent"
         )}
       >
         <div className="relative flex items-center justify-between bg-transparent gap-2 px-6  lg:px-10 h-full w-full">
