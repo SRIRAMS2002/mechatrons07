@@ -28,12 +28,11 @@ const About = () => {
               About Us
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Libero fames augue nisl porttitor nisi, quis. Id ac elit odio
-              vitae elementum enim vitae ullamcorper suspendisse. Libero fames
-              augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum
-              enim vitae ullamcorper suspendisse. Libero fames augue nisl
-              porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae
-              ullamcorper suspendisse.
+              Welcome to Mechatrons, a vibrant environment where innovation is
+              our lifeblood and creativity and technology dances together. Here,
+              we don&#39;t just tell stories; we unfold adventures. Our roots
+              delve into a passion for pushing boundaries, and our branches
+              reach for the skies of endless possibilities.
             </p>
           </motion.div>
           <motion.ul
