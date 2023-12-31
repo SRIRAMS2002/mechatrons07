@@ -5,7 +5,7 @@ import hero from "../../public/hero.png";
 const Hero = () => {
   return (
     <>
-      <div className="flex flex-col-reverse relative min-h-screen h-fit lg:flex-row items-center p-4 lg:p-8 w-full bg-[url('/Hero1.jpg')] bg-opacity-30 bg-black bg-center bg-blend-darken bg-cover px-10 text-white">
+      <div className="flex flex-col-reverse relative min-h-screen h-fit lg:flex-row items-center p-4 lg:p-8 w-full bg-[url('/3.jpeg')] bg-opacity-30 bg-black bg-center bg-blend-darken bg-cover px-10 text-white">
         {/* <div className="flex items-center justify-center"></div> */}
         {/* bg-[url('/bgs/bgGradLine.svg')] */}
         <div className="flex flex-col gap-2 sm:gap-4 items-center w-full h-full mt-10 lg:mt-36">
