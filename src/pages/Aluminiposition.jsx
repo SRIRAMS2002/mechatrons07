@@ -129,7 +129,7 @@ const Position = [
     Company: "Shanthi Gears Ltd.",
     location: "Coimbatore.",
     role: "Graduate Engineer Trainee",
-    email: "",
+    email: "kirthikrangaraj@gmail.com",
   },
   {
     id: 22,
@@ -138,7 +138,7 @@ const Position = [
     Company: "Propel Industries Private Limited",
     location: "Coimbatore.",
     role: "Assistant Engineer",
-    email: "",
+    email: "nithin21@gmail.com",
   },
   {
     id: 20,
@@ -184,10 +184,10 @@ const Position = [
     name: "MAHESH BOOPATHI m",
 
     image: "Mahesh23",
-    Company: "  ",
-    location: ".",
-    role: "",
-    email: "@gmail.com",
+    Company: "Aptiv Pochiyal India Pvt Ltd",
+    location: "Chennai.",
+    role: "Production Engineer",
+    email: "maheshboopathi@gmail.com",
   },
   {
     id: 13,

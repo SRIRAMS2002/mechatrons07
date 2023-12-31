@@ -138,7 +138,7 @@ const Navbar = ({view}) => {
           >
             <Image
               src={logo}
-              className={twMerge("h-16 w-16", view ? "invert-0" : "invert-0")}
+              className={twMerge("h-20 w-20", view ? "invert-0" : "invert-0")}
               alt="hello"
             />
           </a>

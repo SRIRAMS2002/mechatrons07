@@ -4,6 +4,22 @@ const News = () => {
   const posts = [
     {
       id: 1,
+      title: "SRIT students win the national level electric bike challenge!",
+      href: "https://www.covaichronicle.com/english/contentview/srit--wins--kct",
+      description:
+        "The Student-team from Sri Ramakrishna Institute of Technology (SRIT) took part in the National Level Electric Bike Challenge (NEBC’23) organized by Kumaraguru College of Technology last month, and they successfully lifted the overall championship.         ",
+      date: "Mar 16,2023",
+      datetime: "2023-03-16",
+      category: { title: "Coimbatore",  },
+      author: {
+        name: "Covai Chronicle",
+        role: "Newspaper",
+    
+       
+      },
+    },
+    {
+      id: 2,
       title:
         "பெட்ரோல், பேட்டரி மூலம் இயங்கும் வாகனம்: ஸ்ரீ ராமகிருஷ்ணா கல்லூரி மாணவர்கள் சாதனை",
       href: "https://www.covaimail.com/?p=53397",
@@ -11,32 +27,15 @@ const News = () => {
         "ஸ்ரீ ராமகிருஷ்ணா தொழில்நுட்பக் கல்லூரியின் இயந்திரவியல் மற்றும் மின்னியல், மற்றும் தொடர்பியல் துறை சார்ந்த இறுதி ஆண்டு மற்றும் முன்னாள் மாணவர்கள் பேட்டரி மற்றும் பெட்ரோல் மூலமாக இயங்கக்கூடிய இருசக்கர வாகனத்தை தயாரிக்கும் முயற்சியில் வெற்றி கண்டு சாதனை படைத்துள்ளனர்.",
       date: "Nov 06, 2021",
       datetime: "2021-11-06",
-      category: { title: "Marketing", href: "#" },
+      category: { title: "Coimbatore",},
       author: {
         name: "Covai Mail",
         role: "Newspaper",
-        href: "#",
-        imageUrl:
-          "https://pbs.twimg.com/profile_images/841202864336732160/WpjQxv0c_400x400.jpg",
+       
+       
       },
     },
-    {
-      id: 2,
-      title: "Tamil Nadu government opens doors for electric vehicle makers",
-      href: "https://www.business-standard.com/article/companies/tamil-nadu-government-opens-doors-for-electric-vehicle-makers-121100400043_1.html",
-      description:
-        "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-      date: "Oct 04, 2021",
-      datetime: "2021-10-04",
-      category: { title: "Marketing", href: "#" },
-      author: {
-        name: "Business-Standard",
-        role: "Co-Founder / CTO",
-        href: "https://www.business-standard.com/",
-        imageUrl:
-          "https://www.business-standard.com/assets/web-assets/images/business-standard-logo-placeholder.jpg",
-      },
-    },
+   
     {
       id: 3,
       title:
@@ -46,13 +45,12 @@ const News = () => {
         "கோவையை சேர்ந்த ஸ்டார்ட் அப் நிறுவனம் ஒன்று பெட்ரோல் ஸ்கூட்டரை எலக்ட்ரிக்-ஹைபிரிட் ஸ்கூட்டராக மாற்றும் கிட் ஒன்றை கண்டுபிடித்துள்ளது",
       date: "Sep 03, 2021",
       datetime: "2021-09-03",
-      category: { title: "Marketing", href: "#" },
+      category: { title: "Coimbatore", },
       author: {
         name: "The Times of India- Samayam",
         role: "Newspaper",
-        href: "https://tamil.samayam.com/",
-        imageUrl:
-          "https://play-lh.googleusercontent.com/k8eIgpF1iXamn64rd6w_kxpsmEO2VqVGhupV5oSAynhgtPNq56gvTnr4WG8mhBKFYjLX",
+       
+       
       },
     },
   ];
@@ -99,7 +97,8 @@ const News = () => {
                     {post.date}
                   </time>
                   <a
-                    href={post.category.href}
+                   
+                    
                     className="relative z-10 rounded-full bg-black px-3 py-1.5 font-medium text-white "
                   >
                     {post.category.title}
@@ -107,7 +106,8 @@ const News = () => {
                 </div>
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    <a href={post.href}>
+                    <a href={post.href}  target="_blank">
+                    
                       <span className="absolute inset-0" />
                       {post.title}
                     </a>
@@ -117,14 +117,10 @@ const News = () => {
                   </p>
                 </div>
                 <div className="relative mt-8 flex items-center gap-x-4">
-                  <img
-                    src={post.author.imageUrl}
-                    alt=""
-                    className="h-10 w-10 rounded-full bg-gray-900"
-                  />
+                 
                   <div className="text-sm leading-6">
                     <p className="font-bold text-black ">
-                      <a href={post.author.href}>
+                      <a >
                         <span className="absolute inset-0" />
                         {post.author.name}
                       </a>
