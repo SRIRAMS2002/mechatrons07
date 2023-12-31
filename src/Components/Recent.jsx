@@ -11,27 +11,26 @@ import {
 const Intro = [
     {
       id: 1,
-      imageUrl: "Founder-4",
+      imageUrl: "Hero",
     },
     {
       id: 2,
-      imageUrl: "Founder-4",
+      imageUrl: "Hero",
     },
     {
       id: 3,
-      imageUrl: "Founder-4",
+      imageUrl: "Hero",
     },
     {
       id: 4,
-      imageUrl: "Founder-4",
+      imageUrl: "Hero",
     },
   ];
 const Recent = () => {
   return (
     <div>
-      <div className="mx-auto   place-content-center place-items-center max-w-5xl">
-    <div className="bg-white p-5  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
-    <div className="sm:max-w-lg">
+      <div className="mx-auto  items-center lg:flex max-w-7xl">
+      <div className="sm:max-w-lg mx-auto">
               <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Recent TRIUMPHS
               </h1>
@@ -42,11 +41,13 @@ const Recent = () => {
                 profit margins.
               </p>
             </div>
+    <div className="bg-white p-5  mt-5  ">
+   
 
-      <div className="mt-5 md:ml-10 ">
+      <div className=" md:ml-10 ">
       <Swiper
   autoplay={{
-    delay: 3500,
+    delay: 7500,
     disableOnInteraction: false,
   }}
   modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
@@ -57,14 +58,14 @@ const Recent = () => {
   pagination={{ clickable: true }}
   onSwiper={(swiper) => console.log(swiper)}
   onSlideChange={() => console.log("slide change")}
-
+className='max-w-[40rem] max-h-[30rem]'
 >
 {Intro.map((people, index) => (
           <SwiperSlide>
-            <div className="bg-white lg:ml-10 h-[20rem] w-[22rem] place-content-center place-items-center border-2 rounded-xl">
+            <div className="bg-white lg:ml-10 h-[17rem] w-[30rem]  border-2 rounded-xl">
               <img
-                className="object-cover w-full h-full"
-                src={`/Team/Founders/${people.imageUrl}.webp`}
+                className=" object-cover w-full h-full"
+                src={`/Achievements/${people.imageUrl}.webp`}
                 alt=""
               />
             </div>

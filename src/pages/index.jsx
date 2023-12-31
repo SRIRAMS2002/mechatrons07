@@ -120,15 +120,16 @@ const index = () => {
        <div className="w-full" id="target">
             <Navbar view={isSectionInView} />
           </div>
-     
+      
       {/* Hero */}
       <Hero/>
       {/* <Hero /> */}
+      {/* About US */}
+      <About />
       {/* Recent */}
       <Recent/>
     {/* </Recent> */}
-      {/* About US */}
-      <About />
+     
       {/* Projects */}
       <Projects />
    
