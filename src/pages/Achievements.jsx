@@ -295,8 +295,8 @@ const Achievements = () => {
   });
   return (
     <>
-      <Navbar />
-      <div className="bg-white min-h-screen pb-24">
+      <Navbar className="text-black bg-white"/>
+      <div className="mt-[8rem] min-h-screen pb-24">
         <div className="px-4 sm:px-6 lg:px-8 py-2">
           {/* Search bar */}
           <div className="max-w-3xl mx-auto mb-8">
@@ -323,7 +323,7 @@ const Achievements = () => {
             </div>
           </div>
 
-          <div className="max-w-7xl mx-auto  bg-white">
+          <div className="max-w-7xl mx-auto ">
             <div className="flex items-center justify-evenly">
               {/* Category Tabs */}
 

@@ -82,7 +82,7 @@ const Gallery = () => {
       <Navbar className=""/>
 
       <div className="mx-auto   place-content-center place-items-center max-w-5xl">
-    <div className="bg-white p-5  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
+    <div className=" p-5  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
     <div className="sm:max-w-lg">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Gallery
@@ -113,7 +113,7 @@ const Gallery = () => {
 >
 {Intro.map((people, index) => (
           <SwiperSlide>
-            <div className="bg-white lg:ml-10 h-[20rem] w-[22rem] place-content-center place-items-center border-2 rounded-xl">
+            <div className=" lg:ml-10 h-[20rem] w-[22rem] place-content-center place-items-center border-2 rounded-xl">
               <img
                 className="object-cover w-full h-full"
                 src={`/Team/Founders/${people.imageUrl}.webp`}

@@ -133,7 +133,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
 
       {/* gallery mobile */}
       <div className="lg:hidden mx-5">
-      <div className="mx-auto space-y-3 text-center  bg-white p-5  rounded-lg shadow-lg hover:shadow-xl shadow-indigo-500/50 hover:shadow-indigo-500/50 mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
+      <div className="mx-auto space-y-3 text-center   p-5  rounded-lg shadow-lg hover:shadow-xl shadow-indigo-500/50 hover:shadow-indigo-500/50 mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
         
         <p className="text-slate-500 font-sans leading-3 font-semibold text-lg">
               {location}
@@ -163,7 +163,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
 
 >
           <SwiperSlide>
-            <div className="bg-white border-2 rounded-xl">
+            <div className="border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl}
@@ -172,7 +172,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>{" "}
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className="border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl1}
@@ -181,7 +181,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className=" border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl2}
@@ -190,7 +190,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className=" border-2 rounded-xl">
               <img
                  className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl3}
@@ -199,7 +199,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className=" border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl4}
@@ -208,7 +208,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className="  border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl5}
@@ -217,7 +217,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className=" border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl6}
@@ -226,7 +226,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className=" border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl7}
@@ -235,7 +235,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className=" border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl8}
@@ -244,7 +244,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className=" border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl9}
@@ -253,7 +253,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className=" border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl10}
@@ -262,7 +262,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className=" border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl11}
@@ -271,7 +271,7 @@ const GalleryPage = ({ location,date, name, Desc,image, image1, image2,image3,im
             </div>
           </SwiperSlide>
           <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
+          <div className=" border-2 rounded-xl">
               <img
                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
                 src={imageUrl12}

@@ -13,16 +13,14 @@ import {
   CalendarIcon,
 } from "@heroicons/react/20/solid";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Autoplay,
-  Pagination,
-  Scrollbar,
-  A11y,
-} from "swiper/modules";
+import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
-import "swiper/css";
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import { Navigation } from 'swiper/modules';
+
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -51,12 +49,9 @@ const products = [
     venue: "Kumaraguru College    of Technology",
     Organiser: "KCT Garage    &    Society for Smart    E-Mobility(SSEM)",
     date: "25 - 26 Feb 2023",
-    Awards: [{ value: "Overall Champions – ₹50,000/-" },
-    { value: "Best Endurance–₹10,000/-" },
-    { value: "Best Acceleration–₹5,000/-" },
-    { value: "Best Manoeuvrability–₹5,000/-" },
-    { value: "Best Bump Test–₹5,000/-" }
-  ,{ value: "Best Autocross–₹5,000/-" }],
+    Awards: [{ value: "Overall Champions – ₹50,000/-  + 5 Category Awards" },
+  
+   ],
     location:"Coimbatore.",
   },
   {
@@ -69,9 +64,8 @@ const products = [
     venue: "Galgotias University,    Noida.",
     Organiser: "Hero electric &    ISIE India",
     date: "14 - 18 Apr 2023",
-    Awards: [{ value: "Best Business    Plan and Cost-    Rs.10,000/- + Trophy" },
-    { value: "Hill    Climb Test Winner- Rs.10,000/- + Trophy" },
-    { value: "FutureAward-Rs.5,000/-    +Trophy" },],
+    Awards: [{ value: "Best Business Plan and Cost - Rs.10,000/- + 2 Category Awards + 3 Trophy" },
+    ],
     location:"New Delhi.",
   },
   {
@@ -84,12 +78,8 @@ const products = [
     venue: "Chandigarh Group of    College",
     Organiser: "Hero electric &    ISIE India",
     date: "25 - 28 Dec 2021",
-    Awards: [{ value: "Overall Championship     Award - Rs.50,000/-" },
-    { value: "Best Acceleration    Winner - Rs.10,000/-" },
-    { value: "Off Road Test Winner -    Rs.10,000/-" },
-    { value: "Sled Pull Test Winner -    Rs.10,000/-" },
-    { value: "Future Award -    Rs.5,000/-" },
-    { value: "Hill Climb Test -    Runner-up" },],
+    Awards: [{ value: "Overall Championship     Award - Rs.50,000/- + 5 Category Awards" },
+   ],
     location:"Punjab.",
   },
   {
@@ -119,13 +109,12 @@ const Recent = () => {
       </p>
 
       {/* content */}
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-     
+      <Swiper  navigation={true} modules={[Navigation]} className="mySwiper">
        
         {products.map((product) => (
            <SwiperSlide> 
-          <div className="mx-auto   place-content-center place-items-center max-w-7xl">
-        <div className="bg-white p-5  rounded-lg  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
+          <div className="mx-auto   place-content-center place-items-center max-w-6xl">
+        <div className="bg-gray-300 p-5  rounded-lg  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
           <div className="">
             <div className=" text-left">
               <p className="text-sm leading-4 font-medium text-slate-600">
@@ -190,7 +179,7 @@ const Recent = () => {
           </div>
 
           <div className="mt-5 md:ml-10 ">
-          <div className="bg-white border-2 w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-xl">
+          <div className="border-2 w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-xl">
                   <img
                     className="object-cover "
                     src={`/Achievements/${product.image}.webp`}

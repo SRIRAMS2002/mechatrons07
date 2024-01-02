@@ -20,10 +20,10 @@
     opacity: 1; /* Make the text fully opaque */
     
     background-repeat: repeat-x; /* Repeat the background image horizontally */
-    background-clip: inherit; /* Inherit the background clipping from the parent */
+    background-clip: inherit; 
      -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; /* Make the text transparent */
-    animation: animate 40s linear infinite; /* Apply an animation named "animate" */
+    -webkit-text-fill-color: transparent; 
+    animation: animate 40s linear infinite; 
 }
 
 @keyframes animate {
@@ -36,7 +36,7 @@
 }
 
 body{
- background-color: #fdf9ff;
+ background-color: #F4F0EC;
 }
 
 .swiper {
@@ -46,8 +46,8 @@ body{
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff;
+  font-size: 15px;
+  
 
   /* Center slide text vertically */
   display: flex;

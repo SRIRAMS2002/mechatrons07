@@ -57,13 +57,13 @@ const Navbar = ({view}) => {
         )}
       >
         <div className="relative flex items-center justify-between bg-transparent gap-2 px-6 md:mx-20 lg:px-10 h-full w-full">
-          <Popover.Group className="hidden lg:flex items-center justify-center gap-8 text-lg">
-            <a href="/" className="font-semibold leading-6">
+          <Popover.Group className="hidden lg:flex items-center justify-center gap-8 ">
+            <a href="/" className="font-semibold leading-6 text-lg">
               Home
             </a>
             {/* Team */}
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6">
+              <Popover.Button className="flex items-center gap-x-1 font-semibold leading-6 text-lg">
                 Team
                 <ChevronDownIcon
                   className="h-5 w-5 flex-none"
@@ -80,7 +80,7 @@ const Navbar = ({view}) => {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
               >
-                <Popover.Panel className="absolute -left-8   top-full z-20 mt-3 w-screen max-w-sm overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-gray-900/5">
+                <Popover.Panel className="absolute -left-8 text-sm  top-full z-20 mt-3 w-screen max-w-sm overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-gray-900/5">
                   <div className="p-4">
                     {products.map((item) => (
                       <div
@@ -126,7 +126,7 @@ const Navbar = ({view}) => {
                 </Popover.Panel>
               </Transition>
             </Popover>
-            <a href="/Projects" className="font-semibold leading-6">
+            <a href="/Projects" className="font-semibold leading-6 text-lg">
               Projects
             </a>
           </Popover.Group>
