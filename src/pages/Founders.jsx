@@ -62,7 +62,7 @@ const FoundersPage = () => {
       ) : (
         <div>
           <Navbar />
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
+          <div className="mx-auto mt-20 max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
             <h2 className="sr-only">Founders</h2>
             <motion.div
               initial={{ x: -100, y: 100, opacity: 0 }}

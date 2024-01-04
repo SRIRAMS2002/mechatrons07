@@ -114,7 +114,7 @@ const Recent = () => {
         {products.map((product) => (
            <SwiperSlide> 
           <div className="mx-auto   place-content-center place-items-center max-w-6xl">
-        <div className="bg-gray-300 p-5  rounded-lg  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
+        <div className="bg-white p-5 rounded-lg  mt-5  grid  grid-cols-1 items-center  px-2  sm:px-5  lg:grid-cols-2 lg:px-8">
           <div className="">
             <div className=" text-left">
               <p className="text-sm leading-4 font-medium text-slate-600">
