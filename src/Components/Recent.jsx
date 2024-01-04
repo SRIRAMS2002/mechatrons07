@@ -113,13 +113,10 @@ const Recent = () => {
        
         {products.map((product) => (
            <SwiperSlide> 
-<<<<<<< HEAD
           <div className="mx-auto bg-white  rounded-xl   place-content-center place-items-center max-w-6xl">
         <div className=" p-5  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
-=======
           <div className="mx-auto   place-content-center place-items-center max-w-6xl">
         <div className="bg-white p-5 rounded-lg  mt-5  grid  grid-cols-1 items-center  px-2  sm:px-5  lg:grid-cols-2 lg:px-8">
->>>>>>> 2ffd4d2cf4aff91348bc0ea23cb08206d00ba12b
           <div className="">
             <div className=" text-left">
               <p className="text-sm leading-4 font-medium text-slate-600">
@@ -204,6 +201,7 @@ const Recent = () => {
 
      
     </div>
+
   );
 };
 
