@@ -1,158 +1,126 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Autoplay,
-  Pagination,
-  Scrollbar,
-  A11y,
-} from "swiper/modules";
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 // Import Swiper styles
-import "swiper/css";
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
+
+// import required modules
+import { Pagination } from 'swiper/modules';
+
+
+const Testi = [
+  {
+    id:1,
+    name:"Vijayalakshmi R",
+    description:"aaaaa",
+    position:"Software Developer",
+    image:"Founder-2",
+  },
+  {
+    id:2,
+    name:"Ramya T",
+    description:"aaaaa",
+    position:"Design Engineer",
+    image:"Founder-5-1",
+  },
+  {
+    id:1,
+    name:"RAGU B ",
+    description:"aaaaa",
+    position:"R&D Enginner (Simulation & Testing)",
+    image:"ragu",
+  },
+  {
+    id:1,
+    name:"RAMKUMAR K",
+    description:"aaaaa",
+    position:"Design Engineer ",
+    image:"Ramkumar-21-1",
+  },
+  {
+    id:1,
+    name: "VIGNESHWARAN C",
+    image: "VIGNESHWARAN-21",
+    description:"aaaaa",
+    position:"Design Engineer trainee",
+  },
+  {
+    id:1,
+    name: "SIVARAMAKRISHNAN P   ",
+    image: "Sivaramakrihanam-22",
+    position: "Associate - Cloud",
+    description:"aaaaa",
+    
+  },
+  {
+    id:1,
+    name: "Dhanapal D",
+    image: "Dhanapal 23",
+    position: "Design Engineer",
+    description:"aaaaa",
+  },
+  {
+    id:1,
+    name: " SREEJA G",
+    image: "sreeja23",
+    description:"aaaaa",
+    position:"Team Leader",
+    
+  },
+];
+
 const Testimonials = () => {
   return (
-    <>
-      <div className="text-center p-5">
-        <h1 className="text-3xl uppercase font-bold">Testimonials</h1>
-        <h4 className="text-md leading-7 my-3 text-lg font-light opacity-75">
-          Learn how to grow your business with our expert advice.
-        </h4>
-        <div className="flex max-w-5xl mx-auto gap-8">
-          <Swiper
-            // install Swiper modules
-            breakpoints={{
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 40,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 50,
-              },
-            }}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
-            spaceBetween={50}
-            // slidesPerView={1}
-            navigation
-            pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-            className=""
-          >
-            <SwiperSlide>
-              <div className=" bg-white border-2 px-5 py-5 border-violet-900 text-center p-8 rounded-xl">
-                <img
-                  className="h-20 rounded-full mx-auto"
-                  src="https://www.fujitsu.com/global/Images/Srinita_1_tcm100-3656043.jpg"
-                  alt=""
-                />
-                <h4 className="uppercase text-xl font-bold">NAncy Doe</h4>
-                <h5 className="font-bold opacity-75">Front end engineer</h5>
-                <p className="text-md leading-7 my-3 font-light  text-slate-800">
-                  And because these are real people, customers trust them to be
-                  unbiased and truthful. · A testimonial is effectively a review
-                  or recommendation from a client, letting other people know how
-                  your products or services benefitted them.
-                </p>
-              </div>
-            </SwiperSlide>{" "}
-            <SwiperSlide>
-              <div className=" bg-white border-2 px-5 py-5 border-violet-900 text-center p-8 rounded-xl">
-                <img
-                  className="h-20 rounded-full mx-auto"
-                  src="https://www.fujitsu.com/global/Images/Srinita_1_tcm100-3656043.jpg"
-                  alt=""
-                />
-                <h4 className="uppercase text-xl font-bold">NAncy Doe</h4>
-                <h5 className="font-bold opacity-75">Front end engineer</h5>
-                <p className="text-md leading-7 my-3 font-light  text-slate-800">
-                  And because these are real people, customers trust them to be
-                  unbiased and truthful. · A testimonial is effectively a review
-                  or recommendation from a client, letting other people know how
-                  your products or services benefitted them.
-                </p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className=" bg-white border-2 px-5 py-5 border-violet-900 text-center p-8 rounded-xl">
-                <img
-                  className="h-20 rounded-full mx-auto"
-                  src="https://www.fujitsu.com/global/Images/Srinita_1_tcm100-3656043.jpg"
-                  alt=""
-                />
-                <h4 className="uppercase text-xl font-bold">NAncy Doe</h4>
-                <h5 className="font-bold opacity-75">Front end engineer</h5>
-                <p className="text-md leading-7 my-3 font-light  text-slate-800">
-                  And because these are real people, customers trust them to be
-                  unbiased and truthful. · A testimonial is effectively a review
-                  or recommendation from a client, letting other people know how
-                  your products or services benefitted them.
-                </p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className=" bg-white border-2 px-5 py-5 border-violet-900 text-center p-8 rounded-xl">
-                <img
-                  className="h-20 rounded-full mx-auto"
-                  src="https://www.fujitsu.com/global/Images/Srinita_1_tcm100-3656043.jpg"
-                  alt=""
-                />
-                <h4 className="uppercase text-xl font-bold">NAncy Doe</h4>
-                <h5 className="font-bold opacity-75">Front end engineer</h5>
-                <p className="text-md leading-7 my-3 font-light  text-slate-800">
-                  And because these are real people, customers trust them to be
-                  unbiased and truthful. · A testimonial is effectively a review
-                  or recommendation from a client, letting other people know how
-                  your products or services benefitted them.
-                </p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="  bg-white border-2 px-5 py-5 border-violet-900 text-center p-8 rounded-xl">
-                <img
-                  className="h-20 rounded-full mx-auto"
-                  src="https://www.fujitsu.com/global/Images/Srinita_1_tcm100-3656043.jpg"
-                  alt=""
-                />
-                <h4 className="uppercase text-xl font-bold">NAncy Doe</h4>
-                <h5 className="font-bold opacity-75">Front end engineer</h5>
-                <p className="text-md leading-7 my-3 font-light  text-slate-800">
-                  And because these are real people, customers trust them to be
-                  unbiased and truthful. · A testimonial is effectively a review
-                  or recommendation from a client, letting other people know how
-                  your products or services benefitted them.
-                </p>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className=" bg-white border-2 px-5 py-5 border-violet-900 text-center p-8 rounded-xl">
-                <img
-                  className="h-20 rounded-full mx-auto"
-                  src="https://www.fujitsu.com/global/Images/Srinita_1_tcm100-3656043.jpg"
-                  alt=""
-                />
-                <h4 className="uppercase text-xl font-bold">NAncy Doe</h4>
-                <h5 className="font-bold opacity-75">Front end engineer</h5>
-                <p className="text-md leading-7 my-3 font-light  text-slate-800">
-                  And because these are real people, customers trust them to be
-                  unbiased and truthful. · A testimonial is effectively a review
-                  or recommendation from a client, letting other people know how
-                  your products or services benefitted them.
-                </p>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+    <div className='mx-auto max-w-7xl my-10'> <Swiper    slidesPerView={1}
+    spaceBetween={10}
+    pagination={{
+      clickable: true,
+    }}
+    breakpoints={{
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    }}
+    className=''
+    modules={[Pagination]}>
+      {Testi.map((people, index) => (
+      <SwiperSlide> <div className="mx-auto rounded-lg bg-gray-800 space-y-6 py-5 text-center max-w-sm">
+        <div className='mx-auto rounded-full bg-white p-1.5 shadow-2xl shadow-white object-cover h-32 w-32 '>
+        <img
+              className="mx-auto w-full h-full rounded-full"
+              src={`/Team/Founders/${people.image}.webp`}
+              alt=""
+             
+            />
         </div>
-      </div>
-    </>
+            
+            <p className="text-gray-400 mx-2">
+              <span className="text-lg font-semibold leading-none ">"</span>{people.description}<span className="font-serif"> "</span>
+            </p>
+           
+            <div>
+            <h4 class="text-2xl text-white font-semibold ">{people.name}</h4>
+          <span class="block text-sm text-gray-300">{people.position}</span>
+            </div>
+            </div></SwiperSlide>
+             ))}
+           
+            
+      </Swiper></div>
+   
   );
 };
 

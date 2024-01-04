@@ -262,6 +262,34 @@ const products = [
 ];
 
 const Achievements = () => {
+  const [isSectionInView, setIsSectionInView] = useState(false);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
+        setIsSectionInView(true);
+      } else {
+        setIsSectionInView(false);
+      }
+    };
+  
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const [activeTab, setActiveTab] = useState("section1");
   const [selectedCategory, setSelectedCategory] = useState("international");
   const [searchQuery, setSearchQuery] = useState("");
@@ -295,7 +323,7 @@ const Achievements = () => {
   });
   return (
     <>
-      <Navbar className="text-black bg-white"/>
+      <Navbar view={isSectionInView} />
       <div className="mt-[8rem] min-h-screen pb-24">
         <div className="px-4 sm:px-6 lg:px-8 py-2">
           {/* Search bar */}
@@ -311,7 +339,7 @@ const Achievements = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
               {searchQuery === "" ? (
-                <MagnifyingGlassIcon className="h-5 w-5 text-zinc-500   bg-white" />
+                <MagnifyingGlassIcon className="h-5 w-5 text-zinc-500  " />
               ) : (
                 <XMarkIcon
                   onClick={() => {

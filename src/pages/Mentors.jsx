@@ -53,12 +53,32 @@ const MentorList = [
 ];
 
 const Mentors = () => {
+  const [isSectionInView, setIsSectionInView] = useState(false);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2500);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
+        setIsSectionInView(true);
+      } else {
+        setIsSectionInView(false);
+      }
+    };
+  
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -69,8 +89,9 @@ const Mentors = () => {
         </div>
       ) : (
         <div>
-          <Navbar />
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
+          <Navbar view={isSectionInView}/>
+          
+          <div className="mx-auto mt-[5rem] max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
             <motion.h2
               initial={{ x: -100, y: 100, opacity: 0 }}
               whileInView={{ x: 0, y: 0, opacity: 1 }}
@@ -83,6 +104,13 @@ const Mentors = () => {
               viewport={{ once: true }}
               className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
             >
+              <span class="flex text-sm space-x-2 md:items-center">
+            {" "}
+            
+            <span class="font-medium text-gray-600 dark:text-gray-400">
+              New this summer / cslknlkn
+            </span>{" "}
+          </span>
               Mentors
             </motion.h2>
             <motion.p

@@ -98,7 +98,7 @@ const products = [
 ];
 const Recent = () => {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className=" mx-auto max-w-7xl px-6 lg:px-8">
       <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         Recent TRIUMPHS
       </h1>
@@ -113,8 +113,8 @@ const Recent = () => {
        
         {products.map((product) => (
            <SwiperSlide> 
-          <div className="mx-auto   place-content-center place-items-center max-w-6xl">
-        <div className="bg-gray-300 p-5  rounded-lg  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
+          <div className="mx-auto bg-white  rounded-xl   place-content-center place-items-center max-w-6xl">
+        <div className=" p-5  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
           <div className="">
             <div className=" text-left">
               <p className="text-sm leading-4 font-medium text-slate-600">

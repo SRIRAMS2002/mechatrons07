@@ -47,7 +47,7 @@ const people = [
 const products = [
   {
     id: 1,
-    name: "DURGADASS V C",
+    name: "DURGADAS V C",
     category: "2024",
     image: "20-24 DURGADASS V C",
     dept: "Mechanical",
@@ -71,7 +71,7 @@ const products = [
   },
   {
     id: 22,
-    name: " KARTHIGEYAN L",
+    name: " KARTHIKEYAN L",
     category: "2024",
     image: "Karthikeyan24",
     dept: "Mechanical",
@@ -359,12 +359,32 @@ const Members = () => {
   const [selectedCategory, setSelectedCategory] = useState("2024");
   const [searchQuery, setSearchQuery] = useState("");
   const [selected, setSelected] = useState(people[0]);
+  const [isSectionInView, setIsSectionInView] = useState(false);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2500);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
+        setIsSectionInView(true);
+      } else {
+        setIsSectionInView(false);
+      }
+    };
+  
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleCategoryChange = (category) => {
@@ -398,9 +418,9 @@ const Members = () => {
         </div>
       ) : (
         <div>
-          <Navbar />
+          <Navbar view={isSectionInView}/>
 
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
+          <div className="mx-auto mt-[5rem] max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
             <motion.h2
               initial={{ x: -100, y: 100, opacity: 0 }}
               whileInView={{ x: 0, y: 0, opacity: 1 }}

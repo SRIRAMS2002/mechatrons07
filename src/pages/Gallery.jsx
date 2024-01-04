@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import Navbar from '@/Components/Navbar';
 import Footer from '@/Components/Footer';
 import GalleryPage from '@/Components/GalleryPage';
@@ -13,6 +13,34 @@ import {
 // Import Swiper styles
 import "swiper/css";
 const Gallery = () => {
+
+  const [isSectionInView, setIsSectionInView] = useState(false);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 20) {
+        setIsSectionInView(true);
+      } else {
+        setIsSectionInView(false);
+      }
+    };
+  
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const Intro = [
     {
       id: 1,
@@ -79,9 +107,9 @@ const Gallery = () => {
 
   return (
     <div>
-      <Navbar className=""/>
+      <Navbar view={isSectionInView}/>
 
-      <div className="mx-auto   place-content-center place-items-center max-w-5xl">
+      <div className="mx-auto mt-[5rem]  place-content-center place-items-center max-w-5xl">
     <div className=" p-5  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
     <div className="sm:max-w-lg">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">

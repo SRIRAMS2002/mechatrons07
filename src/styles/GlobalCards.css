@@ -36,7 +36,7 @@
 }
 
 body{
- background-color: #f3ecf4;
+ background-color: #ececec;
 }
 
 .swiper {
@@ -46,6 +46,7 @@ body{
 
 .swiper-slide {
   text-align: center;
+  color:aliceblue;
   font-size: 15px;
   
 
@@ -62,5 +63,8 @@ body{
   object-fit: cover;
 }
 
+.justify-text {
+  text-align: justify;
+}
 
   

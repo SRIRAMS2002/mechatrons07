@@ -163,9 +163,10 @@ const Position = [
     id: 9,
     name: "SIVARAMAKRISHNAN P   ",
     image: "Sivaramakrihanam-22",
+    role: "Associate - Cloud",
     Company: "SecureKloud Technologies Ltd",
     location: "Chennai.",
-    role: "Associate - Cloud",
+    
     email: "sivaram28032001@gmail.com",
   },
   {
@@ -193,9 +194,10 @@ const Position = [
     id: 13,
     name: "Dhanapal D",
     image: "Dhanapal 23",
+    role: "Design Engineer",
     Company: "Shree sai Technologies",
     location: "Coimbatore.",
-    role: "Design Engineer",
+    
     email: "dharun16122001@gmail.com",
   },
   {
@@ -224,13 +226,33 @@ const Aluminiposition = () => {
     const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
     window.open(gmailComposeUrl, "_blank");
   };
-const [loading, setLoading] = useState(false);
-useEffect(() => {
-  setLoading(true);
-  setTimeout(() => {
-    setLoading(false);
-  }, 2000);
-}, []);
+  const [isSectionInView, setIsSectionInView] = useState(false);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
+        setIsSectionInView(true);
+      } else {
+        setIsSectionInView(false);
+      }
+    };
+  
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       {loading ? (
@@ -240,9 +262,9 @@ useEffect(() => {
       ) : (
         <div>
           <div>
-            <Navbar />
+            <Navbar view={isSectionInView}/>
 
-            <div className="mx-auto max-w-7xl  px-4 py-10 sm:px-6 sm:py-10">
+            <div className="mx-auto max-w-7xl mt-[5rem] px-4 py-10 sm:px-6 sm:py-10">
               <motion.div
                 initial={{ x: -100, y: 100, opacity: 0 }}
                 whileInView={{ x: 0, y: 0, opacity: 1 }}
@@ -283,7 +305,7 @@ useEffect(() => {
                       viewport={{ once: true }}
                       key={index}
                     >
-                      <div className="flex items-center rounded-xl min-h-[14rem] p-3 gap-x-6 bg-white  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
+                      <div className="flex items-center rounded-xl min-h-[10rem] p-3 gap-x-6 bg-white  border-box hover:border-violet-900 transition border-2 hover:shadow-lg shadow-indigo-500/50 shadow-lg  hover:shadow-indigo-500/50">
                         <div className="mx-auto ">
                           <div className="flex items-center gap-x-6">
                             <img

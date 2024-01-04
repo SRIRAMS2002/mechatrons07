@@ -46,12 +46,32 @@ const Founders = [
 ];
 
 const FoundersPage = () => {
+  const [isSectionInView, setIsSectionInView] = useState(false);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2500);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
+        setIsSectionInView(true);
+      } else {
+        setIsSectionInView(false);
+      }
+    };
+  
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
   return (
     <>
@@ -61,7 +81,7 @@ const FoundersPage = () => {
         </div>
       ) : (
         <div>
-          <Navbar />
+          <Navbar view={isSectionInView} />
           <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
             <h2 className="sr-only">Founders</h2>
             <motion.div
@@ -74,7 +94,7 @@ const FoundersPage = () => {
                 stiffness: 100,
               }}
               viewport={{ once: true }}
-              className="mx-auto"
+              className="mx-auto mt-[5rem]"
             >
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Founders

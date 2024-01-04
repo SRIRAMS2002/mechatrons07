@@ -28,13 +28,13 @@ const About = () => {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               About Us
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-gray-600 justify-text">
               Welcome to Team Mechatrons, an official Electric Bike team from
               Sri Ramakrishna Institute of Technology, Coimbatore comprises 40
               enthusiastic students driven by innovation. Here, we don&#39;t
               just tell stories; we unfold our adventures and Victories. Our roots delve into a
               passion for pushing boundaries, and our branches reach for the
-              skies of endless possibilities. <span className="font-semibold">We strive to devise an eco-friendly and efficient electric bike using cutting-edge technology that would help us "One Team...One Dream..One Family."</span>
+              skies of endless possibilities. <span className="font-semibold text-gray-800">We strive to devise an eco-friendly and efficient electric bike using cutting-edge technology that would help us "One Team...One Dream..One Family."</span>
             </p>
           </motion.div>
           <motion.ul

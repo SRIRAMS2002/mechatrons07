@@ -425,7 +425,7 @@ const products = [
     id: 41,
     name: "Sakthi S",
     category: "2023",
-    image: "",
+    image: "Sakthi23",
     dept: "Mechanical",
     role: "Team Manager",
   },
@@ -487,14 +487,7 @@ const products = [
     dept: "Mechanical",
     role: "Technician",
   },
-  {
-    id: 47,
-    name: "THENAPPAN R",
-    category: "2023",
-    image: "",
-    dept: "Mechanical",
-    role: "Technician ",
-  },
+
   {
     id: 44,
     name: "ARUNKUMAR  T",
@@ -596,7 +589,7 @@ const Alumini = () => {
   const [selectedCategory, setSelectedCategory] = useState("2020");
   const [searchQuery, setSearchQuery] = useState("");
   const [selected, setSelected] = useState(people[0]);
-  const [loading, setLoading] = useState(false);
+
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
@@ -621,11 +614,33 @@ const Alumini = () => {
 
     return product.name.toLowerCase().includes(searchQuery.toLowerCase());
   });
+  const [isSectionInView, setIsSectionInView] = useState(false);
+
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 2500);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 50) {
+        setIsSectionInView(true);
+      } else {
+        setIsSectionInView(false);
+      }
+    };
+  
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
   return (
     <>
@@ -635,7 +650,7 @@ const Alumini = () => {
         </div>
       ) : (
         <div>
-          <Navbar />
+          <Navbar view={isSectionInView}/>
           <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
             <motion.h2
               initial={{ x: -100, y: 100, opacity: 0 }}
@@ -647,7 +662,7 @@ const Alumini = () => {
                 stiffness: 100,
               }}
               viewport={{ once: true }}
-              className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              className="text-3xl mt-[5rem] font-bold tracking-tight text-gray-900 sm:text-4xl"
             >
               Alumini
             </motion.h2>
