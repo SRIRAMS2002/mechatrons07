@@ -81,13 +81,8 @@ const FoundersPage = () => {
         </div>
       ) : (
         <div>
-<<<<<<< HEAD
           <Navbar view={isSectionInView} />
           <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
-=======
-          <Navbar />
-          <div className="mx-auto mt-20 max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
->>>>>>> 2ffd4d2cf4aff91348bc0ea23cb08206d00ba12b
             <h2 className="sr-only">Founders</h2>
             <motion.div
               initial={{ x: -100, y: 100, opacity: 0 }}
