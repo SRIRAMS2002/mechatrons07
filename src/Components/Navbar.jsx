@@ -56,7 +56,7 @@ const Navbar = ({view}) => {
           view ? "text-black bg-white shadow-lg h-24" : "text-black bg-transparent"
         )}
       >
-        <div className="relative flex items-center justify-between bg-transparent gap-2 px-6 md:mx-20 lg:px-10 h-full w-full">
+        <div className="relative flex items-center justify-between bg-transparent gap-2 px-6 lg:px-20 h-full w-full">
           <Popover.Group className="hidden lg:flex items-center justify-center gap-8 ">
             <a href="/" className="font-semibold leading-6 text-lg">
               Home

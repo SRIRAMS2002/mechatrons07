@@ -650,8 +650,8 @@ const Alumini = () => {
         </div>
       ) : (
         <div>
-          <Navbar view={isSectionInView}/>
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
+          <Navbar />
+          <div className="mx-auto mt-20 max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
             <motion.h2
               initial={{ x: -100, y: 100, opacity: 0 }}
               whileInView={{ x: 0, y: 0, opacity: 1 }}

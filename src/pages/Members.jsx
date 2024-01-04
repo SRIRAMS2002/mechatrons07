@@ -420,7 +420,11 @@ const Members = () => {
         <div>
           <Navbar view={isSectionInView}/>
 
+<<<<<<< HEAD
           <div className="mx-auto mt-[5rem] max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
+=======
+          <div className="mx-auto mt-20 max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
+>>>>>>> 2ffd4d2cf4aff91348bc0ea23cb08206d00ba12b
             <motion.h2
               initial={{ x: -100, y: 100, opacity: 0 }}
               whileInView={{ x: 0, y: 0, opacity: 1 }}
