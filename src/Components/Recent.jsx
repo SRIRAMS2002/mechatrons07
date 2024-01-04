@@ -103,7 +103,7 @@ const Recent = () => {
         Recent TRIUMPHS
       </h1>
       <p className="mt-4 text-xl text-gray-500">
-        We dared to dream beyond the numerical count of achievements lies a
+       12 We dared to dream beyond the numerical count of achievements lies a
         deeper impact. Our endeavors are not just about the bottom line; they
         resonate with apurpose that extends beyond profit margins.
       </p>
