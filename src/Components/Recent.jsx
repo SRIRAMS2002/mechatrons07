@@ -192,6 +192,7 @@ const Recent = () => {
         </div>
       </div>
       </SwiperSlide>
+      
         ))}
 
       
