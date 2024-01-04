@@ -55,6 +55,7 @@ const MentorList = [
 const Mentors = () => {
   const [isSectionInView, setIsSectionInView] = useState(false);
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -71,9 +72,7 @@ const Mentors = () => {
         setIsSectionInView(false);
       }
     };
-  
 
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
     return () => {
@@ -85,18 +84,15 @@ const Mentors = () => {
     <>
       {loading ? (
         <div className="flex items-center justify-center h-screen">
+          {/* Show loading component */}
           <Load />
         </div>
       ) : (
+        // Render the content
         <div>
+          <Navbar view={isSectionInView} />
 
-          <Navbar view={isSectionInView}/>
-          
           <div className="mx-auto mt-[5rem] max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
-
-          <Navbar />
-          <div className="mx-auto mt-20 max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
-
             <motion.h2
               initial={{ x: -100, y: 100, opacity: 0 }}
               whileInView={{ x: 0, y: 0, opacity: 1 }}
@@ -110,12 +106,11 @@ const Mentors = () => {
               className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
             >
               <span class="flex text-sm space-x-2 md:items-center">
-            {" "}
-            
-            <span class="font-medium text-gray-600 dark:text-gray-400">
-              New this summer / cslknlkn
-            </span>{" "}
-          </span>
+                {" "}
+                <span class="font-medium text-gray-600 dark:text-gray-400">
+                  New this summer / cslknlkn
+                </span>{" "}
+              </span>
               Mentors
             </motion.h2>
             <motion.p

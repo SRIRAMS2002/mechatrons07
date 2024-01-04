@@ -22,9 +22,9 @@ const Hero = () => {
             className="text-5xl sm:text-7xl text-center  md:text-end font-semibold w-full drop-shadow-md"
           >
             Team
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-orange-700 to-yellow-400">
+            {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-orange-700 to-yellow-400">
               Mechatrons
-            </span>
+            </span> */}
           </motion.h1>
 
           <motion.p

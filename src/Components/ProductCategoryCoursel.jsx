@@ -1,75 +1,215 @@
-import React from "react";
-import "./GlobalCards.css"
+import { Fragment, useState } from "react";
+import { Dialog, RadioGroup, Transition } from "@headlessui/react";
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { StarIcon } from "@heroicons/react/20/solid";
+import { Award, MapPin, Users } from "lucide-react";
+import {
+  ChevronDownIcon,
+  FunnelIcon,
+  MinusIcon,
+  PlusIcon,
+  Squares2X2Icon,
+  CheckIcon,
+  CalendarIcon,
+} from "@heroicons/react/20/solid";
 
-const GroupCards = () => {
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import { Navigation } from 'swiper/modules';
+
+
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+const products = [
+  {
+    id: 1,
+    name: " National Electric Tractor Design Challenge (NETDC'23)",
+
+
+    image: "NETDC23",
+
+    venue: "Bannari Amman Institute of Technology",
+    Organiser: " Department of Agricultural Engineering&amp; BIT-IIC",
+    date: "18 - 19 Aug 2023",
+    Awards: [{ value: "Overall Champions" }],
+    location:"Erode",
+  },
+  {
+    id: 2,
+    name: "  National Electric    Bike Challenge    (NEBC’23  Season 1)",
+
+
+    image: "NEBC23",
+
+    venue: "Kumaraguru College    of Technology",
+    Organiser: "KCT Garage    &    Society for Smart    E-Mobility(SSEM)",
+    date: "25 - 26 Feb 2023",
+    Awards: [{ value: "Overall Champions – ₹50,000/-  + 5 Category Awards" },
+
+   ],
+    location:"Coimbatore.",
+  },
+  {
+    id: 3,
+    name: "SIEP’23    Electric Bike    Challenge    (Season 3)",
+
+
+    image: "SIEP23",
+
+    venue: "Galgotias University,    Noida.",
+    Organiser: "Hero electric &    ISIE India",
+    date: "14 - 18 Apr 2023",
+    Awards: [{ value: "Best Business Plan and Cost - Rs.10,000/- + 2 Category Awards + 3 Trophy" },
+    ],
+    location:"New Delhi.",
+  },
+  {
+    id: 4,
+    name: "SIEP’21    Electric Bike    Challenge    (Season 2)",
+
+
+    image: "SIEP21",
+
+    venue: "Chandigarh Group of    College",
+    Organiser: "Hero electric &    ISIE India",
+    date: "25 - 28 Dec 2021",
+    Awards: [{ value: "Overall Championship     Award - Rs.50,000/- + 5 Category Awards" },
+   ],
+    location:"Punjab.",
+  },
+  {
+    id: 5,
+    name: "National Level Mini    Dirt Bike    (DIRTRASH’22) ",
+
+
+    image: "DIRTRASH22",
+
+    venue: "Sri Ramakrishna    Engineering College,    ",
+    Organiser: "Department of    Mechanical    Engineering",
+    date: "19 Oct 2022",
+    Awards: [{ value: "Overall Runner up –    Rs.7,500" },],
+    location:"Coimbatore.",
+  },
+];
+const Recent = () => {
   return (
-    <>
-      <div className="overflow-hidden pt-0  pb-80 p-0 lg:p-16 block w-screen relative -mt-96 sm:-mt-72 lg:-mt-40 mg-10 sm:mb-16 lg:mb-40">
-        <div className="h-[800px] pt-12 text-center items-center justify-center w-full max-w-[110%] block my-0 mx-auto">
-          <div className="flex items-center justify-center h-[535px] md:h-[700px]">
-            <div className="absolute z-30 top-6 left-1/2 -translate-x-1/2 grid place-items-center grid-cols-8 h-full w-[260%] sm:w-[150%] md:w-[1500px]">
-              <div className="relative z-30 col-span-1 col-start-1 h-[800px] flex flex-col gap-6 items-center justify-center mt-80">
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-              </div>
-              <div className="relative z-30 col-span-1 col-start-2 h-[800px] flex flex-col gap-6 items-center justify-center">
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-              </div>
-              <div className="relative z-30 col-span-1 col-start-3 h-[800px] flex flex-col gap-6 items-center justify-center">
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-              </div>
-              <div className="relative z-30 col-span-2 col-start-4 h-[800px] flex flex-col gap-6 items-start justify-center -mt-20">
-                <div className="h-[220px] md:h-[356px] p-[30px] md:p-[35px] w-[220px] md:w-[356px] grid place-items-center neomorphism"></div>
-              </div>
-              <div className="relative z-30 col-span-1 col-start-6 h-[800px] flex flex-col gap-6 items-center justify-center">
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-              </div>
-              <div className="relative z-30 col-span-1 col-start-7 h-[800px] flex flex-col gap-6 items-center justify-center">
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-              </div>
-              <div className="relative z-30 col-span-1 col-start-8 h-[800px] flex flex-col gap-6 items-center justify-center mt-80">
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-                <div className="h-[100px] md:h-[163px] p-[18px] md:p-[35px] w-[100px] md:w-[163px] grid place-items-center neomorphism"></div>
-              </div>
+    <div className=" mx-auto max-w-7xl px-6 lg:px-8">
+      <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        Recent TRIUMPHS
+      </h1>
+      <p className="mt-4 text-xl text-gray-500">
+       12 We dared to dream beyond the numerical count of achievements lies a
+        deeper impact. Our endeavors are not just about the bottom line; they
+        resonate with apurpose that extends beyond profit margins.
+      </p>
+
+      {/* content */}
+      <Swiper  navigation={true} modules={[Navigation]} className="mySwiper">
+
+        {products.map((product) => (
+           <SwiperSlide> 
+          <div className="mx-auto bg-white  rounded-xl   place-content-center place-items-center max-w-6xl">
+        <div className=" p-5  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
+          <div className="mx-auto   place-content-center place-items-center max-w-6xl">
+        <div className="bg-white p-5 rounded-lg  mt-5  grid  grid-cols-1 items-center  px-2  sm:px-5  lg:grid-cols-2 lg:px-8">
+          <div className="">
+            <div className=" text-left">
+              <p className="text-sm leading-4 font-medium text-slate-600">
+                Event
+              </p>
+              <h1 className="mt-1 text-2xl font-semibold text-black sm:text-slate-900 md:text-2xl">
+               {product.name}
+              </h1>
             </div>
+
+            <dl className="mt-4 text-sm font-medium flex items-center row-start-2 sm:mt-1 sm:row-start-3 md:mt-2.5 lg:row-start-2">
+              <dt className="sr-only">Reviews</dt>
+              <dd className="text-indigo-400 flex items-center">
+                <CalendarIcon
+                  className="mr-1.5 h-5 w-5 flex-shrink-0  text-indigo-600"
+                  aria-hidden="true"
+                />
+                <span className="text-slate-600">{product.date}</span>
+              </dd>
+              <dt className="sr-only">Location</dt>
+              <dd className="flex items-center ml-2 text-slate-600">
+                <MapPin className="mr-1.5 h-4 w-5 flex-shrink-0 text-indigo-600" />
+               {product.location}
+              </dd>
+            </dl>
+
+            <dl className="mt-8 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2  lg:gap-x-8">
+              <div className="border-t border-gray-300 pt-4">
+                <dt className="font-semibold text-gray-900">Awards</dt>
+                <dd className="mt-5  text-md text-gray-800">
+                  <div className="flex items-center">
+
+                    <h1>
+                    <div>
+  {product.Awards && product.Awards.length > 0 ? (
+    product.Awards.map((award, index) => (
+      <div key={index} className="flex items-center">
+        <Award className="mr-1.5 h-5 w-5 flex-shrink-0 text-indigo-700" />
+        <span>{award.value}</span>
+      </div>
+    ))
+  ) : (
+    <p>No awards found</p>
+  )}
+</div>
+</h1>
+                  </div>
+                </dd>
+              </div>
+              <div className="border-t border-gray-300 pt-4">
+                <dt className="font-semibold text-gray-900">Venue</dt>
+                <dd className="mt-5 flex text-md text-gray-800">
+                  <MapPin className="mr-1.5 h-5 w-5 flex-shrink-0 text-indigo-700" />
+                  {product.venue}
+                </dd>
+              </div>
+              <div className="border-t border-gray-300 pt-4">
+                <dt className="font-semibold text-gray-900">Organiser</dt>
+                <dd className="mt-5 flex text-md gap-x-2 text-gray-800">
+                  <Users className="mr-1.5 h-5 w-5 flex-shrink-0 text-indigo-700" />
+                 {product.Organiser}
+                </dd>
+              </div>
+            </dl>
           </div>
-        </div>
-        <div className="mx-auto w-[90vw] mt-0 sm:mt-40 lg:-mt-10 p-3 h-[10rem] sm:h-[13rem] lg:h-[20rem] flex items-center justify-start flex-col gap-6">
-          <p className="text-slate-500 font-sans leading-3 font-semibold text-lg">
-            A Global Commercial Product
-          </p>
-          <h1 className="text-3xl md:text-5xl font-extrabold max-w-xl text-center">
-            Trusted by our Customers, Open to Everyone
-          </h1>
-          <p className="text-sm md:text-lg font-normal text-center max-w-lg mt-6">
-            Est labore mollit esse eu. Magna dolore exercitation ex incididunt
-            irure amet. Do cillum exercitation in minim eu tempor duis est amet
-            voluptate ad.{" "}
-          </p>
-          <div className="flex items-center justify-center gap-6 w-full">
-            <button className="p-4 min-w-[100px] md:min-w-[200px] bg-green-500 text-white rounded-full text-center">
-              Learn more
-            </button>
-            <button className="p-4 min-w-[100px] md:min-w-[200px] border-green-500 border text-green-500 rounded-full text-center">
-              Join the community
-            </button>
+
+          <div className="mt-5 md:ml-10 ">
+          <div className="border-2 w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-xl">
+          <img
+  className="object-cover"
+  src={`/Achievements/${product.image}.webp`}
+  alt=""
+/>
+
+                </div>
           </div>
         </div>
       </div>
+      </div>
+      </div>
+      </SwiperSlide>
 
-    
-    </>
+        ))}
+
+
+
+
+      </Swiper>
+
+
+    </div>
+
   );
 };
 
-export default GroupCards;
+export default Recent;
