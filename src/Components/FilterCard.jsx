@@ -39,9 +39,79 @@ const FilterCard = ({ name, image1 ,image2 ,image3 ,image4 ,image5 ,date,venue,O
   return (
     
     <div className="mx-auto   place-content-center place-items-center max-w-5xl">
-    <div className="bg-white p-5  rounded-lg shadow-lg hover:shadow-xl shadow-indigo-500/50 hover:shadow-indigo-500/50 mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
-      <div className="">
-        <div>
+   <div className="mx-auto my-5 bg-white rounded-xl shadow-md overflow-hidden">
+<div className="p-6 lg:p-8 flex flex-col lg:flex-row">
+  <div className="lg:w-1/2 md:max-h-[20rem]">
+  <Swiper
+  autoplay={{
+    delay: 2500,
+    disableOnInteraction: false,
+  }}
+  modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
+  slidesPerView={1}
+  spaceBetween={10}
+  navigation={true}
+
+  pagination={{ clickable: true }}
+  onSwiper={(swiper) => console.log(swiper)}
+  onSlideChange={() => console.log("slide change")}
+
+>
+          <SwiperSlide>
+            <div className="bg-white border-2 rounded-xl">
+            <img
+      className="w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+      src={imageUrl1}
+      alt=""
+    />
+            </div>
+          </SwiperSlide>{" "}
+          <SwiperSlide>
+          <div className="bg-white border-2 rounded-xl">
+          <img
+      className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+      src={imageUrl1}
+      alt=""
+    />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+          <div className="bg-white border-2 rounded-xl">
+          <img
+      className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+      src={imageUrl1}
+      alt=""
+    />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+          <div className="bg-white border-2 rounded-xl">
+          <img
+      className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+      src={imageUrl1} alt=""
+    />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+          <div className="bg-white border-2 rounded-xl">
+          <img
+      className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+      src={imageUrl1}
+      alt=""
+    />
+            </div>
+          </SwiperSlide>
+         
+        </Swiper>
+    {/* <img
+      className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+      src={`/Achievements/${product.image}.webp`}
+      alt={product.name}
+    /> */}
+  </div>
+  <div className="lg:w-1/2 mt-5 lg:pl-8">
+
+  <div>
           <p className="text-sm leading-4 font-medium text-slate-600">
             Event
           </p>
@@ -99,75 +169,11 @@ const FilterCard = ({ name, image1 ,image2 ,image3 ,image4 ,image5 ,date,venue,O
             </dd>
           </div>
         </dl>
-      </div>
 
-      <div className="mt-5 md:ml-10 ">
-        
-      <Swiper
-  autoplay={{
-    delay: 2500,
-    disableOnInteraction: false,
-  }}
-  modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
-  slidesPerView={1}
-  spaceBetween={10}
-  navigation={true}
 
-  pagination={{ clickable: true }}
-  onSwiper={(swiper) => console.log(swiper)}
-  onSlideChange={() => console.log("slide change")}
-
->
-          <SwiperSlide>
-            <div className="bg-white border-2 rounded-xl">
-              <img
-                className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
-                src={imageUrl1}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
-              <img
-                className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
-                src={imageUrl2}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
-              <img
-                 className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
-                src={imageUrl3}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
-              <img
-                className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
-                src={imageUrl4}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
-              <img
-                className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96"
-                src={imageUrl5}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-         
-        </Swiper>
-      </div>
-
-    </div>
+  </div>
+</div>
+</div>
 
 
    
