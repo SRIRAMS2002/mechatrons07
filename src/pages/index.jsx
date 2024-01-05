@@ -86,7 +86,7 @@ const index = () => {
 
          {/* VideoBox */}
 
-         {/* <VideoBox/> */}
+         <VideoBox/>
       {/* Testimonials */}
       <Testimonials />
 

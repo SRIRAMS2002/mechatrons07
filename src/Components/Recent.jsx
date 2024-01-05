@@ -81,7 +81,7 @@ const products = [
 
 const Recent = () => {
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl  px-6 lg:px-8">
     <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
       Recent Triumphs
     </h1>
@@ -90,12 +90,12 @@ const Recent = () => {
       endeavors resonate with a purpose that extends beyond profit margins.
     </p>
 
-    <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+    <Swiper navigation={true} modules={[Navigation]} className="mySwiper ">
       {products.map((product) => (
         <SwiperSlide key={product.id}>
           <div className="mx-auto my-5 bg-white rounded-xl shadow-md overflow-hidden">
             <div className="p-6 lg:p-8 flex flex-col lg:flex-row">
-              <div className="lg:w-1/2">
+              <div className="lg:w-1/2 md:max-h-[20rem]">
                 <img
                   className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
                   src={`/Achievements/${product.image}.webp`}
@@ -103,10 +103,10 @@ const Recent = () => {
                 />
               </div>
               <div className="lg:w-1/2 mt-5 lg:pl-8">
-                <h1 className="text-2xl font-semibold text-gray-900 mb-2">
+                <h1 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-2">
                   {product.name}
                 </h1>
-                <dl className="mb-4 flex flex-wrap gap-4">
+                <dl className="mb-4 flex flex-wrap justify-between gap-4">
                   <div className="flex items-center">
                     <CalendarIcon className="h-5 w-5 mr-1.5 text-indigo-600" />
                     <span className="text-gray-700">{product.date}</span>

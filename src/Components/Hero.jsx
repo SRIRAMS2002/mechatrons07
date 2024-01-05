@@ -19,12 +19,12 @@ const Hero = () => {
               stiffness: 100,
             }}
             viewport={{ once: true }}
-            className="text-5xl sm:text-7xl text-center  md:text-end font-semibold w-full drop-shadow-md"
+            className="text-4xl sm:text-7xl text-center  md:text-end font-semibold w-full drop-shadow-md"
           >
             Team
-            {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-orange-700 to-yellow-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-orange-700 to-yellow-400">
               Mechatrons
-            </span> */}
+            </span>
           </motion.h1>
 
           <motion.p
@@ -42,20 +42,7 @@ const Hero = () => {
             One Team...One Dream..One Family.
           </motion.p>
 
-          {/* <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.3,
-            }}
-            viewport={{ once: true }}
-            className="w-full px-10 lg:px-40 flex items-center  gap-4 pt-10"
-          >
-            <div className="text-violet-500 bg-white border border-violet-500 rounded-lg p-4 flex-1 flex items-center justify-center">
-              Contact Us
-            </div>
-          </motion.div> */}
+          
         </div>
       </div>
     </>

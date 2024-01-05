@@ -16,7 +16,7 @@ const Testi = [
   {
     id:1,
     name:"Vijayalakshmi R",
-    description:"aaaaa",
+    description:" an official Electric Bike team from Sri Ramakrishna Institute of Technology, Coimbatore comprises 40 enthusiastic students driven by innovation. Here, we don't just tell stories; we unfold our adventures and Victories. ",
     position:"Software Developer",
     image:"Founder-2",
   },
@@ -75,7 +75,15 @@ const Testi = [
 
 const Testimonials = () => {
   return (
-    <div className='mx-auto max-w-7xl my-10'> <Swiper    slidesPerView={1}
+    <div className='mx-auto max-w-7xl my-10  px-6 lg:px-8'>
+       <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Testimonial
+              </h2>
+            <p className="mt-2 text-lg leading-8 text-gray-600">
+              Learn how to grow your business with our expert advice.
+            </p>
+      
+       <Swiper    slidesPerView={1}
     spaceBetween={10}
     pagination={{
       clickable: true,
@@ -94,7 +102,7 @@ const Testimonials = () => {
         spaceBetween: 20,
       },
     }}
-    className=''
+    className='mt-5'
     modules={[Pagination]}>
       {Testi.map((people, index) => (
       <SwiperSlide> <div className="mx-auto rounded-lg bg-gray-800 space-y-6 py-5 text-center max-w-sm">
