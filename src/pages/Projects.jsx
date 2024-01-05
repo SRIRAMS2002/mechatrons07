@@ -16,7 +16,7 @@ const product = [
 
     venue: "Bannari Amman Institute of Technology",
     Organiser: " Department of Agricultural Engineering&amp; BIT-IIC",
-    date: "18 - 19 Aug 2023",
+    date: "18 Aug 2023",
     Awards: [{ value: "Overall Champions" }],
     location: "Erode",
   },
