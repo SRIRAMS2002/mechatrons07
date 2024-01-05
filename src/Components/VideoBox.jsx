@@ -45,6 +45,14 @@ const videoData = [
     link: "https://www.youtube.com/watch?v=68Jbv-tlzXY",
     
   },
+  {
+    id:5,
+    title: "Journey Towards EBDC",
+    thumbnail: "/card5.webp",
+    channel: "Team Mechatrons",
+    link: "https://youtu.be/rDEI71LbW_E?feature=shared",
+    
+  },
   // Add more video data as needed
 ];
 

@@ -106,7 +106,7 @@ const Testimonials = () => {
     modules={[Pagination]}>
       {Testi.map((people, index) => (
       <SwiperSlide> <div className="mx-auto rounded-lg bg-gray-800 space-y-6 py-5 text-center max-w-sm">
-        <div className='mx-auto rounded-full bg-white p-1.5 shadow-2xl shadow-white object-cover h-32 w-32 '>
+        <div className='mx-auto rounded-full bg-white p-1.5 shadow-2xl shadow-gray-300 object-cover h-32 w-32 '>
         <img
               className="mx-auto w-full h-full rounded-full"
               src={`/Team/Founders/${people.image}.webp`}
