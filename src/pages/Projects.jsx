@@ -198,6 +198,14 @@ const Projects = () => {
                             layout requirements.
                           </p>
                         </div>
+                        <button
+                      type="button"
+                      className=" text-gray-900 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8"
+                      onClick={() => setOpen(false)}
+                    >
+                      <span className="">Close</span>
+                    
+                    </button>
                     </div>
                   </div>
                 </Dialog.Panel>
