@@ -87,9 +87,7 @@ const product = [
   {
     id: 3,
     name: " DESIGN AND FABRICATION OF RETROFITTED ELECTRIC BIKE (KARIZMA)",
-
     image1: "KARIZMA-2",
-
     Dept: "Mechanical",
     Head: " Department of Agricultural  BIT-IIC",
     date: "18 Aug 2023",
@@ -119,6 +117,190 @@ const product = [
     spec6: "Range 50-65 Km",
     spec7: "Max Torque 127NM",
     spec8: "Payload Capacity 300Kg",
+  },
+  {
+    id: 4,
+    name: "DESIGN AND FABRICATION OF SELF MANUFACTURING ELECTRIC BIKE - (STORMER)",
+    image1: "STORMER-1",
+    Dept: "Mechanical",
+    Head: " Department of Agricultural  BIT-IIC",
+    date: "18 Aug 2023",
+    Category: "Overall Champions",
+    location: "Erode",
+
+    image2: "STORMER-2",
+    name1: "Overall Length",
+    desc1: "1975 mm ",
+    name2: "Overall Width",
+    desc2: "850 mm",
+    name3: "Overall Height",
+    desc3: "1150 mm",
+    name4: "Overall Weight",
+    desc4: "80 kg ",
+    name5: "Ground Clearance",
+    desc5: "180 mm",
+    name6: "Wheel base",
+    desc6: "1400 mm",
+    name7: "Seat Height",
+    desc7: "850 mm",
+    spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
+    spec2: "72V & 2KW BLDC Hub Motor",
+    spec3: "72V 65A Regenerative Sine Wave Controller",
+    spec4: " 72V to 12V DC-DC Convertor",
+    spec5: "Max.Speed 70 Km/hr",
+    spec6: "Range 50-65 Km",
+    spec7: "Max Torque 127NM",
+    spec8: "Payload Capacity 300Kg",
+  },
+  {
+    id: 5,
+    name: "SMART INSTRUMENTATION CLUSTER WITH ARTIFICIAL EXHAUST SOUND FOR ELECTRIC BIKE",
+    image1: "EXHAUSTSOUND-1",
+    Dept: "Mechanical",
+    Head: " Department of Agricultural  BIT-IIC",
+    date: "18 Aug 2023",
+    Category: "Overall Champions",
+    location: "Erode",
+
+    image2: "EXHAUSTSOUND-2",
+    name1: "RASPBERRY PI DISPLAY",
+    desc1: "5 INCH ",
+    name2: "TFT TOUCH DISPLAY",
+    desc2: "3.5 INCH",
+    name3: "GSM-GPS MODULE",
+    desc3: "SIM800L V2.0",
+    name4: "TEMPERATURE SENSOR",
+    desc4: "DS18B20 WATER PROOF",
+    name5: "TEMPERATURE SENSOR",
+    desc5: "89AE LM35DZ",
+    name6: "WI-FI MODEM",
+    desc6: "ESP8266",
+    name7: "CURRENT SENSOR",
+    desc7: "MCU-758 MODULE 50 A",
+    name8:"HALL SENSOR",
+    desc8:"A3144 HALL EFFECT SENSOR MODULE",
+    spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
+    spec2: "72V & 2KW BLDC Hub Motor",
+    spec3: "72V 65A Regenerative Sine Wave Controller",
+    spec4: " 72V to 12V DC-DC Convertor",
+    spec5: "Max.Speed 70 Km/hr",
+    spec6: "Range 50-65 Km",
+    spec7: "Max Torque 127NM",
+    spec8: "Payload Capacity 300Kg",
+    para1:"Our smart instrumentation cluster is a Cloud connectivity device which acquires data from the components of the electric vehicles and transfers those data to the cloud with the help of the application from the mobile phone. ",
+    para2:"The prime objective of this project is to develop a smart instrumentation cluster which can display and also collect data from vehicle sensors like speed, GPS information and motion tracking using accelerometer and gyro sensor and log the data onto a database file using IOT. ",  
+  },
+
+  {
+    id: 6,
+    name: "	DESIGN AND FABRICATION OF HYBRID TWO WHEELER SCOOTY",
+    image1: "",
+    Dept: "Mechanical",
+    Head: " Department of Agricultural  BIT-IIC",
+    date: "18 Aug 2023",
+    Category: "Overall Champions",
+    location: "Erode",
+
+    image2: "",
+    name1: "BLDC Hub Motor ",
+    desc1: "72V & 1200W ",
+    name2: "Li Ion Battery",
+    desc2: "72V & 30Ah",
+    name3: "Charger",
+    desc3: "72V & 10A",
+    name4: "Controller ",
+    desc4: "Regenerative Type",
+    name5: "Throttle",
+    desc5: "Hybrid",
+    name6: "Display",
+    desc6: "Digital Type",
+   
+
+    spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
+    spec2: "72V & 2KW BLDC Hub Motor",
+    spec3: "72V 65A Regenerative Sine Wave Controller",
+    spec4: " 72V to 12V DC-DC Convertor",
+    spec5: "Max.Speed 70 Km/hr",
+    spec6: "Range 50-65 Km",
+    spec7: "Max Torque 127NM",
+    spec8: "Payload Capacity 300Kg",
+    para1:"The objective of our project aims at better utilization of fuel energy and reduces dependence on non-renewable resources using latest technology. The implementation involves development of Hybrid Electric Vehicle (HEV) in two wheelers that uses BLDC hub motor that is run by a Li-Ion battery as well as petrol engine for propulsion of vehicle. ",
+    para2:" The hybridization of a convectional combustion engine vehicle with an advanced electric motor drive may greatly enhance the overall efficiency and achieve higher fuel with reduced emissions.",  
+  },
+
+  {
+    id: 7,
+    name: "MODERNISATION OF AUTOMATED GUIDED VEHICLE BY USING ULTASONIC SENSOR AND RFID TECHNOLOGIES",
+    image1: "",
+    Dept: "Mechanical",
+    Head: " Department of Agricultural  BIT-IIC",
+    date: "18 Aug 2023",
+    Category: "Overall Champions",
+    location: "Erode",
+
+    image2: "",
+    name1: "•	RFID Tag ",
+
+    name2: "•	RFID Reader",
+  
+    name3: "•	Ultrasonic Sensor",
+  
+    name4: "•	PIC Microcontroller ",
+ 
+    name5: "•	(Embedded C Programming)",
+   
+    name6: "•	Battery",
+ 
+   
+
+    spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
+    spec2: "72V & 2KW BLDC Hub Motor",
+    spec3: "72V 65A Regenerative Sine Wave Controller",
+    spec4: " 72V to 12V DC-DC Convertor",
+    spec5: "Max.Speed 70 Km/hr",
+    spec6: "Range 50-65 Km",
+    spec7: "Max Torque 127NM",
+    spec8: "Payload Capacity 300Kg",
+
+    para1:"Our project deals with the examination of possibility to interconnect sparsely deployed RFID tags with ultrasonic sensors. RFID Readers are mounted under this unmanned automated guided vehicle (AGV) equipment with RFID tags installed on or in the floor, allowing the vehicle's logic to understand its location and make decisions to stop, turn right/left or continue straight ahead. ",
+    para2:"As signals produced by these technology are often affected by uncertainty and incompleteness we use fuzzy logic for their processing as well as control of the entire navigation process.",  
+  },
+  {
+    id: 8,
+    name: "	DESIGN AND IMPLEMENTATION OF AUTOMATIC HEADLIGHT DIMMER FOR TWO WHEELERS USING ARDUINO CONTROLLER",
+    image1: "",
+    Dept: "Mechanical",
+    Head: " Department of Agricultural  BIT-IIC",
+    date: "18 Aug 2023",
+    Category: "Overall Champions",
+    location: "Erode",
+
+    image2: "",
+    name1: "•	LDR SENSOR ",
+
+    name2: "•	ULTRASONIC SENSOR",
+  
+    name3: "•		ARDUINO CONTROLLER",
+  
+    name4: "•		RELAY ",
+ 
+    name5: "•		TOGGLE SWITCH",
+   
+    name6: "•		LIGHTS (10W & 40W)",
+ 
+   
+
+    spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
+    spec2: "72V & 2KW BLDC Hub Motor",
+    spec3: "72V 65A Regenerative Sine Wave Controller",
+    spec4: " 72V to 12V DC-DC Convertor",
+    spec5: "Max.Speed 70 Km/hr",
+    spec6: "Range 50-65 Km",
+    spec7: "Max Torque 127NM",
+    spec8: "Payload Capacity 300Kg",
+
+    para1:"To develop a prototype of an automatic headlight switch ON and OFF while driving the two wheeler according to light intensity (LDR) and distance of the object or vehicle (ULTRASONIC SENSOR) in opposite ",
+    para2:"	To use the Arduino controller for the conversion of bright light (HIGH BEAM) into dim light (LOW BEAM) according to the LDR and Ultrasonic sensors.",  
   },
 ];
 
@@ -279,7 +461,8 @@ const Projects = () => {
         spec6={product.spec6}
         spec7={product.spec7}
         spec8={product.spec8}
-        
+        para1={product.para1}
+        para2={product.para2}
 
         />
         ))}

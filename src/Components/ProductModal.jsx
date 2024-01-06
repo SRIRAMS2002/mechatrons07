@@ -3,7 +3,7 @@ import react, { Fragment} from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 
-const ProductModal = ({ open, setOpen, selectedProduct, handleCloseModal,image2,name,name1,desc1,desc2,name2,name3,desc3,name4,desc4,name5,desc5,name6,desc6,name7,desc7,name8,desc8,spec1,spec2,spec3,spec4,spec5,spec6,spec7,spec8 }) => {
+const ProductModal = ({ open, setOpen, selectedProduct, handleCloseModal,image2,name,name1,desc1,desc2,name2,name3,desc3,name4,desc4,name5,desc5,name6,desc6,name7,desc7,name8,desc8,spec1,spec2,spec3,spec4,spec5,spec6,spec7,spec8,para1,para2 }) => {
   return (
     <div>
          <Transition.Root show={open} as={Fragment}>
@@ -127,6 +127,17 @@ const ProductModal = ({ open, setOpen, selectedProduct, handleCloseModal,image2,
                               </div>
                             </div>
                           </div>
+                        </div>
+
+
+                        {/* para */}
+                        <div className='mx-auto text-center '>
+                        <p className="mt-6 text-lg leading-8 text-gray-600 justify-text">
+             {para1}
+            </p>
+            <p className="mt-6 text-lg leading-8 text-gray-600 justify-text">
+             {para2}
+             </p>
                         </div>
 
                         {/* Technical */}
@@ -266,6 +277,9 @@ const ProductModal = ({ open, setOpen, selectedProduct, handleCloseModal,image2,
                             </div>
                           </div>
                         </div>
+
+
+                      
 
                         <div className="flex flex-col sm:flex-row items-center sm:space-x-10 sm:justify-around">
                           <button
