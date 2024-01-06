@@ -500,8 +500,7 @@ const Projects = () => {
         />
         ))}
 
-      {/* projects */}
-      <div className="pt-[10rem]">d</div>
+      
 
       <Footer />
     </div>
