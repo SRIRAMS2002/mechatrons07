@@ -6,26 +6,21 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { Award, MapPin, Users } from "lucide-react";
 import { CalendarIcon } from "@heroicons/react/20/solid";
-
+import ProductModal from "@/Components/ProductModal";
 const product = [
   {
     id: 1,
     name: " DESIGN AND FABRICATION OF RETROFITTED ELECTRIC BIKE (TVS APACHE)",
 
-    image: "RETROFITTED-2",
+    image1: "RETROFITTED-2",
 
-    venue: "Bannari Amman Institute of Technology",
-    Organiser: " Department of Agricultural Engineering&amp; BIT-IIC",
+    Dept: "Mechanical",
+    Head: " Department of Agricultural  BIT-IIC",
     date: "18 Aug 2023",
-    Awards: [{ value: "Overall Champions" }],
+    Category: "Overall Champions",
     location: "Erode",
-  },
-];
-const Models = [
-  {
-    id: 1,
-    name: " DESIGN AND FABRICATION OF RETROFITTED ELECTRIC",
-    image: "RETROFITTED-1",
+
+    image2: "RETROFITTED-1",
     name1: "Overall Length",
     desc1: "2020 mm",
     name2: "Overall Width",
@@ -42,19 +37,88 @@ const Models = [
     desc7: "750 mm",
     name8: "Overall Weight",
     desc8: "96kg",
-    spec1:"72V & 30Ah Li-Ion Battery with 6A Charger",
-    spec2:"72V & 2KW BLDC Hub Motor",
-    spec3:"72V 65A Regenerative Sine Wave Controller",
-    spec4:" 72V to 12V DC-DC Convertor",
-    spec5:"Max.Speed 70 Km/hr",
-    spec6:"Range 50-65 Km",
-    spec7:"Max Torque 127NM",
-    spec8:"Payload Capacity 300Kg",
-    venue: "Bannari Amman Institute of Technology",
-    Organiser: " Department of Agricultural Engineering&amp; BIT-IIC",
-    date: "18 - 19 Aug 2023",
-    Awards: [{ value: "Overall Champions" }],
+    spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
+    spec2: "72V & 2KW BLDC Hub Motor",
+    spec3: "72V 65A Regenerative Sine Wave Controller",
+    spec4: " 72V to 12V DC-DC Convertor",
+    spec5: "Max.Speed 70 Km/hr",
+    spec6: "Range 50-65 Km",
+    spec7: "Max Torque 127NM",
+    spec8: "Payload Capacity 300Kg",
+  },
+  {
+    id: 2,
+    name: " DESIGN AND FABRICATION OF ELECTRIC SCOOTY",
+    image1: "ELECTRIC SCOOTY-1",
+    Dept: "Mechanical",
+    Head: " Department of Agricultural  BIT-IIC",
+    date: "18 Aug 2023",
+    Category: "Overall Champions",
     location: "Erode",
+
+    image2: "ELECTRIC SCOOTY-2",
+    name1: "Overall Length",
+    desc1: "1790mm",
+    name2: "Overall Width",
+    desc2: "640mm",
+    name3: "Overall Height",
+    desc3: "1115mm",
+    name4: "Chassis Material used",
+    desc4: "Mild Steel",
+    name5: "Ground Clearance",
+    desc5: "156mm",
+    name6: "Wheel base",
+    desc6: "1275mm",
+    name7: "Seat Height",
+    desc7: "770mm",
+    name8: "Overall Weight",
+    desc8: "76kg",
+    spec1: "48V & 30Ah Li-Ion Battery with 6A Charger",
+    spec2: "48V & 1KW BLDC Hub Motor",
+    spec3: "48V 40A Regenerative Sine Wave Controller",
+    spec4: " 48V to 12V DC-DC Convertor",
+    spec5: "Max.Speed 50 Km/hr",
+    spec6: "Range 50-60 Km",
+    spec7: "Max Torque 83NM",
+    spec8: "Payload Capacity 250Kg",
+
+
+  },
+  {
+    id: 3,
+    name: " DESIGN AND FABRICATION OF RETROFITTED ELECTRIC BIKE (KARIZMA)",
+
+    image1: "KARIZMA-2",
+
+    Dept: "Mechanical",
+    Head: " Department of Agricultural  BIT-IIC",
+    date: "18 Aug 2023",
+    Category: "Overall Champions",
+    location: "Erode",
+
+    image2: "KARIZMA-1",
+    name1: "Overall Length",
+    desc1: "2100 mm",
+    name2: "Overall Width",
+    desc2: "805 mm",
+    name3: "Overall Height",
+    desc3: "1190 mm",
+    name4: "Overall Weight",
+    desc4: "118kg",
+    name5: "Ground Clearance",
+    desc5: "145 mm",
+    name6: "Wheel base",
+    desc6: "1360 mm",
+    name7: "Seat Height",
+    desc7: "756 mm",
+    spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
+    spec2: "72V & 2KW BLDC Hub Motor",
+    spec3: "72V 65A Regenerative Sine Wave Controller",
+    spec4: " 72V to 12V DC-DC Convertor",
+    spec5: "Max.Speed 70 Km/hr",
+    spec6: "Range 50-65 Km",
+    spec7: "Max Torque 127NM",
+    spec8: "Payload Capacity 300Kg",
   },
 ];
 
@@ -71,7 +135,7 @@ const Projects = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 20) {
+      if (scrollPosition > 0) {
         setIsSectionInView(true);
       } else {
         setIsSectionInView(false);
@@ -85,7 +149,19 @@ const Projects = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [open, setOpen] = useState(false);
+
+  // Function to handle opening a specific product modal
+  const handleOpenModal = (product) => {
+    setSelectedProduct(product);
+    setOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProduct(null);
+    setOpen(false);
+  };
 
   return (
     <div>
@@ -107,12 +183,12 @@ const Projects = () => {
                 <div className="lg:w-1/2 md:max-h-[20rem]">
                   <img
                     className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-                    src={`/Projects/${product.image}.png`}
+                    src={`/Projects/${product.image1}.png`}
                     alt={product.name}
                   />
                 </div>
                 <div className="lg:w-1/2 mt-5 lg:pl-8">
-                  <h1 className="text-xl sm:text-4xl font-semibold text-gray-900 mb-2">
+                  <h1 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
                     {product.name}
                   </h1>
                   <dl className="mb-4 flex flex-wrap justify-between gap-4">
@@ -126,31 +202,24 @@ const Projects = () => {
                     </div>
                   </dl>
                   <div className="mb-4">
-                    <h2 className="text-gray-800 font-semibold">Awards</h2>
+                    <h2 className="text-gray-800 font-semibold">Category</h2>
                     <div className="flex flex-col gap-2">
-                      {product.Awards &&
-                        product.Awards.map((award, index) => (
-                          <div key={index} className="">
-                            <span className="text-gray-700 ">
-                              {award.value}
-                            </span>
-                          </div>
-                        ))}
+                      {product.Category}
                     </div>
                   </div>
                   <div className="mb-4">
-                    <h2 className="text-gray-800 font-semibold">Venue</h2>
-                    <p className="text-gray-700">{product.venue}</p>
+                    <h2 className="text-gray-800 font-semibold">Head</h2>
+                    <p className="text-gray-700">{product.Head}</p>
                   </div>
                   <div className="mb-4">
-                    <h2 className="text-gray-800 font-semibold">Organiser</h2>
-                    <p className="text-gray-700">{product.Organiser}</p>
+                    <h2 className="text-gray-800 font-semibold">Department</h2>
+                    <p className="text-gray-700">{product.Dept}</p>
                   </div>
 
                   <div className="flex flex-col sm:flex-row items-center sm:space-x-10 sm:justify-around">
                     <button
                       type="submit"
-                      onClick={() => setOpen(true)}
+                      onClick={() => handleOpenModal(product)}
                       className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                     >
                       Quick View
@@ -170,292 +239,51 @@ const Projects = () => {
         ))}
       </div>
 
-      <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={setOpen}>
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div className="fixed inset-0 hidden bg-gray-500 bg-opacity-75 transition-opacity md:block" />
-          </Transition.Child>
+      {product.map((product) => (
+        <ProductModal 
+        key={product.id}
+        open={open && selectedProduct && selectedProduct.id === product.id}
+        setOpen={setOpen}
+        selectedProduct={selectedProduct}
+        handleCloseModal={handleCloseModal}
+        name={product.name}
+        image2={product.image2}
+        name1={product.name1}
+        desc1={product.desc1}
 
-          <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-            <div className="flex min-h-full items-stretch justify-center text-center md:items-center ">
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 translate-y-4 md:translate-y-0 md:scale-95"
-                enterTo="opacity-100 translate-y-0 md:scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 translate-y-0 md:scale-100"
-                leaveTo="opacity-0 translate-y-4 md:translate-y-0 md:scale-95"
-              >
-                <Dialog.Panel className="  p-4 md:p-8 py-28 md:pt-20 pb-20  w-full  sm:w-[90%] md:w-[90%] h-[75%] rounded-xl relative  overflow-hidden flex flex-col">
-                  {Models.map((product) => (
-                    <div className="relative flex w-full items-center overflow-hidden bg-white px-4 pb-8 pt-14 shadow-2xl sm:px-6 sm:pt-8 md:p-6 lg:p-8">
-                      <button
-                        type="button"
-                        className="absolute right-4 top-4 text-gray-400 hover:text-gray-500 sm:right-6 sm:top-8 md:right-6 md:top-6 lg:right-8 lg:top-8"
-                        onClick={() => setOpen(false)}
-                      >
-                        <span className="sr-only">Close</span>
-                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                      </button>
-                      <div className="mx-auto my-5 bg-white rounded-xl shadow-md overflow-hidden">
-                        <div className="p-2 lg:p-8 flex flex-col lg:flex-row">
-                          <div className="lg:w-1/2 md:max-h-[20rem]">
-                            <img
-                              className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-                              src={`/Projects/${product.image}.png`}
-                              alt={product.name}
-                            />
-                          </div>
-                          <div className="lg:w-1/2 mt-5 lg:pl-8">
-                            <h1 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-2">
-                              {product.name}
-                            </h1>
+        name2={product.name2}
+        desc2={product.desc2}
 
-                            {/* length */}
-                            <dt className="font-medium text-gray-900">
-                              Measurements
-                            </dt>
-                            <div className="grid  grid-cols-2">
-                              <div className="border-t border-gray-200 pt-4">
-                                <dt className="font-medium text-gray-900">
-                                  {product.name1}
-                                </dt>
-                                <dd className="mt-2 text-sm text-gray-500">
-                                  {product.desc1}
-                                </dd>
-                              </div>
-                              <div className="border-t border-gray-200 pt-4">
-                                <dt className="font-medium text-gray-900">
-                                  {product.name2}
-                                </dt>
-                                <dd className="mt-2 text-sm text-gray-500">
-                                  {product.desc2}
-                                </dd>
-                              </div>
-                              <div className="border-t border-gray-200 pt-4">
-                                <dt className="font-medium text-gray-900">
-                                  {product.name3}
-                                </dt>
-                                <dd className="mt-2 text-sm text-gray-500">
-                                  {product.desc3}
-                                </dd>
-                              </div>
-                              <div className="border-t border-gray-200 pt-4">
-                                <dt className="font-medium text-gray-900">
-                                  {product.name4}
-                                </dt>
-                                <dd className="mt-2 text-sm text-gray-500">
-                                  {product.desc4}
-                                </dd>
-                              </div>
-                              <div className="border-t border-gray-200 pt-4">
-                                <dt className="font-medium text-gray-900">
-                                  {product.name5}
-                                </dt>
-                                <dd className="mt-2 text-sm text-gray-500">
-                                  {product.desc5}
-                                </dd>
-                              </div>
-                              <div className="border-t border-gray-200 pt-4">
-                                <dt className="font-medium text-gray-900">
-                                  {product.name6}
-                                </dt>
-                                <dd className="mt-2 text-sm text-gray-500">
-                                  {product.desc6}
-                                </dd>
-                              </div>
-                              <div className="border-t border-gray-200 pt-4">
-                                <dt className="font-medium text-gray-900">
-                                  {product.name7}
-                                </dt>
-                                <dd className="mt-2 text-sm text-gray-500">
-                                  {product.desc7}
-                                </dd>
-                              </div>
-                              <div className="border-t border-gray-200 pt-4">
-                                <dt className="font-medium text-gray-900">
-                                  {product.name8}
-                                </dt>
-                                <dd className="mt-2 text-sm text-gray-500">
-                                  {product.desc8}
-                                </dd>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+        name3={product.name3}
+        desc3={product.desc3}
 
-                        {/* Technical */}
-                        <div class="py-5">
-                          <div class="xl:container m-auto px-6 text-gray-500 md:px-12">
-                            <div>
-                              <h2 class=" text-2xl font-bold text-gray-700  md:text-4xl">
-                                Technical Specs
-                              </h2>
-                            </div>
-                            <div class="mt-5 grid divide-x divide-y divide-gray-600 overflow-hidden rounded-3xl border border-gray-100  sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
-                            <div class="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                                <div class="flex space-x-8 items-center py-5 p-6 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
-                                  <img
-                                    src="/Projects/battery.png"
-                                    class="w-12"
-                                    width="512"
-                                    height="512"
-                                    alt="burger illustration"
-                                  />
-                                  <h5 class="text-md font-medium  text-gray-300 transition group-hover:text-primary">
-                                  {product.spec1}
-                                  </h5>
-                                </div>
-                              </div>
-                              <div class="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                                <div class="flex space-x-8 items-center py-5 p-6 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
-                                  <img
-                                    src="/Projects/car-engine.png"
-                                    class="w-12"
-                                    width="512"
-                                    height="512"
-                                    alt="burger illustration"
-                                  />
-                                  <h5 class="text-md  font-medium  text-gray-300 transition group-hover:text-primary">
-                                    {product.spec2}
-                                  </h5>
-                                </div>
-                              </div>
-                              <div class="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                                <div class="flex space-x-8 items-center py-5 p-6 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
-                                  <img
-                                    src="/Projects/bike.png"
-                                    class="w-12"
-                                    width="512"
-                                    height="512"
-                                    alt="burger illustration"
-                                  />
-                                  <h5 class="text-md  font-medium  text-gray-300 transition group-hover:text-primary">
-                                  {product.spec3}
-                                  </h5>
-                                </div>
-                              </div>
-                              <div class="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                                <div class="flex space-x-8 items-center py-5 p-6 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
-                                  <img
-                                    src="/Projects/convert.png"
-                                    class="w-12"
-                                    width="512"
-                                    height="512"
-                                    alt="burger illustration"
-                                  />
-                                  <h5 class="text-md  font-medium  text-gray-300 transition group-hover:text-primary">
-                                  {product.spec4}
-                                  </h5>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+        name4={product.name4}
+        desc4={product.desc4}
 
-                        {/* Performance Specs */}
-                        <div class="py-5">
-                          <div class="xl:container m-auto px-6 text-gray-500 md:px-12">
-                            <div>
-                              <h2 class=" text-2xl font-bold text-gray-700  md:text-4xl">
-                                Performance Specs
-                              </h2>
-                            </div>
-                            <div class="mt-5 grid divide-x divide-y divide-gray-600 overflow-hidden rounded-3xl border border-gray-100  sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
-                            <div class="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                                <div class="flex space-x-8 items-center py-5 p-6 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
-                                  <img
-                                    src="/Projects/performance.png"
-                                    class="w-12"
-                                    width="512"
-                                    height="512"
-                                    alt="burger illustration"
-                                  />
-                                  <h5 class="text-md font-medium  text-gray-300 transition group-hover:text-primary">
-                                  {product.spec5}
-                                  </h5>
-                                </div>
-                              </div>
-                              <div class="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                                <div class="flex space-x-8 items-center py-5 p-6 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
-                                  <img
-                                    src="/Projects/speedometer.png"
-                                    class="w-12"
-                                    width="512"
-                                    height="512"
-                                    alt="burger illustration"
-                                  />
-                                  <h5 class="text-md font-medium  text-gray-300 transition group-hover:text-primary">
-                                  {product.spec6}
-                                  </h5>
-                                </div>
-                              </div>
-                              <div class="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                                <div class="flex space-x-8 items-center py-5 p-6 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
-                                  <img
-                                    src="/Projects/renewable-energy.png"
-                                    class="w-12"
-                                    width="512"
-                                    height="512"
-                                    alt="burger illustration"
-                                  />
-                                  <h5 class="text-md font-medium  text-gray-300 transition group-hover:text-primary">
-                                  {product.spec7}
-                                  </h5>
-                                </div>
-                              </div>
-                              <div class="group relative bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
-                                <div class="flex space-x-8 items-center py-5 p-6 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
-                                  <img
-                                    src="/Projects/scalability.png"
-                                    class="w-12"
-                                    width="512"
-                                    height="512"
-                                    alt="burger illustration"
-                                  />
-                                  <h5 class="text-md font-medium  text-gray-300 transition group-hover:text-primary">
-                                  {product.spec8}
-                                  </h5>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+        name5={product.name5}
+        desc5={product.desc5}
 
-                        <div className="flex flex-col sm:flex-row items-center sm:space-x-10 sm:justify-around">
-                          <button
-                            type="submit"
-                            onClick={() => setOpen(false)}
-                            className="mt-6 max-w-sm flex sm:w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                          >
-                            Back
-                          </button>
-                          <a
-                            href="/Contact"
-                            type="submit"
-                            className="mt-6 max-w-sm flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                          >
-                            Contact Us
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </Dialog.Panel>
-              </Transition.Child>
-            </div>
-          </div>
-        </Dialog>
-      </Transition.Root>
+        name6={product.name6}
+        desc6={product.desc6}
+
+        name7={product.name7}
+        desc7={product.desc7}
+
+        name8={product.name8}
+        desc8={product.desc8}
+        spec1={product.spec1}
+        spec2={product.spec2}
+        spec3={product.spec3}
+        spec4={product.spec4}
+        spec5={product.spec5}
+        spec6={product.spec6}
+        spec7={product.spec7}
+        spec8={product.spec8}
+        
+
+        />
+        ))}
+
       {/* projects */}
       <div className="pt-[10rem]">d</div>
 
