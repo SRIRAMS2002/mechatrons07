@@ -11,8 +11,9 @@ const MentorList = [
     id: 1,
     name: "Mr.S.Veerakumar M.E,(Ph.D)",
     image: "Veerakumar1",
+    demo:"ISIE Event Ambassador (South India)",
     dept: "",
-    role: "Electic & Hybrid Vechicles Technology",
+    role: "Mechatronics & EV Technology",
   },
   {
     id: 2,
@@ -141,7 +142,7 @@ const Mentors = () => {
                   }}
                   viewport={{ once: true }}
                   key={index}
-                  className="mx-auto bg-white rounded-lg shadow-lg hover:shadow-xl shadow-indigo-500/50 hover:shadow-indigo-500/50 overflow-hidden"
+                  className="mx-auto bg-white rounded-lg max-w-[20rem] shadow-lg hover:shadow-xl shadow-indigo-500/50 hover:shadow-indigo-500/50 overflow-hidden"
                 >
                   <img
                     src={`/Team/Mentors/${people.image}.webp`}
@@ -152,7 +153,10 @@ const Mentors = () => {
                     <p className="text-xl font-bold   text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-pink-600 leading-6">
                       {people.name}
                     </p>
-                    <div className="flex items-center justify-evenly mt-4">
+                    <p className="mt-4 truncate font-semibold text-sm leading-5 text-gray-600">
+                        {people.demo}
+                      </p>
+                    <div className="flex items-center justify-evenly mt-2">
                       <p className="mt-1 truncate font-semibold text-sm leading-5 text-gray-600">
                         {people.dept}
                       </p>

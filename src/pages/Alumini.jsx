@@ -359,7 +359,7 @@ const products = [
     category: "2022",
     image: "selvakumar22",
     dept: "Mechanical",
-    role: "Cheif Technician",
+    role: "Team Manager",
   },
 
   {
@@ -368,7 +368,7 @@ const products = [
     category: "2022",
     image: "prasanth22",
     dept: "Mechanical",
-    role: "Technician",
+    role: "CFD Analyst",
   },
   {
     id: 33,
@@ -376,7 +376,7 @@ const products = [
     category: "2022",
     image: "Venktaesh22",
     dept: "Mechanical",
-    role: "Team Member",
+    role: "Cheif Technician",
   },
   {
     id: 34,
@@ -384,7 +384,7 @@ const products = [
     category: "2022",
     image: "Udhaya22",
     dept: "Mechanical",
-    role: "Team Member",
+    role: "Electrical Engineer",
   },
   {
     id: 59,
@@ -392,7 +392,7 @@ const products = [
     category: "2022",
     image: "Uthish Krishnan...Mech....2022",
     dept: "Mechanical",
-    role: "Team Member",
+    role: "Innovation Team",
   },
 
   // 2023
@@ -650,8 +650,8 @@ const Alumini = () => {
         </div>
       ) : (
         <div>
-          <Navbar />
-          <div className="mx-auto mt-20 max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
+          <Navbar view={isSectionInView} />
+          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-10">
             <motion.h2
               initial={{ x: -100, y: 100, opacity: 0 }}
               whileInView={{ x: 0, y: 0, opacity: 1 }}

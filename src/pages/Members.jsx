@@ -122,7 +122,7 @@ const products = [
   },
   {
     id: 40,
-    name: "Mounica",
+    name: "Mounika M",
     category: "2024",
     image: "Mounica24",
     dept: "CSE",

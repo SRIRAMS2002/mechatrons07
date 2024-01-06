@@ -4,7 +4,7 @@ import { Fragment, useState, useEffect } from "react";
 import { Dialog, RadioGroup, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/20/solid";
-import { Award, MapPin, Users } from "lucide-react";
+import { Award,  IndianRupee, Users } from "lucide-react";
 import { CalendarIcon } from "@heroicons/react/20/solid";
 import ProductModal from "@/Components/ProductModal";
 const product = [
@@ -14,11 +14,14 @@ const product = [
 
     image1: "RETROFITTED-2",
 
-    Dept: "Mechanical",
-    Head: " Department of Agricultural  BIT-IIC",
-    date: "18 Aug 2023",
-    Category: "Overall Champions",
-    location: "Erode",
+    Dept: "Mechanical & EEE",
+    Head: "Mr.V.Vigneshram & Mr.B.Ragu",
+    date: "Nov - Dec 2021",
+    Category: "Electric Motorcycle",
+    location: "1.25Lakhs",
+    Awards:"20",
+    Rewards:"2 Lakhs",
+
 
     image2: "RETROFITTED-1",
     name1: "Overall Length",
@@ -50,12 +53,13 @@ const product = [
     id: 2,
     name: " DESIGN AND FABRICATION OF ELECTRIC SCOOTY",
     image1: "ELECTRIC SCOOTY-1",
-    Dept: "Mechanical",
-    Head: " Department of Agricultural  BIT-IIC",
-    date: "18 Aug 2023",
-    Category: "Overall Champions",
-    location: "Erode",
-
+    Dept: "Mechanical & EEE",
+    Head: "Mr.J.Kabilan & Mr.M.A.Jeevabharathi",
+    date: "Jan - Feb 2023",
+    Category: "Electric Scooty",
+    location: "55,000",
+    Awards:"06",
+    Rewards:"80,000",
     image2: "ELECTRIC SCOOTY-2",
     name1: "Overall Length",
     desc1: "1790mm",
@@ -86,14 +90,15 @@ const product = [
   },
   {
     id: 3,
-    name: " DESIGN AND FABRICATION OF RETROFITTED ELECTRIC BIKE (KARIZMA)",
+    name: " DESIGN AND FABRICATION OF RETROFITTED ELECTRIC BIKE (KARIZMA ZMR)",
     image1: "KARIZMA-2",
-    Dept: "Mechanical",
-    Head: " Department of Agricultural  BIT-IIC",
-    date: "18 Aug 2023",
-    Category: "Overall Champions",
-    location: "Erode",
-
+    Dept: "Mechanical & EEE",
+    Head: "Mr.J.V.Vignesh & Mr.A.Harevashanthan",
+    date: "Aug - Sep 2022",
+    Category: "Electrical Motorcycle",
+    location: "1.20 Lakhs",
+    Awards:"01",
+    Rewards:"3,500",
     image2: "KARIZMA-1",
     name1: "Overall Length",
     desc1: "2100 mm",
@@ -122,12 +127,13 @@ const product = [
     id: 4,
     name: "DESIGN AND FABRICATION OF SELF MANUFACTURING ELECTRIC BIKE - (STORMER)",
     image1: "STORMER-1",
-    Dept: "Mechanical",
-    Head: " Department of Agricultural  BIT-IIC",
-    date: "18 Aug 2023",
-    Category: "Overall Champions",
-    location: "Erode",
-
+    Dept: "Mechanical, ECE & EEE",
+    Head: "Mr.M.Ramkumar, Mr.K.SedhuMadhavan & Mr.B.Ragu",
+    date: "Aug - Sep 2019",
+    Category: "Self Manufacturing EV",
+    location: "1.50 Lakhs",
+    Awards:"05",
+    Rewards:"5000",
     image2: "STORMER-2",
     name1: "Overall Length",
     desc1: "1975 mm ",
@@ -155,13 +161,14 @@ const product = [
   {
     id: 5,
     name: "SMART INSTRUMENTATION CLUSTER WITH ARTIFICIAL EXHAUST SOUND FOR ELECTRIC BIKE",
-    image1: "EXHAUSTSOUND-1",
-    Dept: "Mechanical",
-    Head: " Department of Agricultural  BIT-IIC",
-    date: "18 Aug 2023",
-    Category: "Overall Champions",
-    location: "Erode",
-
+    image1: "ARTIFICIALEXHAUST-1",
+    Dept: "EEE",
+    Head: "Mr.B.Ragu & Mr.M.A.Jeevabharathi",
+    date: "Jan - Mar 2023",
+    Category: "Smart Display",
+    location: "20,000",
+    Awards:"01(Fund Received)",
+    Rewards:"20,000",
     image2: "EXHAUSTSOUND-2",
     name1: "RASPBERRY PI DISPLAY",
     desc1: "5 INCH ",
@@ -179,12 +186,12 @@ const product = [
     desc7: "MCU-758 MODULE 50 A",
     name8:"HALL SENSOR",
     desc8:"A3144 HALL EFFECT SENSOR MODULE",
-    spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
+    spec1: "Shows Charging and Discharging rate",
     spec2: "72V & 2KW BLDC Hub Motor",
     spec3: "72V 65A Regenerative Sine Wave Controller",
     spec4: " 72V to 12V DC-DC Convertor",
     spec5: "Max.Speed 70 Km/hr",
-    spec6: "Range 50-65 Km",
+    spec6: "Range 75-80 Km",
     spec7: "Max Torque 127NM",
     spec8: "Payload Capacity 300Kg",
     para1:"Our smart instrumentation cluster is a Cloud connectivity device which acquires data from the components of the electric vehicles and transfers those data to the cloud with the help of the application from the mobile phone. ",
@@ -194,14 +201,15 @@ const product = [
   {
     id: 6,
     name: "	DESIGN AND FABRICATION OF HYBRID TWO WHEELER SCOOTY",
-    image1: "",
-    Dept: "Mechanical",
-    Head: " Department of Agricultural  BIT-IIC",
-    date: "18 Aug 2023",
-    Category: "Overall Champions",
-    location: "Erode",
-
-    image2: "",
+    image1: "HYBRIDSCOOTY-1",
+    Dept: "Mechanical & EEE",
+    Head: "Mr.R.Ruman & Mr.B.Ragu",
+    date: "Aug - Sep 2021",
+    Category: "HYBRID SCOOTY",
+    location: "1.10 Lakhs",
+    Awards:"02",
+    Rewards:"3,000",
+    image2: "HYBRIDSCOOTY-2",
     name1: "BLDC Hub Motor ",
     desc1: "72V & 1200W ",
     name2: "Li Ion Battery",
@@ -217,12 +225,12 @@ const product = [
    
 
     spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
-    spec2: "72V & 2KW BLDC Hub Motor",
-    spec3: "72V 65A Regenerative Sine Wave Controller",
+    spec2: "72V & 1.5KW BLDC Hub Motor",
+    spec3: "72V 65A  Controller",
     spec4: " 72V to 12V DC-DC Convertor",
     spec5: "Max.Speed 70 Km/hr",
     spec6: "Range 50-65 Km",
-    spec7: "Max Torque 127NM",
+    spec7: "Max Torque 97NM",
     spec8: "Payload Capacity 300Kg",
     para1:"The objective of our project aims at better utilization of fuel energy and reduces dependence on non-renewable resources using latest technology. The implementation involves development of Hybrid Electric Vehicle (HEV) in two wheelers that uses BLDC hub motor that is run by a Li-Ion battery as well as petrol engine for propulsion of vehicle. ",
     para2:" The hybridization of a convectional combustion engine vehicle with an advanced electric motor drive may greatly enhance the overall efficiency and achieve higher fuel with reduced emissions.",  
@@ -231,14 +239,15 @@ const product = [
   {
     id: 7,
     name: "MODERNISATION OF AUTOMATED GUIDED VEHICLE BY USING ULTASONIC SENSOR AND RFID TECHNOLOGIES",
-    image1: "",
-    Dept: "Mechanical",
-    Head: " Department of Agricultural  BIT-IIC",
-    date: "18 Aug 2023",
-    Category: "Overall Champions",
-    location: "Erode",
-
-    image2: "",
+    image1: "RFIDTECHNOLOGIES-1",
+    Dept: "Mechanical & ECE",
+    Head: "Mr.V.Vigneshram & Ms.T.Ramya",
+    date: "Jul - Aug 2019",
+    Category: "AUTOMATED GUIDED VEHICLE",
+    location: "10,000",
+    Awards:"8",
+    Rewards:"7,000",
+    image2: "RFIDTECHNOLOGIES-2",
     name1: "•	RFID Tag ",
 
     name2: "•	RFID Reader",
@@ -253,14 +262,14 @@ const product = [
  
    
 
-    spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
-    spec2: "72V & 2KW BLDC Hub Motor",
-    spec3: "72V 65A Regenerative Sine Wave Controller",
-    spec4: " 72V to 12V DC-DC Convertor",
-    spec5: "Max.Speed 70 Km/hr",
-    spec6: "Range 50-65 Km",
-    spec7: "Max Torque 127NM",
-    spec8: "Payload Capacity 300Kg",
+    spec1: "12V  Li-Ion Battery",
+    spec2: "12V DC Motor",
+    spec3: "PIC Micro Controller",
+    spec4: " RFID Tag",
+    spec5: "Max.Speed 5 Km/hr",
+    spec6: "Range 50mm",
+    spec7: "Passive type RFID Reader",
+    spec8: "Payload Capacity 3Kg",
 
     para1:"Our project deals with the examination of possibility to interconnect sparsely deployed RFID tags with ultrasonic sensors. RFID Readers are mounted under this unmanned automated guided vehicle (AGV) equipment with RFID tags installed on or in the floor, allowing the vehicle's logic to understand its location and make decisions to stop, turn right/left or continue straight ahead. ",
     para2:"As signals produced by these technology are often affected by uncertainty and incompleteness we use fuzzy logic for their processing as well as control of the entire navigation process.",  
@@ -268,14 +277,15 @@ const product = [
   {
     id: 8,
     name: "	DESIGN AND IMPLEMENTATION OF AUTOMATIC HEADLIGHT DIMMER FOR TWO WHEELERS USING ARDUINO CONTROLLER",
-    image1: "",
-    Dept: "Mechanical",
-    Head: " Department of Agricultural  BIT-IIC",
-    date: "18 Aug 2023",
-    Category: "Overall Champions",
-    location: "Erode",
-
-    image2: "",
+    image1: "HEADLIGHTDIMMER-1",
+    Dept: "Mechanical & ECE",
+    Head: " Mr.B.Sivakumar & Mr.K.Sedhumadhavan",
+    date: "Jan - Feb 2019",
+    Category: "AUTOMOBILE",
+    location: "5,000",
+    Awards:"03",
+    Rewards:"4,500",
+    image2: "HEADLIGHTDIMMER-2",
     name1: "•	LDR SENSOR ",
 
     name2: "•	ULTRASONIC SENSOR",
@@ -290,14 +300,14 @@ const product = [
  
    
 
-    spec1: "72V & 30Ah Li-Ion Battery with 6A Charger",
-    spec2: "72V & 2KW BLDC Hub Motor",
-    spec3: "72V 65A Regenerative Sine Wave Controller",
-    spec4: " 72V to 12V DC-DC Convertor",
-    spec5: "Max.Speed 70 Km/hr",
-    spec6: "Range 50-65 Km",
-    spec7: "Max Torque 127NM",
-    spec8: "Payload Capacity 300Kg",
+    spec1: "12V  Li-Ion Battery ",
+    spec2: "LDR & ULTRASONIC SENSOR",
+    spec3: "Arduino UNO Controller",
+    spec4: "5V Relay",
+    spec5: "Max Power dissipated in 200mW - LDR",
+    spec6: "UltraSonic - Range 50m",
+    spec7: "32-bit ARM Cortex-M4F core",
+    spec8: "High beam - Low beam",
 
     para1:"To develop a prototype of an automatic headlight switch ON and OFF while driving the two wheeler according to light intensity (LDR) and distance of the object or vehicle (ULTRASONIC SENSOR) in opposite ",
     para2:"	To use the Arduino controller for the conversion of bright light (HIGH BEAM) into dim light (LOW BEAM) according to the LDR and Ultrasonic sensors.",  
@@ -373,19 +383,20 @@ const Projects = () => {
                   <h1 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
                     {product.name}
                   </h1>
+                  
                   <dl className="mb-4 flex flex-wrap justify-between gap-4">
                     <div className="flex items-center">
                       <CalendarIcon className="h-5 w-5 mr-1.5 text-indigo-600" />
                       <span className="text-gray-700">{product.date}</span>
                     </div>
-                    <div className="flex items-center">
-                      <MapPin className="h-5 w-5 mr-1.5 text-indigo-600" />
-                      <span className="text-gray-700">{product.location}</span>
-                    </div>
+                    
                   </dl>
+                  <div className=" sm:flex sm:justify-between mx-5">
+                    {/* details */}
+                  <div>
                   <div className="mb-4">
                     <h2 className="text-gray-800 font-semibold">Category</h2>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 text-gray-700">
                       {product.Category}
                     </div>
                   </div>
@@ -397,6 +408,34 @@ const Projects = () => {
                     <h2 className="text-gray-800 font-semibold">Department</h2>
                     <p className="text-gray-700">{product.Dept}</p>
                   </div>
+                  </div>
+                  {/* awards */}
+                  <div>
+                    <div>
+                    <h2 className="text-gray-800 font-semibold">Project Cost</h2>
+                    <div className="flex mb-5 items-center">
+                      <IndianRupee className="h-5 w-5 mr-1.5 text-indigo-600" />
+                      <span className="text-gray-700">{product.location}</span>
+                    </div>
+                    </div>
+                
+                  <div className="mb-4">
+                    <h2 className="text-gray-800 font-semibold">No.of.Awards Won</h2>
+                    <p className="text-gray-700">{product.Awards}</p>
+                  </div>
+                  <div className="mb-4">
+                  
+                    <h2 className="text-gray-800 font-semibold">Total Rewards Won</h2>
+                    <div className="flex mb-5  items-center">
+                      <IndianRupee className="h-5 w-5 mr-1.5 text-indigo-600" />
+                      <p className="text-gray-700">{product.Rewards}</p>
+                    </div>
+                  </div>
+                  </div>
+                  
+                  </div>
+                  
+                
 
                   <div className="flex flex-col sm:flex-row items-center sm:space-x-10 sm:justify-around">
                     <button
@@ -406,13 +445,7 @@ const Projects = () => {
                     >
                       Quick View
                     </button>
-                    <a
-                      href="/path/to/your/file.pdf"
-                      download="filename.pdf"
-                      className="flex-none rounded-md mt-5 sm:mt-0 bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-                    >
-                      Download File
-                    </a>
+                  
                   </div>
                 </div>
               </div>

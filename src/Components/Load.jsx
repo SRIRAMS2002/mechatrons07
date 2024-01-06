@@ -27,7 +27,7 @@ const Load = () => {
           }}
           className=" text-lg text-white font-semibold w-full text-center"
         >
-          The Future of Bots
+        One Team...One Dream..One Family.
         </motion.h1>
       </div>
     </>

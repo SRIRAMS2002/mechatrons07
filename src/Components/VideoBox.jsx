@@ -16,13 +16,7 @@ function classNames(...classes) {
 
 
 const videoData = [
-  {
-    id:1,
-    title: "Automatic Headlight Dimmer",
-    thumbnail: "/Card1.webp",
-    channel: "Team Mechatrons",
-    link: "https://www.youtube.com/watch?v=XpvkIRvNJ3w&list=PLUdl9f4veCssUyE3f14yC5sKLsLffYvuS&index=4",
-  },
+  
   {
     id:2,
     title: "SIEP E-BIKE CHALLENGE 2023",
@@ -44,6 +38,13 @@ const videoData = [
     channel: "Team Mechatrons",
     link: "https://www.youtube.com/watch?v=68Jbv-tlzXY",
     
+  },
+  {
+    id:1,
+    title: "Automatic Headlight Dimmer",
+    thumbnail: "/Card1.webp",
+    channel: "Team Mechatrons",
+    link: "https://www.youtube.com/watch?v=XpvkIRvNJ3w&list=PLUdl9f4veCssUyE3f14yC5sKLsLffYvuS&index=4",
   },
   {
     id:5,
