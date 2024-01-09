@@ -112,6 +112,14 @@ const Gallery = () => {
       <div className="mx-auto mt-[5rem]  place-content-center place-items-center max-w-5xl">
     <div className=" p-5  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
     <div className="sm:max-w-lg">
+    <span class="sm:hidden flex mb-5 font-medium text-gray-600 text-sm space-x-2 md:items-center">
+                {" "}
+                
+                <a href="/">
+                Home 
+                </a>{" "}
+                / Gallery
+              </span>
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Gallery
               </h1>

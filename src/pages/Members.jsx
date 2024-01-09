@@ -433,6 +433,14 @@ const Members = () => {
               viewport={{ once: true }}
               className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
             >
+              <span class="sm:hidden flex mb-5 font-medium text-gray-600 text-sm space-x-2 md:items-center">
+                {" "}
+                
+                <a href="/">
+                Home 
+                </a>{" "}
+                / Members
+              </span>
               Members
             </motion.h2>
             <motion.p

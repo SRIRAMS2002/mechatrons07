@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Load from "@/Components/Load";
-
+import { MoveLeft } from 'lucide-react';
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 import { motion } from "framer-motion";
@@ -106,11 +106,13 @@ const Mentors = () => {
               viewport={{ once: true }}
               className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
             >
-              <span class="flex text-sm space-x-2 md:items-center">
+              <span class="flex mb-5 font-medium text-gray-600 text-sm space-x-2 md:items-center">
                 {" "}
-                <span class="font-medium text-gray-600 dark:text-gray-400">
-                  New this summer / cslknlkn
-                </span>{" "}
+                
+                <a href="/">
+                Home 
+                </a>{" "}
+                / Mentors
               </span>
               Mentors
             </motion.h2>

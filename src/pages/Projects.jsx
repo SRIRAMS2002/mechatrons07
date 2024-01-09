@@ -360,6 +360,14 @@ const Projects = () => {
       <Navbar view={isSectionInView} />
 
       <div className="mx-auto mt-[10rem] max-w-7xl  px-6 lg:px-8">
+      <span class="sm:hidden flex mb-5 font-medium text-gray-600 text-sm space-x-2 md:items-center">
+                {" "}
+                
+                <a href="/">
+                Home 
+                </a>{" "}
+                / Projects
+              </span>
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Projects
         </h1>

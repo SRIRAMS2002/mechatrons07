@@ -277,6 +277,14 @@ const Aluminiposition = () => {
                 viewport={{ once: true }}
                 className="max-w-7xl"
               >
+                 <span class="sm:hidden flex mb-5 font-medium text-gray-600 text-sm space-x-2 md:items-center">
+                {" "}
+                
+                <a href="/">
+                Home 
+                </a>{" "}
+                / Alumini Positions
+              </span>
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                   {" "}
                   Alumini Positions- Meet our leadership

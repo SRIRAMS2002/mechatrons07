@@ -326,6 +326,7 @@ const Achievements = () => {
       <Navbar view={isSectionInView} />
       <div className="mt-[8rem] min-h-screen pb-24">
         <div className="px-4 sm:px-6 lg:px-8 py-2">
+       
           {/* Search bar */}
           <div className="max-w-3xl mx-auto mb-8">
             <div className="flex items-center border-b-2 border-indigo-400 hover:border-indigo-900">
