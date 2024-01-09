@@ -238,7 +238,7 @@ const Aluminiposition = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      if (scrollPosition > 50) {
+      if (scrollPosition > 20) {
         setIsSectionInView(true);
       } else {
         setIsSectionInView(false);
@@ -264,7 +264,7 @@ const Aluminiposition = () => {
           <div>
             <Navbar view={isSectionInView}/>
 
-            <div className="mx-auto max-w-7xl  px-4 py-10 sm:px-6 sm:py-10">
+            <div className="mx-auto mt-[5rem] max-w-7xl  px-4 py-10 sm:px-6 sm:py-10">
               <motion.div
                 initial={{ x: -100, y: 100, opacity: 0 }}
                 whileInView={{ x: 0, y: 0, opacity: 1 }}
