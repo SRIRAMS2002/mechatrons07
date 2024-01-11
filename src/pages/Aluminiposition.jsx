@@ -222,10 +222,7 @@ const Position = [
   },
 ];
 const Aluminiposition = () => {
-  const handleMailClick = (email) => {
-    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
-    window.open(gmailComposeUrl, "_blank");
-  };
+ 
   const [isSectionInView, setIsSectionInView] = useState(false);
   const [loading, setLoading] = useState(false);
   useEffect(() => {

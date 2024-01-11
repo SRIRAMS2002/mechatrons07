@@ -1,12 +1,35 @@
-import React, { useEffect } from "react";
-import CountUp, { useCountUp } from "react-countup";
+import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import CountUp from "react-countup";
 import { motion } from "framer-motion";
+
+const SlowCountUp = ({ end, inView }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (inView) {
+      const duration = 10; // Set the duration in seconds
+      const framesPerSecond = 30; // Adjust this value as needed
+
+      const increment = (end / (duration * framesPerSecond)) || 1;
+
+      const interval = setInterval(() => {
+        setCount((prevCount) => {
+          const newCount = prevCount + increment;
+          return newCount >= end ? end : newCount;
+        });
+      }, 1000 / framesPerSecond);
+
+      return () => clearInterval(interval);
+    }
+  }, [end, inView]);
+
+  return <span>{Math.round(count)}</span>;
+};
+
 const About = () => {
-  useCountUp({
-    ref: "counter",
-    end: 1234567,
-    enableScrollSpy: true,
-    scrollSpyDelay: 9500,
+  const [ref, inView] = useInView({
+    triggerOnce: true,
   });
 
   return (
@@ -38,6 +61,7 @@ const About = () => {
             </p>
           </motion.div>
           <motion.ul
+           ref={ref}
             role="list"
             className="  grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
           >
@@ -57,9 +81,10 @@ const About = () => {
                     National Events
                   </h3>
                   <p className="text-3xl pt-5 font-semibold leading-6 text-indigo-600">
-                    {" "}
-                    <CountUp end={30} enableScrollSpy />+
-                  </p>
+                {" "}
+               
+                <SlowCountUp end={30} inView={inView} />
+              </p>
                 </div>
               </div>
             </motion.li>
@@ -80,7 +105,7 @@ const About = () => {
                   </h3>
                   <p className="text-3xl pt-5 font-semibold leading-6 text-indigo-600">
                     {" "}
-                    <CountUp end={4} enableScrollSpy />+
+                    <SlowCountUp end={30} inView={inView} />+
                   </p>
                 </div>
               </div>
@@ -102,7 +127,7 @@ const About = () => {
                   </h3>
                   <p className="text-3xl pt-5 font-semibold leading-6 text-indigo-600">
                     {" "}
-                    <CountUp end={20} enableScrollSpy /> +
+                    <SlowCountUp end={30} inView={inView} />+
                   </p>
                 </div>
               </div>
@@ -124,7 +149,7 @@ const About = () => {
                   </h3>
                   <p className="text-3xl pt-5 font-semibold leading-6 text-indigo-600">
                     {" "}
-                    <CountUp end={250000} enableScrollSpy />+
+                    <SlowCountUp end={3000000} inView={inView} />+
                   </p>
                 </div>
               </div>
