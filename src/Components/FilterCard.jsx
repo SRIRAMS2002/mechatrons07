@@ -32,82 +32,21 @@ function classNames(...classes) {
 
 const FilterCard = ({ name, image1 ,image2 ,image3 ,image4 ,image5 ,date,venue,Organiser, Awards,location }) => {
   const imageUrl1 = image1 ? `/Achievements/${image1}.webp` : "/placeholder.gif";
-  const imageUrl2 = image2 ? `/Achievements/${image2}.webp` : "/placeholder.gif";
-  const imageUrl3 = image3 ? `/Achievements/${image3}.webp` : "/placeholder.gif";
-  const imageUrl4 = image4 ? `/Achievements/${image4}.webp` : "/placeholder.gif";
-  const imageUrl5 = image5 ? `/Achievements/${image5}.webp` : "/placeholder.gif";
+
   return (
     
     <div className="mx-auto   place-content-center place-items-center max-w-5xl">
    <div className="mx-auto my-5 bg-white rounded-xl shadow-md overflow-hidden">
 <div className="p-6 lg:p-8 flex flex-col lg:flex-row">
   <div className="lg:w-1/2 md:max-h-[20rem]">
-  <Swiper
-  autoplay={{
-    delay: 2500,
-    disableOnInteraction: false,
-  }}
-  modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
-  slidesPerView={1}
-  spaceBetween={10}
-  navigation={true}
-
-  pagination={{ clickable: true }}
-  onSwiper={(swiper) => console.log(swiper)}
-  onSlideChange={() => console.log("slide change")}
-
->
-          <SwiperSlide>
-            <div className="bg-white border-2 rounded-xl">
+  <div className="bg-white border-2 rounded-xl">
             <img
       className="w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
       src={imageUrl1}
       alt=""
     />
             </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
-          <img
-      className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-      src={imageUrl1}
-      alt=""
-    />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
-          <img
-      className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-      src={imageUrl1}
-      alt=""
-    />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
-          <img
-      className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-      src={imageUrl1} alt=""
-    />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-          <div className="bg-white border-2 rounded-xl">
-          <img
-      className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-      src={imageUrl1}
-      alt=""
-    />
-            </div>
-          </SwiperSlide>
-         
-        </Swiper>
-    {/* <img
-      className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-      src={`/Achievements/${product.image}.webp`}
-      alt={product.name}
-    /> */}
+ 
   </div>
   <div className="lg:w-1/2 mt-5 lg:pl-8">
 

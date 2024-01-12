@@ -1,7 +1,7 @@
-import React, {useState,useEffect} from 'react'
-import Navbar from '@/Components/Navbar';
-import Footer from '@/Components/Footer';
-import GalleryPage from '@/Components/GalleryPage';
+import React, { useState, useEffect } from "react";
+import Navbar from "@/Components/Navbar";
+import Footer from "@/Components/Footer";
+import GalleryPage from "@/Components/GalleryPage";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
@@ -13,7 +13,6 @@ import {
 // Import Swiper styles
 import "swiper/css";
 const Gallery = () => {
-
   const [isSectionInView, setIsSectionInView] = useState(false);
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -32,7 +31,6 @@ const Gallery = () => {
         setIsSectionInView(false);
       }
     };
-  
 
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
@@ -62,10 +60,10 @@ const Gallery = () => {
   const products = [
     {
       id: 1,
-      location:"Chattisgarh",
-      date:"05 September 2023",
+      location: "Chattisgarh",
+      date: "05 September 2023",
       name: "EBDC Season 2 ",
-      Desc:"Collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help when you need it.",
+      Desc: "Collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help when you need it.",
       image: "Hero",
       image1: "Hero",
       image2: "Thailand",
@@ -79,14 +77,13 @@ const Gallery = () => {
       image10: "",
       image11: "",
       image12: "",
-      
     },
     {
       id: 1,
-      location:"Chattisgarh",
-      date:"05 September 2023",
+      location: "Chattisgarh",
+      date: "05 September 2023",
       name: "EBDC Season 2 ",
-      Desc:"Collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help when you need it.",
+      Desc: "Collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help when you need it.",
       image: "Hero",
       image1: "Hero",
       image2: "Thailand",
@@ -100,111 +97,233 @@ const Gallery = () => {
       image10: "",
       image11: "",
       image12: "",
-      
     },
-   
   ];
 
   return (
     <div>
-      <Navbar view={isSectionInView}/>
-
-      <div className="mx-auto mt-[5rem]  place-content-center place-items-center max-w-5xl">
-    <div className=" p-5  mt-5  grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
-    <div className="sm:max-w-lg">
-    <span class="sm:hidden flex mb-5 font-medium text-gray-600 text-sm space-x-2 md:items-center">
-                {" "}
-                
-                <a href="/">
-                Home 
-                </a>{" "}
-                / Gallery
-              </span>
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Gallery
-              </h1>
-              <p className="mt-4 text-xl text-gray-500">
-                We dared to dream beyond the numerical count of achievements
-                lies a deeper impact. Our endeavors are not just about the
-                bottom line; they resonate with apurpose that extends beyond
-                profit margins.
-              </p>
-            </div>
-
-      <div className="mt-5 md:ml-10 ">
-      <Swiper
-  autoplay={{
-    delay: 3500,
-    disableOnInteraction: false,
-  }}
-  modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
-  slidesPerView={1}
-  spaceBetween={10}
-  navigation={true}
-
-  pagination={{ clickable: true }}
-  onSwiper={(swiper) => console.log(swiper)}
-  onSlideChange={() => console.log("slide change")}
-
->
-{Intro.map((people, index) => (
-          <SwiperSlide>
-            <div className=" lg:ml-10 h-[20rem] w-[22rem] place-content-center place-items-center border-2 rounded-xl">
-              <img
-                className="object-cover w-full h-full"
-                src={`/Team/Founders/${people.imageUrl}.webp`}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-              ))}
-        
-         
-        </Swiper>
-     
-      </div>
-
-    </div>
-
-
-   
-  </div>
-
-     
-
-      <div className=''>
-
-{products.map((product) => (
-            <GalleryPage
-              key={product.id}
-              location={product.location}
-              date={product.date}
-              name={product.name}
-              Desc={product.Desc}
-              image={product.image}
-              image1={product.image1}
-              image2={product.image2}
-              image3={product.image3}
-              image4={product.image4}
-              image5={product.image5}
-              image6={product.image6}
-              image7={product.image7}
-              image8={product.image8}
-              image9={product.image9}
-              image10={product.image10}
-              image11={product.image11}
-              image12={product.image12}
-             
-              
+      <Navbar view={isSectionInView} />
+<div className="absolute inset-0 -z-10 overflow-hidden">
+        <svg
+          className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+          aria-hidden="true"
+        >
+          <defs>
+            <pattern
+              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
+              width={200}
+              height={200}
+              x="50%"
+              y={-1}
+              patternUnits="userSpaceOnUse"
+            >
+              <path d="M100 200V.5M.5 .5H200" fill="none" />
+            </pattern>
+          </defs>
+          <svg x="50%" y={-1} className="overflow-visible fill-transparent">
+            <path
+              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+              strokeWidth={0}
             />
-          ))}
+          </svg>
+          <rect width="100%" height="100%" strokeWidth={0} fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
+        </svg>
+        </div>
+      <div className="mx-auto max-w-7xl mt-[7rem]  place-content-center place-items-center ">
+         
+        <div className=" p-5  mt-5 mx-5 grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
+          <div className="lg:max-w-xl ">
+            <span class="sm:hidden flex mb-5  font-medium text-gray-600 text-sm space-x-2 md:items-center">
+              {" "}
+              <a href="/">Home</a> / Gallery
+            </span>
+          
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Gallery
+              </h2>
+              <p className="text-lg pt-5 font-semibold leading-6 text-gray-600">
+              We dared to dream beyond the numerical count of achievements lies
+              a deeper impact. Our endeavors are not just about the bottom line;
+              they resonate with apurpose that extends beyond profit margins.
+              </p>
+           
+           
+          </div>
+
+          <div className="mt-5 md:ml-10 ">
+             <Swiper
+       autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
+      slidesPerView={1}
+      spaceBetween={10}
+      pagination={{
+        clickable: true,
+      }}
+      breakpoints={{
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+      }}
+        watchSlidesProgress={true}
+      
+        className="mySwiper"
+      >
        
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+            src="/1G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+            src="/2G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+     
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+            src="/4G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+        
+      </Swiper>
+          </div>
+        </div>
       </div>
 
-      <Footer/>
-   
-    </div>
-  )
-}
+ <div className="pb-5 ">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl sm:text-center">
+        <div className="mt-10  flex items-center gap-x-4">
+        <div className="h-px flex-auto hidden sm:flex bg-gray-400" />
+              <h4 className=" text-sm  font-semibold leading-6 text-indigo-600">05 September 2023</h4>
+              <div className="h-px flex-auto bg-gray-400" />
+            </div>
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple no-tricks pricing</h2>
+          <p className="mt-4 text-lg leading-8 text-gray-600">
+            Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas
+            in. Explicabo id ut laborum.
+          </p>
+        </div>
+        <div className="mx-auto  sm:p-3.5 rounded-3xl ring-1 ring-gray-200 mt-5 lg:mx-0 lg:flex">
+        <Swiper
+       autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              modules={[Navigation, Autoplay, Pagination, Scrollbar, A11y]}
+      slidesPerView={1}
+      spaceBetween={10}
+      pagination={{
+        clickable: true,
+      }}
+      breakpoints={{
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        
+      }}
+        watchSlidesProgress={true}
+      
+        className="mySwiper"
+      >
+       
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96px rounded-lg"
+            src="/1G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+            src="/2G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+       
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+            src="/4G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+            src="/4G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-auto rounded-lg"
+            src="/1G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+            src="/2G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+            src="/4G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-auto rounded-lg"
+            src="/1G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
+        <SwiperSlide>
+          <img
+            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
+            src="/2G.jpg"
+            alt=""
+          />
+        </SwiperSlide>{" "}
 
-export default Gallery
+        
+      </Swiper>
+        </div>
+      </div>
+    </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default Gallery;

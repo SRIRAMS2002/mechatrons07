@@ -129,6 +129,10 @@ const ProductModal = ({ open, setOpen, selectedProduct, handleCloseModal,image2,
                           </div>
                         </div>
 
+                        <div className=" flex items-center gap-x-4">
+           
+              <div className="h-px flex-auto bg-gray-100" />
+            </div>
 
                         {/* para */}
                         <div className='mx-auto text-center '>
