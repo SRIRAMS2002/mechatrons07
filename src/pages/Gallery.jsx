@@ -103,32 +103,7 @@ const Gallery = () => {
   return (
     <div>
       <Navbar view={isSectionInView} />
-<div className="absolute inset-0 -z-10 overflow-hidden">
-        <svg
-          className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-300 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="e813992c-7d03-4cc4-a2bd-151760b470a0"
-              width={200}
-              height={200}
-              x="50%"
-              y={-1}
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M100 200V.5M.5 .5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y={-1} className="overflow-visible fill-transparent">
-            <path
-              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
-              strokeWidth={0}
-            />
-          </svg>
-          <rect width="100%" height="100%" strokeWidth={0} fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
-        </svg>
-        </div>
+
       <div className="mx-auto max-w-7xl mt-[7rem]  place-content-center place-items-center ">
          
         <div className=" p-5  mt-5 mx-5 grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
@@ -217,7 +192,7 @@ const Gallery = () => {
               <h4 className=" text-sm  font-semibold leading-6 text-indigo-600">05 September 2023</h4>
               <div className="h-px flex-auto bg-gray-400" />
             </div>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simple no-tricks pricing</h2>
+          <h2 className="text-3xl  mt-2 font-bold tracking-tight text-gray-900 sm:text-4xl">Simple no-tricks pricing</h2>
           <p className="mt-4 text-lg leading-8 text-gray-600">
             Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas
             in. Explicabo id ut laborum.
