@@ -94,7 +94,7 @@ const Recent = () => {
       {products.map((product) => (
         <SwiperSlide key={product.id}>
           <div className="mx-auto my-5 bg-white rounded-xl shadow-md overflow-hidden">
-            <div className="p-6 lg:p-8 flex flex-col lg:flex-row">
+            <div className="p-3 lg:p-8 flex flex-col lg:flex-row">
               <div className="lg:w-1/2 md:max-h-[20rem]">
                 <img
                   className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
@@ -102,8 +102,8 @@ const Recent = () => {
                   alt={product.name}
                 />
               </div>
-              <div className="lg:w-1/2 mt-5 lg:pl-8">
-                <h1 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-2">
+              <div className="lg:w-1/2 mt-5 lg:pl-5">
+                <h1 className="text-2xl sm:text-4xl font-semibold text-gray-900 mb-2">
                   {product.name}
                 </h1>
                 <dl className="mb-4 flex flex-wrap justify-between gap-4">
