@@ -39,71 +39,25 @@ const Gallery = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  const Intro = [
-    {
-      id: 1,
-      imageUrl: "Founder-4",
-    },
-    {
-      id: 2,
-      imageUrl: "Founder-4",
-    },
-    {
-      id: 3,
-      imageUrl: "Founder-4",
-    },
-    {
-      id: 4,
-      imageUrl: "Founder-4",
-    },
-  ];
+ 
   const products = [
-    {
-      id: 1,
-      location: "Chattisgarh",
-      date: "05 September 2023",
-      name: "EBDC Season 2 ",
-      Desc: "Collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help when you need it.",
-      image: "Hero",
-      image1: "Hero",
-      image2: "Thailand",
-      image3: "",
-      image4: "",
-      image5: "",
-      image6: "",
-      image7: "",
-      image8: "",
-      image9: "",
-      image10: "",
-      image11: "",
-      image12: "",
-    },
-    {
-      id: 1,
-      location: "Chattisgarh",
-      date: "05 September 2023",
-      name: "EBDC Season 2 ",
-      Desc: "Collaborate on the open source framework, contribute to the package ecosystem on pub.dev, and find help when you need it.",
-      image: "Hero",
-      image1: "Hero",
-      image2: "Thailand",
-      image3: "",
-      image4: "",
-      image5: "",
-      image6: "",
-      image7: "",
-      image8: "",
-      image9: "",
-      image10: "",
-      image11: "",
-      image12: "",
-    },
+   {
+    id:1,
+    date:"05 Sep 2023",
+    title:"Ideathon Season-3 2023",
+    Desc:" Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas    in. Explicabo id ut laborum.",
+    image1:"1G",
+    image2:"2G",
+    image3:"4G",
+    
+
+   }
   ];
 
   return (
     <div>
       <Navbar view={isSectionInView} />
-
+      {/* Gallery-Hero Section */}
       <div className="mx-auto max-w-7xl mt-[7rem]  place-content-center place-items-center ">
          
         <div className=" p-5  mt-5 mx-5 grid  grid-cols-1 items-center  px-2  sm:py-5  lg:grid-cols-2 lg:px-8">
@@ -159,14 +113,14 @@ const Gallery = () => {
         <SwiperSlide>
           <img
             className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-            src="/1G.jpg"
+            src="/Gallery/1G.jpg"
             alt=""
           />
         </SwiperSlide>{" "}
         <SwiperSlide>
           <img
             className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-            src="/2G.jpg"
+            src="/Gallery/2G.jpg"
             alt=""
           />
         </SwiperSlide>{" "}
@@ -174,7 +128,7 @@ const Gallery = () => {
         <SwiperSlide>
           <img
             className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-            src="/4G.jpg"
+            src="/Gallery/4G.jpg"
             alt=""
           />
         </SwiperSlide>{" "}
@@ -185,17 +139,17 @@ const Gallery = () => {
       </div>
 
  <div className="pb-5 ">
+ {products.map((product) => (
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl sm:text-center">
         <div className="mt-10  flex items-center gap-x-4">
         <div className="h-px flex-auto hidden sm:flex bg-gray-400" />
-              <h4 className=" text-sm  font-semibold leading-6 text-indigo-600">05 September 2023</h4>
+              <h4 className=" text-sm  font-semibold leading-6 text-indigo-600">{product.date}</h4>
               <div className="h-px flex-auto bg-gray-400" />
             </div>
-          <h2 className="text-3xl  mt-2 font-bold tracking-tight text-gray-900 sm:text-4xl">Simple no-tricks pricing</h2>
+          <h2 className="text-3xl  mt-2 font-bold tracking-tight text-gray-900 sm:text-4xl">{product.title}</h2>
           <p className="mt-4 text-lg leading-8 text-gray-600">
-            Distinctio et nulla eum soluta et neque labore quibusdam. Saepe et quasi iusto modi velit ut non voluptas
-            in. Explicabo id ut laborum.
+          {product.Desc}
           </p>
         </div>
         <div className="mx-auto  sm:p-3.5 rounded-3xl ring-1 ring-gray-200 mt-5 lg:mx-0 lg:flex">
@@ -229,72 +183,33 @@ const Gallery = () => {
         <SwiperSlide>
           <img
             className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96px rounded-lg"
-            src="/1G.jpg"
+            src={`/Gallery/${product.image1}.jpg`}
+            // src="/1G.jpg"
             alt=""
           />
         </SwiperSlide>{" "}
         <SwiperSlide>
           <img
             className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-            src="/2G.jpg"
-            alt=""
-          />
-        </SwiperSlide>{" "}
-       
-        <SwiperSlide>
-          <img
-            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-            src="/4G.jpg"
+            src={`/Gallery/${product.image2}.jpg`}
             alt=""
           />
         </SwiperSlide>{" "}
         <SwiperSlide>
           <img
             className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-            src="/4G.jpg"
+            src={`/Gallery/${product.image3}.jpg`}
             alt=""
           />
         </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img
-            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-auto rounded-lg"
-            src="/1G.jpg"
-            alt=""
-          />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img
-            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-            src="/2G.jpg"
-            alt=""
-          />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img
-            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-            src="/4G.jpg"
-            alt=""
-          />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img
-            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-auto rounded-lg"
-            src="/1G.jpg"
-            alt=""
-          />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img
-            className="object-cover w-full h-64 sm:h-72 md:h-80 lg:h-96 rounded-lg"
-            src="/2G.jpg"
-            alt=""
-          />
-        </SwiperSlide>{" "}
+
+     
 
         
       </Swiper>
         </div>
       </div>
+ ))}
     </div>
       <Footer />
     </div>

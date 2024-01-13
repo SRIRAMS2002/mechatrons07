@@ -90,7 +90,7 @@ const Footer = () => {
           </dl>
         </div>
       </div>
-
+{/* Footer Section */}
       <div class="w-full mx-auto mt-10 my-5 max-w-7xl justify-around text-sm pt-6  flex flex-wrap gap-y-6 gap-4 items-center md:justify-between dark:border-white/10">
             <div class="order-2 sm:order-1 flex items-center gap-3 text-gray-900/50 dark:text-white/50">
                 
@@ -99,8 +99,8 @@ const Footer = () => {
                 </span>
             </div>
             <div class="order-first sm:order-2 flex flex-wrap justify-center gap-y-2 gap-x-4 text-gray-500">
-                <a class="transition hover:text-gray-600 dark:hover:text-gray-300" target="_blank" rel="noopener noreferrer" href="https://twitter.com/tailus_ui">Instagram</a>
-                <a class="transition hover:text-gray-600 dark:hover:text-gray-300" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/Tailus-ui/">YouTube</a>
+                <a class="transition hover:text-gray-600 dark:hover:text-gray-300" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/srit_mechatrons_/">Instagram</a>
+                <a class="transition hover:text-gray-600 dark:hover:text-gray-300" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@mechatronssrit902">YouTube</a>
 
                 
                 <a class="transition hover:text-gray-600 dark:hover:text-gray-300" href="/contact">Contact</a>

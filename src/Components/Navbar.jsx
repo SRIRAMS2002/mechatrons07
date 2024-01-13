@@ -1,4 +1,8 @@
 "use-client";
+
+ 
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import {twMerge} from "tailwind-merge"
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
@@ -19,7 +23,8 @@ import { AiOutlineInstagram, AiOutlineYoutube } from "react-icons/ai";
 import { FiUserCheck } from "react-icons/fi";
 const Navbar = ({view}) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const pathname = usePathname()
+  console.log(pathname)
   const products = [
     { name: "Founders", href: "/Founders", icon: UserCircleIcon },
     { name: "Mentors", href: "/Mentors", icon: UserIcon },
@@ -53,7 +58,7 @@ const Navbar = ({view}) => {
       <nav
         className={twMerge(
           "fixed top-0 w-full  h-28 py-2 flex items-center justify-center z-50 left-0 right-0 transition-all duration-300 delay-100 ease-linear",
-          view ? "text-black bg-white shadow-lg h-24" : "text-black bg-transparent"
+          pathname === "/Contact" ? view ? "text-black bg-white shadow-lg h-24" : "text-white bg-transparent" : view ? "text-black bg-white shadow-lg h-24" : "text-black bg-transparent"
         )}
       >
         <div className="relative flex items-center justify-between bg-transparent gap-2 px-6 lg:px-20 h-full w-full">
