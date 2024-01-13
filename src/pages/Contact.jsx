@@ -37,14 +37,7 @@ export default function Example() {
   return (
     <div className="isolate  bg-gray-900 text-white px-6 lg:px-8">
      <Navbar view={isSectionInView} />
-      <span class="sm:hidden  flex mb-5 font-medium text-sm space-x-2 md:items-center">
-                {" "}
-                
-                <a href="/">
-                Home 
-                </a>{" "}
-                / Contact
-              </span>
+   
       <div
         className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
         aria-hidden="true"
@@ -57,6 +50,7 @@ export default function Example() {
           }}
         />
       </div>
+     
       <div className="mx-auto pt-[8rem] max-w-2xl text-center">
         <h2 className="text-3xl font-bold tracking-tight  sm:text-4xl">Contact sales</h2>
         <p className="mt-2 text-lg leading-8 text-gray-400/75">
@@ -137,34 +131,7 @@ export default function Example() {
               />
             </div>
           </div>
-          <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2">
-            <div className="flex h-6 items-center">
-              <Switch
-                checked={agreed}
-                onChange={setAgreed}
-                className={classNames(
-                  agreed ? 'bg-indigo-600' : 'bg-gray-200',
-                  'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
-                )}
-              >
-                <span className="sr-only">Agree to policies</span>
-                <span
-                  aria-hidden="true"
-                  className={classNames(
-                    agreed ? 'translate-x-3.5' : 'translate-x-0',
-                    'h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out'
-                  )}
-                />
-              </Switch>
-            </div>
-            <Switch.Label className="text-sm leading-6 text-gray-300/70">
-              By selecting this, you agree to our{' '}
-              <a href="#" className="font-semibold text-indigo-600">
-                privacy&nbsp;policy
-              </a>
-              .
-            </Switch.Label>
-          </Switch.Group>
+         
         </div>
         <div className="mt-10">
           <button
@@ -175,7 +142,19 @@ export default function Example() {
           </button>
         </div>
       </form>
-
+      <div
+        className="absolute inset-x-0 bottom-0 -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]"
+        aria-hidden="true"
+      >
+        <div
+          className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]"
+          style={{
+            clipPath:
+              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+          }}
+        />
+      </div>
+     
       {/* Footer Section */}
       <div class="w-full mx-auto mt-10 py-5 max-w-7xl justify-around text-sm pt-6  flex flex-wrap gap-y-6 gap-4 items-center md:justify-between dark:border-white/10">
             <div class="order-2 sm:order-1 flex items-center gap-3 text-gray-900/50 dark:text-white/50">
@@ -214,16 +193,9 @@ export default function Example() {
                     </div>
                 </h2>
             </div>
+         
         </div>
-      <div className="absolute  left-1/2 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
-        <div
-          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
-          style={{
-            clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 0.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-        />
-      </div>
+      
     </div>
   )
 }
