@@ -34,8 +34,8 @@ const About = () => {
 
   return (
     <>
-      <div className=" py-24 sm:py-32">
-        <div className="mx-auto grid max-w-7xl gap-x-20 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+      <div className=" py-10 sm:py-15">
+        <div className="mx-auto grid max-w-7xl gap-x-20 gap-y-10 px-6 lg:px-8 xl:grid-cols-3">
           <motion.div
             initial={{ x: -100, y: 100, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
@@ -63,7 +63,7 @@ const About = () => {
           <motion.ul
            ref={ref}
             role="list"
-            className="  grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+            className="  grid gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-15 xl:col-span-2"
           >
             <motion.li
               initial={{ y: 100, opacity: 0 }}

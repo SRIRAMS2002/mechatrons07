@@ -69,7 +69,7 @@ body{
 
 .swiper-button-next::after, .swiper-button-prev::after {
   color: black;
-
+ --swiper-navigation-size: 30px;
 }
 
   

@@ -56,7 +56,7 @@ const News = () => {
   ];
   return (
     <>
-      <div className=" py-12 sm:py-20">
+      <div className=" py-5 sm:py-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <motion.div
             initial={{ x: -100, y: 100, opacity: 0 }}
@@ -77,7 +77,7 @@ const News = () => {
               Learn how to grow your business with our expert advice.
             </p>
           </motion.div>
-          <div className=" mx-auto  grid max-w-2xl grid-cols-1 gap-x-8 mt-5 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div className=" mx-auto  grid max-w-2xl grid-cols-1 gap-y-5 gap-x-8 mt-5 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {posts.map((post, index) => (
               <motion.article
                 initial={{ y: 100, opacity: 0 }}
@@ -90,7 +90,7 @@ const News = () => {
                 }}
                 // viewport={{ once: true }}
                 key={post.id}
-                className="flex relative bg-[white] border-2 px-5 py-5 border-violet-900 rounded-xl max-w-xl flex-col items-start justify-between"
+                className="flex relative bg-[white] border-2 px-5 py-5  border-violet-900 rounded-xl max-w-xl flex-col items-start justify-between"
               >
                 <div className="flex items-center gap-x-4 text-xs">
                   <time dateTime={post.datetime} className="text-black">
